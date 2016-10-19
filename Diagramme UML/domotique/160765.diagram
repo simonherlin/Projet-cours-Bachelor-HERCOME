@@ -19,10 +19,10 @@ durationcanvas 128765 classinstance_ref 128509 // :IHMAccueilRasp
   xyzwh 146 75 2010 11 380
 end
 durationcanvas 129149 classinstance_ref 129021 // :CAlarme
-  xyzwh 320 100 2010 11 25
+  xyzwh 320 110 2010 11 67
 end
 durationcanvas 130173 classinstance_ref 129021 // :CAlarme
-  xyzwh 320 236 2010 11 25
+  xyzwh 320 237 2010 11 75
 end
 msg 128893 synchronous
   from durationcanvas_ref 128637
@@ -33,13 +33,13 @@ msg 128893 synchronous
 msg 129277 synchronous
   from durationcanvas_ref 128765
   to durationcanvas_ref 129149
-  yz 109 2020 explicitmsg "desactiver()"
+  yz 111 2020 explicitmsg "desactiver()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 217 97
+  label_xy 217 99
 msg 130301 synchronous
   from durationcanvas_ref 128765
   to durationcanvas_ref 130173
-  yz 236 2015 explicitmsg "activer()"
+  yz 237 2015 explicitmsg "activer()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 221 224
+  label_xy 221 225
 end

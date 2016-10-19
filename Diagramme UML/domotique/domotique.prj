@@ -1,6 +1,6 @@
 format 75
 "domotique"
-  revision 18
+  revision 19
   modified_by 125 "Herlin"
 
 
@@ -251,6 +251,16 @@ format 75
     end
 
     sequencediagram 134653 "Gérer matériel (lumière) WEB"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 173821 "Gérer matériel ( Store) WEB"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 173949 "Gérer matériel (Chauffage) WEB"
       show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
       overlapping_bars size A4
     end
@@ -534,6 +544,17 @@ format 75
     end
 
     class 189181 "CCapteurPrsence"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 195709 "CBuffer"
       visibility package 
       cpp_decl ""
       java_decl ""
