@@ -1,0 +1,23 @@
+window_sizes 1536 801 360 1080 576 82
+diagrams
+  usecasediagram_ref 128125 // Diagrammes des cas d'utilisation
+    1170 655 100 4 0 0
+  sequencediagram_ref 134653 // Gérer matériel (lumière) WEB
+    1170 645 100 4 0 0
+  sequencediagram_ref 141181 // Gérer matériel (lumiére) center
+    1170 643 100 4 0 0
+  sequencediagram_ref 147709 // Gérer matériel (Store) center
+    1170 643 100 4 0 0
+  sequencediagram_ref 154237 // Gérer matériel (Chauffage) center
+    932 516 100 4 0 0
+  sequencediagram_ref 160765 // Gérer alarme
+    1170 645 100 4 0 0
+  active  sequencediagram_ref 167293 // detectionPrésence
+    1170 643 100 4 0 0
+end
+show_stereotypes
+selected class_ref 175997 // CMonSocket
+open
+  usecaseview_ref 128125 // diagramme
+end
+end

@@ -1,0 +1,133 @@
+format 75
+
+classinstance 128125 class_ref 156029 // CRequeteRasp
+  name ""   xyz 693.5 5 2000 life_line_z 2000
+classinstance 128253 class_ref 128125 // Client
+  name ""   xyz 8.5 5 2000 life_line_z 2000
+classinstance 128509 class_ref 156285 // ER433Rasp
+  name ""   xyz 414.5 5 2000 life_line_z 2000
+classinstance 128637 class_ref 155517 // iHMModuleRasp
+  name ""   xyz 181.5 5 2000 life_line_z 2000
+classinstance 128765 class_ref 156157 // WiringPi
+  name ""   xyz 534.5 5 2000 life_line_z 2000
+classinstance 128893 class_ref 155389 // IHMAccueilRasp
+  name ""   xyz 71.5 5 2000 life_line_z 2000
+classinstance 129021 class_ref 155901 // CBdd
+  name ""   xyz 777.5 5 2000 life_line_z 2000
+classinstance 132349 class_ref 169469 // CChauffageRasp
+  name ""   xyz 300 4 2000 life_line_z 2000
+durationcanvas 129149 classinstance_ref 128893 // :IHMAccueilRasp
+  xyzwh 107 99 2010 11 45
+end
+durationcanvas 129277 classinstance_ref 128765 // :WiringPi
+  xyzwh 553 195 2010 11 63
+end
+durationcanvas 129405 classinstance_ref 128125 // :CRequeteRasp
+  xyzwh 727 107 2010 11 49
+end
+durationcanvas 129661 classinstance_ref 128637 // :iHMModuleRasp
+  xyzwh 216 105 2010 11 57
+end
+durationcanvas 129789 classinstance_ref 128509 // :ER433Rasp
+  xyzwh 441 190 2010 11 85
+end
+durationcanvas 129917 classinstance_ref 128253 // :Client
+  xyzwh 18 103 2010 11 250
+end
+durationcanvas 130045 classinstance_ref 128637 // :iHMModuleRasp
+  xyzwh 216 186 2010 11 99
+end
+durationcanvas 130173 classinstance_ref 129021 // :CBdd
+  xyzwh 796 113 2010 11 36
+end
+durationcanvas 130301 classinstance_ref 128637 // :iHMModuleRasp
+  xyzwh 216 311 2010 11 37
+end
+durationcanvas 132477 classinstance_ref 132349 // :CChauffageRasp
+  xyzwh 339 190 2010 11 92
+end
+msg 130429 return
+  from durationcanvas_ref 130173
+  to durationcanvas_ref 129405
+  yz 138 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130557 synchronous
+  from durationcanvas_ref 129661
+  to durationcanvas_ref 129405
+  yz 111 2020 explicitmsg "creeRequeteRechercheInfo()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 424.5 99
+msg 130685 synchronous
+  from durationcanvas_ref 129917
+  to durationcanvas_ref 130045
+  yz 188 2015 explicitmsg "ChoisitChauffage()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 81.5 176
+msg 130941 synchronous
+  from durationcanvas_ref 129917
+  to durationcanvas_ref 129149
+  yz 103 2015 explicitmsg "AfficherModule()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 26.5 91
+msg 131197 synchronous
+  from durationcanvas_ref 129917
+  to durationcanvas_ref 130301
+  yz 311 2015 explicitmsg "quitter()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 103.5 299
+msg 131325 return
+  from durationcanvas_ref 129277
+  to durationcanvas_ref 129789
+  yz 247 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131453 synchronous
+  from durationcanvas_ref 129149
+  to durationcanvas_ref 129661
+  yz 106 2015 explicitmsg "CreateIHMModule()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 129.5 94
+msg 131709 synchronous
+  from durationcanvas_ref 129789
+  to durationcanvas_ref 129277
+  yz 197 2015 explicitmsg "write()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 487.5 185
+msg 131837 synchronous
+  from durationcanvas_ref 129405
+  to durationcanvas_ref 130173
+  yz 114 2025 explicitmsg "lire()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 753.5 102
+msg 132093 return
+  from durationcanvas_ref 129405
+  to durationcanvas_ref 129661
+  yz 145 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132221 return
+  from durationcanvas_ref 130301
+  to durationcanvas_ref 129917
+  yz 333 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132605 synchronous
+  from durationcanvas_ref 130045
+  to durationcanvas_ref 132477
+  yz 191 2015 explicitmsg "choisitTemperatur()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 243 179
+msg 132861 synchronous
+  from durationcanvas_ref 132477
+  to durationcanvas_ref 129789
+  yz 197 2025 explicitmsg "envoyerTrame()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 365 185
+msg 132989 return
+  from durationcanvas_ref 129789
+  to durationcanvas_ref 132477
+  yz 264 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133117 return
+  from durationcanvas_ref 132477
+  to durationcanvas_ref 130045
+  yz 272 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

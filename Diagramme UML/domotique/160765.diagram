@@ -1,0 +1,45 @@
+format 75
+
+classinstance 128125 class_ref 128125 // Client
+  name ""   xyz 14 5 2000 life_line_z 2000
+classinstance 128509 class_ref 155389 // IHMAccueilRasp
+  name ""   xyz 110 4 2000 life_line_z 2000
+classinstance 129021 class_ref 182525 // CAlarme
+  name ""   xyz 300 4 2000 life_line_z 2000
+fragment 129917 "alt etatAlarme==activer"
+  xyzwh 41 87 1995 345 124
+end
+fragment 130045 "else"
+  xyzwh 42 209 1990 344 162
+end
+durationcanvas 128637 classinstance_ref 128125 // :Client
+  xyzwh 24 74 2010 11 488
+end
+durationcanvas 128765 classinstance_ref 128509 // :IHMAccueilRasp
+  xyzwh 146 75 2010 11 380
+end
+durationcanvas 129149 classinstance_ref 129021 // :CAlarme
+  xyzwh 320 100 2010 11 25
+end
+durationcanvas 130173 classinstance_ref 129021 // :CAlarme
+  xyzwh 320 236 2010 11 25
+end
+msg 128893 synchronous
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 128765
+  yz 75 2015 explicitmsg "AppuyeAlarme()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 32 57
+msg 129277 synchronous
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 129149
+  yz 109 2020 explicitmsg "desactiver()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 217 97
+msg 130301 synchronous
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 130173
+  yz 236 2015 explicitmsg "activer()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 221 224
+end

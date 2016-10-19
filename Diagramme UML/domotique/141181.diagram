@@ -1,0 +1,119 @@
+format 75
+
+classinstance 128253 class_ref 128125 // Client
+  name ""   xyz 10 4 2000 life_line_z 2000
+classinstance 128381 class_ref 155389 // IHMAccueilRasp
+  name ""   xyz 69 4 2000 life_line_z 2000
+classinstance 128509 class_ref 155517 // iHMModuleRasp
+  name ""   xyz 181 4 2000 life_line_z 2000
+classinstance 129533 class_ref 155901 // CBdd
+  name ""   xyz 784 5 2000 life_line_z 2000
+classinstance 129661 class_ref 156029 // CRequeteRasp
+  name ""   xyz 703 4 2000 life_line_z 2000
+classinstance 130557 class_ref 156157 // WiringPi
+  name ""   xyz 533 4 2000 life_line_z 2000
+classinstance 130813 class_ref 156285 // ER433Rasp
+  name ""   xyz 415 4 2000 life_line_z 2000
+classinstance 130941 class_ref 156413 // CLumiereRasp
+  name ""   xyz 294 4 2000 life_line_z 2000
+durationcanvas 128637 classinstance_ref 128253 // :Client
+  xyzwh 20 78 2010 11 226
+end
+durationcanvas 128765 classinstance_ref 128381 // :IHMAccueilRasp
+  xyzwh 105 76 2010 11 27
+end
+durationcanvas 129021 classinstance_ref 128509 // :iHMModuleRasp
+  xyzwh 216 82 2010 11 57
+end
+durationcanvas 129277 classinstance_ref 128509 // :iHMModuleRasp
+  xyzwh 216 143 2010 11 119
+end
+durationcanvas 129789 classinstance_ref 129661 // :CRequeteRasp
+  xyzwh 737 84 2010 11 49
+end
+durationcanvas 130045 classinstance_ref 129533 // :CBdd
+  xyzwh 803 90 2010 11 36
+end
+durationcanvas 131069 classinstance_ref 130941 // :CLumiereRasp
+  xyzwh 327 157 2010 11 93
+end
+durationcanvas 132093 classinstance_ref 130813 // :ER433Rasp
+  xyzwh 442 167 2010 11 82
+end
+durationcanvas 132349 classinstance_ref 130557 // :WiringPi
+  xyzwh 552 172 2010 11 63
+end
+msg 128893 synchronous
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 128765
+  yz 78 2015 explicitmsg "AfficherModule()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 31 66
+msg 129149 synchronous
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 129021
+  yz 83 2015 explicitmsg "CreateIHMModule()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 130 71
+msg 129405 synchronous
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 129277
+  yz 143 2015 explicitmsg "ChoisitLumiere()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 86 131
+msg 129917 synchronous
+  from durationcanvas_ref 129021
+  to durationcanvas_ref 129789
+  yz 88 2020 explicitmsg "creeRequeteRechercheInfo()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 427 76
+msg 130173 synchronous
+  from durationcanvas_ref 129789
+  to durationcanvas_ref 130045
+  yz 91 2025 explicitmsg "lire()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 766 79
+msg 130301 return
+  from durationcanvas_ref 130045
+  to durationcanvas_ref 129789
+  yz 115 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130429 return
+  from durationcanvas_ref 129789
+  to durationcanvas_ref 129021
+  yz 122 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131197 synchronous
+  from durationcanvas_ref 129277
+  to durationcanvas_ref 131069
+  yz 158 2015 explicitmsg "commandeLumiere()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 235 146
+msg 132221 synchronous
+  from durationcanvas_ref 131069
+  to durationcanvas_ref 132093
+  yz 169 2015 explicitmsg "envoyerTrame()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 362 156
+msg 132477 synchronous
+  from durationcanvas_ref 132093
+  to durationcanvas_ref 132349
+  yz 174 2015 explicitmsg "write()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 491 162
+msg 132605 return
+  from durationcanvas_ref 132349
+  to durationcanvas_ref 132093
+  yz 224 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132733 return
+  from durationcanvas_ref 132093
+  to durationcanvas_ref 131069
+  yz 233 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132861 return
+  from durationcanvas_ref 131069
+  to durationcanvas_ref 129277
+  yz 238 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

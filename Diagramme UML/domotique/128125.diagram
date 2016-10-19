@@ -1,0 +1,51 @@
+format 75
+
+classcanvas 128125 class_ref 128125 // Client
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 22.8 197.4 2000
+end
+classcanvas 131965 class_ref 128253 // informaticien
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 11 358 2000
+end
+usecasecanvas 132093 usecase_ref 129405 // ajouter composant
+  xyzwh 256 348 3005 64 32 label_xy 250 380
+end
+usecasecanvas 132221 usecase_ref 129533 // supprimer composant
+  xyzwh 255 421 3005 64 32 label_xy 242 455
+end
+usecasecanvas 132605 usecase_ref 129661 // authentification
+  xyzwh 550 387 3005 64 32 label_xy 550 419
+end
+usecasecanvas 133629 usecase_ref 136189 // gerer materiel 
+  xyzwh 261 213 3005 64 32 label_xy 263 245
+end
+usecasecanvas 134269 usecase_ref 128509 // visualiser information
+  xyzwh 261 275 3011 64 32 label_xy 248 307
+end
+usecasecanvas 134653 usecase_ref 136317 // Commande vocal
+  xyzwh 543 212 3005 64 32 label_xy 538 244
+end
+note 135421 "Pour gerer le matériel il y aura un site web, et une application mobile, de meme pour la visualisation"
+  xyzwh 222 138 2000 167 65
+line 132349 ----
+  from ref 131965 z 3006 to ref 132093
+line 132477 ----
+  from ref 131965 z 3006 to ref 132221
+simplerelationcanvas 133373 simplerelation_ref 129661
+  from ref 132093 z 3006 to ref 132605
+end
+simplerelationcanvas 133501 simplerelation_ref 129789
+  from ref 132221 z 3006 to ref 132605
+end
+simplerelationcanvas 133757 simplerelation_ref 136317
+  from ref 133629 z 3006 to ref 132605
+end
+line 134141 ----
+  from ref 128125 z 3006 to ref 133629
+simplerelationcanvas 134397 simplerelation_ref 129533
+  from ref 134269 z 3012 to ref 132605
+end
+line 134525 ----
+  from ref 128125 z 3012 to ref 134269
+end
