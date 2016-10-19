@@ -1,6 +1,6 @@
 format 75
 "domotique"
-  revision 19
+  revision 20
   modified_by 125 "Herlin"
 
 
@@ -280,7 +280,7 @@ format 75
       overlapping_bars size A4
     end
 
-    sequencediagram 160765 "Gérer alarme"
+    sequencediagram 160765 "Activer/Desactiver alarme"
       show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
       overlapping_bars size A4
     end

@@ -12,7 +12,7 @@ classinstance 130045 class_ref 156285 // ER433Rasp
 classinstance 130173 class_ref 156157 // WiringPi
   name ""   xyz 482.5 4 2000 life_line_z 2000
 fragment 130941 "if (alarme activé)"
-  xyzwh 0 129 1990 760 278
+  xyzwh 3 98 1990 750 303
 end
 classinstance 131069 class_ref 195709 // CBuffer
   name ""   xyz 267 4 2000 life_line_z 2000
