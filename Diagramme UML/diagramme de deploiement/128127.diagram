@@ -1,0 +1,358 @@
+format 75
+
+fragment 128124 "Module Detection de mouvement"
+  xyzwh 11.2 386.1 2000 211 176
+end
+deploymentnodecanvas 128252 deploymentnode_ref 156159 // Arduino
+  xyzwh 20.1 418 2020 187 85
+end
+deploymentnodecanvas 128380 deploymentnode_ref 128124 // Capteur Mouvement
+  xyzwh 92.6 517.4 2020 117 32
+end
+deploymentnodecanvas 128636 deploymentnode_ref 156287 // ER433
+  xyzwh 25.7 518.1 2025 52 32
+end
+componentcanvas 128767 component_ref 128127 // BDD
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 859.9 605.7 2005 181 51
+end
+componentcanvas 128892 component_ref 128124 // Logiciel Detection
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 38.3 444.3 2031 143 51
+end
+deploymentnodecanvas 129020 deploymentnode_ref 156287 // ER433
+  xyzwh 451.9 355.7 2000 52 32
+end
+componentcanvas 129023 component_ref 128383 // WebServices
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 860.7 707.7 2005 181 51
+end
+deploymentnodecanvas 129148 deploymentnode_ref 128252 // Ecran Tactile
+  xyzwh 452 633.7 2006 83 32
+end
+componentcanvas 129151 component_ref 128511 // OS : Raspbian
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 860.7 656 2005 181 51
+end
+deploymentnodecanvas 129404 deploymentnode_ref 128508 // Clavier
+  xyzwh 376.2 632 2000 54 32
+end
+deploymentnodecanvas 131068 deploymentnode_ref 149375 // PC Client
+  xyzwh 707.3 1140.4 2000 163 89
+end
+componentcanvas 131196 component_ref 150271 // Navigateur Web
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 715.2 1169.1 2005 143 51
+end
+deploymentnodecanvas 131711 deploymentnode_ref 134911 // Switch
+  xyzwh 894.4 889.5 2000 117 32
+end
+fragment 132604 ""
+  xyzwh 276.5 304.6 0 380 391
+end
+note 132607 "DMZ
+"
+  xyzwh 1017.6 560.1 2000 56 36
+deploymentnodecanvas 132732 deploymentnode_ref 149503 // Smartphone Client
+  xyzwh 544.3 961 2000 171 139
+end
+componentcanvas 132735 component_ref 135039 // Logiciel HERCOME Center
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 377.2 488.8 2006 188 51
+end
+componentcanvas 132860 component_ref 150399 // OS : Android
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 555.2 988.1 2005 143 51
+end
+componentcanvas 132988 component_ref 150527 // Logiciel HERCOME Home
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 552.9 1042.9 2005 150 51
+end
+fragment 133116 "Module Barrière"
+  xyzwh 948.9 10.1 0 220 199
+end
+deploymentnodecanvas 133372 deploymentnode_ref 128636 // Commande Chaudière
+  xyzwh 152 41 2020 140 32
+end
+deploymentnodecanvas 134527 deploymentnode_ref 141695 // Hercome Center
+  xyzwh 368.9 452.4 2000 219 161
+end
+deploymentnodecanvas 134911 deploymentnode_ref 141823 // Serveur Web
+  xyzwh 843.4 572.4 0 219 201
+end
+componentcanvas 140415 component_ref 143103 // Logiciel Lumiere
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 538.8 104.5 2006 143 51
+end
+componentcanvas 140543 component_ref 128511 // OS : Raspbian
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 377.5 542.1 2006 187 51
+end
+deploymentnodecanvas 142079 deploymentnode_ref 149119 // Routeur
+  xyzwh 921.7 1210.7 2000 63 32
+end
+deploymentnodecanvas 142207 deploymentnode_ref 149247 // FAI
+  xyzwh 1066.1 1209 2000 92 32
+end
+deploymentnodecanvas 142335 deploymentnode_ref 149247 // FAI
+  xyzwh 1064.4 1315.2 2000 92 32
+end
+deploymentnodecanvas 142463 deploymentnode_ref 149119 // Routeur
+  xyzwh 721.1 1314.5 2000 62 32
+end
+deploymentnodecanvas 142591 deploymentnode_ref 134911 // Switch
+  xyzwh 90.9 1315.2 2000 108 32
+end
+deploymentnodecanvas 142719 deploymentnode_ref 134655 // Camera IP
+  xyzwh 580.5 891.2 2005 110 32
+end
+deploymentnodecanvas 143999 deploymentnode_ref 149375 // PC Client
+  xyzwh 93.3 935.8 2000 170 97
+end
+componentcanvas 144127 component_ref 150271 // Navigateur Web
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 103.3 972.4 2005 143 51
+end
+deploymentnodecanvas 144383 deploymentnode_ref 149503 // Smartphone Client
+  xyzwh 346.3 916.5 2000 177 146
+end
+componentcanvas 144511 component_ref 150399 // OS : Android
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 357.9 946.4 2010 150 51
+end
+componentcanvas 144639 component_ref 150527 // Logiciel HERCOME Home
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 357.9 998.1 2005 150 51
+end
+deploymentnodecanvas 148863 deploymentnode_ref 156159 // Arduino
+  xyzwh 525.1 74.5 2000 177 83
+end
+deploymentnodecanvas 148991 deploymentnode_ref 156287 // ER433
+  xyzwh 533.8 168.8 2000 83 32
+end
+deploymentnodecanvas 149375 deploymentnode_ref 156543 // Relais 5V
+  xyzwh 534.3 35.7 2000 71 32
+end
+deploymentnodecanvas 149759 deploymentnode_ref 156415 // Lumière
+  xyzwh 636.6 35 2000 64 32
+end
+fragment 150015 "Module Lumière"
+  xyzwh 514.7 10.9 2000 209 199
+end
+deploymentnodecanvas 150143 deploymentnode_ref 156159 // Arduino
+  xyzwh 737.3 73.7 2000 166 77
+end
+deploymentnodecanvas 150399 deploymentnode_ref 156671 // Capteur Position
+  xyzwh 815.2 161.7 2010 108 32
+end
+deploymentnodecanvas 150527 deploymentnode_ref 156543 // Relais 5V
+  xyzwh 741.2 38.1 2005 71 32
+end
+deploymentnodecanvas 150655 deploymentnode_ref 156799 // Garage Domotique
+  xyzwh 815.5 38.1 2000 121 32
+end
+deploymentnodecanvas 151167 deploymentnode_ref 156287 // ER433
+  xyzwh 734.6 158.1 2000 68 32
+end
+fragment 151423 "Module Garage"
+  xyzwh 725.5 10.3 0 221 199
+end
+componentcanvas 151551 component_ref 157311 // Logiciel Garage
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 745.5 98.1 2006 143 51
+end
+deploymentnodecanvas 151679 deploymentnode_ref 156159 // Arduino
+  xyzwh 968.4 83 0 177 82
+end
+componentcanvas 151807 component_ref 142975 // Logiciel Barrière
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 973.8 112.2 2005 143 51
+end
+deploymentnodecanvas 151935 deploymentnode_ref 156287 // ER433
+  xyzwh 959.5 172.6 2005 72 32
+end
+deploymentnodecanvas 152063 deploymentnode_ref 156543 // Relais 5V
+  xyzwh 960.5 39.5 2005 71 32
+end
+deploymentnodecanvas 152191 deploymentnode_ref 156927 // Barrière Domotique
+  xyzwh 1047.6 38.8 2005 123 32
+end
+fragment 152703 "Module Barrière"
+  xyzwh 1220.9 45.3 2005 229 200
+end
+fragment 152831 "Module Météo"
+  xyzwh 313.3 10.4 2005 198 199
+end
+deploymentnodecanvas 152959 deploymentnode_ref 156159 // Arduino
+  xyzwh 321.5 79.6 2010 168 79
+end
+componentcanvas 153087 component_ref 142719 // Logiciel Météo
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 332.4 103.4 2015 143 51
+end
+deploymentnodecanvas 153215 deploymentnode_ref 156287 // ER433
+  xyzwh 328.2 167.4 2010 57 32
+end
+deploymentnodecanvas 153471 deploymentnode_ref 157055 // DHT22
+  xyzwh 329.6 39.5 2010 58 32
+end
+deploymentnodecanvas 154111 deploymentnode_ref 157183 // Station Météo
+  xyzwh 393 165 2010 96 32
+end
+deploymentnodecanvas 154239 deploymentnode_ref 157311 // Capteur Lumière
+  xyzwh 391.5 38.8 2010 109 32
+end
+deploymentnodecanvas 154623 deploymentnode_ref 156159 // Arduino
+  xyzwh 17.8 78.2 2000 272 79
+end
+deploymentnodecanvas 154751 deploymentnode_ref 156543 // Relais 5V
+  xyzwh 23.7 39.2 2005 71 32
+end
+deploymentnodecanvas 154879 deploymentnode_ref 157055 // DHT22
+  xyzwh 35.7 166.3 2005 58 32
+end
+deploymentnodecanvas 155519 deploymentnode_ref 156287 // ER433
+  xyzwh 222 167.5 2000 57 32
+end
+componentcanvas 155775 component_ref 142847 // Logiciel Thermostat
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 29.5 103.3 2006 246 51
+end
+fragment 155903 "Module Thermostat"
+  xyzwh 10.5 9.3 0 293 201
+end
+deploymentnodecanvas 156031 deploymentnode_ref 156159 // Arduino
+  xyzwh 965.6 286 2005 166 89
+end
+componentcanvas 156159 component_ref 157439 // Logiciel Store
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 973.5 318.1 2005 143 51
+end
+deploymentnodecanvas 156287 deploymentnode_ref 156287 // ER433
+  xyzwh 966.1 387.1 2005 56 33
+end
+deploymentnodecanvas 156543 deploymentnode_ref 156543 // Relais 5V
+  xyzwh 969.8 243.3 2005 71 33
+end
+deploymentnodecanvas 156671 deploymentnode_ref 157567 // Store Electrique
+  xyzwh 1053.5 242.6 2005 104 33
+end
+fragment 157055 "Module Store"
+  xyzwh 954.8 213.5 2000 221 224
+end
+deploymentnodecanvas 157695 deploymentnode_ref 156159 // Arduino
+  xyzwh 17.9 245.8 2000 181 79
+end
+componentcanvas 157823 component_ref 157567 // Logiciel Porte
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 32.1 269.5 2005 143 51
+end
+deploymentnodecanvas 158079 deploymentnode_ref 156671 // Capteur Position
+  xyzwh 81.5 333.3 2005 108 33
+end
+fragment 158463 "Module Porte"
+  xyzwh 10.2 217.2 2010 196 160
+end
+deploymentnodecanvas 158591 deploymentnode_ref 156287 // ER433
+  xyzwh 21.2 334 2015 56 33
+end
+line 128508 ----
+  from ref 128380 z 2021 to ref 128252
+line 128764 ----
+  from ref 128636 z 2026 to ref 128252
+line 129660 ----
+  from ref 129020 z 2001 to ref 134527
+line 129916 ----
+  from ref 129404 z 2001 to ref 134527
+line 130044 ----
+  from ref 134527 z 2007 to ref 129148
+line 130300 ----
+  from ref 153215 z 2011 label "X10 (433MHz)" xyz 426 272 3000 to ref 129020
+line 130684 ----
+  from ref 148991 z 2001 label "X10 (433MHz)" xyz 462 234 3000 to ref 129020
+line 130812 ----
+  from ref 129020 z 2001 label "X10 (433MHz)" xyz 587 231 3000 to ref 151167
+line 131324 ---- decenter_end 888
+  from ref 131711 z 2001 label "Ethernet/Wifi" xyz 866 1016 3000 to ref 131068
+line 131964 ----
+  from ref 134527 z 2001 label "Ethernet/Wifi" xyz 722 708 3000 to ref 131711
+line 133244 ----
+  from ref 131711 z 2001 label "Ethernet/Wifi" xyz 779 943 3000 to ref 132732
+line 133628 ----
+  from ref 154751 z 2021 to ref 133372
+line 134396 ----
+  from ref 158591 z 2011 to point 96 380
+  line 135548 z 2011 to point 277 399
+  line 135420 z 2011 label "X10 (433MHz)" xyz 312 364 3000 to ref 129020
+line 134908 ----
+  from ref 128636 z 2026 to point 169 587
+  line 135292 z 2026 label "X10 (433MHz)" xyz 283 438 3000 to ref 129020
+line 136060 ----
+  from ref 155519 z 2001 label "X10 (433MHz)" xyz 257 253 3000 to ref 129020
+line 136316 ----
+  from ref 151935 z 2006 label "X10 (433MHz)" xyz 696 253 3000 to ref 129020
+line 136700 ----
+  from ref 156287 z 2006 label "X10 (433MHz)" xyz 710 370 3000 to ref 129020
+line 142847 ----
+  from ref 131711 z 2006 label "Ethernet" xyz 740 903.5 2006 to ref 142719
+line 143103 ----
+  from ref 142079 z 2001 label "xDSL" xyz 1014 1218 2001 to ref 142207
+line 143231 ----
+  from ref 142207 z 2001 to ref 142335
+line 143359 ----
+  from ref 142335 z 2001 label "xDSL" xyz 910 1315 2001 to ref 142463
+line 143487 ----
+  from ref 142463 z 2001 label "Ethernet" xyz 439.5 1315.5 2001 to ref 142591
+line 143615 ----
+  from ref 131711 z 2001 label "Ethernet" xyz 960.5 1053 2001 to ref 142079
+line 144767 ---- decenter_begin 437 decenter_end 699
+  from ref 143999 z 2001 label "Ethernet/Wifi" xyz 133 1104 2001 to ref 142591
+line 146047 ---- decenter_begin 190 decenter_end 865
+  from ref 144383 z 2001 label "Ethernet/Wifi" xyz 284 1148.5 2001 to ref 142591
+line 147839 ----
+  from ref 131711 z 2001 label "Ethernet/Wifi" xyz 884.5 803 2001 to ref 134911
+line 149119 ----
+  from ref 148863 z 2001 to ref 148991
+line 149503 ----
+  from ref 149375 z 2001 to ref 148863
+line 149887 ----
+  from ref 149375 z 2001 to ref 149759
+line 150783 ----
+  from ref 150399 z 2011 to ref 150143
+line 150911 ---- decenter_begin 122
+  from ref 150527 z 2006 to ref 150143
+line 151039 ----
+  from ref 150527 z 2006 to ref 150655
+line 151295 ----
+  from ref 150143 z 2001 to ref 151167
+line 152319 ----
+  from ref 152063 z 2006 to ref 151679
+line 152447 ----
+  from ref 152063 z 2006 to ref 152191
+line 152575 ----
+  from ref 151679 z 2001 to ref 151935
+line 153343 ----
+  from ref 152959 z 2011 to ref 153215
+line 153983 ----
+  from ref 153471 z 2011 to ref 152959
+line 154367 ----
+  from ref 154239 z 2011 to ref 152959
+line 154495 ----
+  from ref 154111 z 2011 to ref 152959
+line 155135 ----
+  from ref 154879 z 2006 to ref 154623
+line 155263 ----
+  from ref 154751 z 2006 to ref 154623
+line 155647 ---- decenter_end 156
+  from ref 154623 z 2001 to ref 155519
+line 156415 ----
+  from ref 156031 z 2001 to ref 156287
+line 156799 ----
+  from ref 156543 z 2001 to ref 156671
+line 156927 ----
+  from ref 156543 z 2001 to ref 156031
+line 158207 ----
+  from ref 158079 z 2006 to ref 157695
+line 158719 ----
+  from ref 157695 z 2011 to ref 158591
+end

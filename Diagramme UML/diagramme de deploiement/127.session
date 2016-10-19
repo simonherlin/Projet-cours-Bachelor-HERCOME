@@ -1,0 +1,12 @@
+window_sizes 1366 705 320 960 512 82
+diagrams
+  active  deploymentdiagram_ref 128127 // deploiement
+    1040 547 80 3 0 0
+end
+show_stereotypes
+selected deploymentnode_ref 156287 // ER433
+open
+  deploymentview_ref 128127 // deploimenthercome
+  componentview_ref 128127 // composent
+end
+end
