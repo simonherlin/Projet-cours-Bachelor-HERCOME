@@ -1,0 +1,104 @@
+// Custom colors
+$primary-color: #caff2d;
+
+@mixin prefix($declarations, $prefixes: webkit moz o) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+} 
+
+//Creates an animation using shorthand and prefixed properties
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+  
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  @include prefix((animation: $animations));
+}
+
+// Creates a keyframe to use with animations
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@include keyframes('showBannerLineTop') {
+  0% {
+    bottom: 50%;
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    height: 300px;
+    opacity: 1;
+  }
+}
+
+@include keyframes('showBannerLineBottom') {
+  0% {
+    top: 50%;
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    height: 300px;
+    opacity: 1;
+  }
+}
+
+
+
+
+.banner__cta {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto 0;
+  position: relative;
+  
+}
+
+.banner__line {
+  height: 0;
+  width: 1px;
+  border-right: 3px solid #ccc;
+  position: absolute;
+  right: 160px;
+  opacity: 0;
+
+  &--bottom {
+    top: 100%;
+    @include animation(.5s linear 1s 1 forwards showBannerLineBottom);
+  }
+
+  &--top {
+    bottom: 100%;
+    @include animation(.5s linear 1s 1 forwards showBannerLineTop);
+  }
+}

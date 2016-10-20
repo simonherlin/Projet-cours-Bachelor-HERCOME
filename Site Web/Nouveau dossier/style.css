@@ -1,0 +1,30 @@
+html, body {
+ margin:0;
+ padding:0;
+
+ }
+ 
+body,html{
+    height: 100%;
+  }
+
+
+
+    .logo{
+      width: 600px;
+      height: 100%;
+      float: left;
+      margin-bottom: 0px;
+	  margin-left:-500px;
+    }
+
+  
+
+    .logo:hover{
+		width: 600px;
+      height: 100%;
+      float: left;
+      margin-bottom: 0px;
+	margin-left:500px;
+    }
+

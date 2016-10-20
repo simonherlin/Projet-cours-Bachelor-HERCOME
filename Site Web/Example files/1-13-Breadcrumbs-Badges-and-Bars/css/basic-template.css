@@ -1,0 +1,22 @@
+.padding-top-10 {
+	padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    margin-bottom: 5px;
+  }
+}
+
+.brand 
+{
+    max-height: 25px;
+}
+
+.margin-top-60 {
+	padding-top: 60px;
+}
+
+.progress {
+	margin-bottom: 0px;
+}

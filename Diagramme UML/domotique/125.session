@@ -10,13 +10,13 @@ diagrams
     1170 643 100 4 0 0
   sequencediagram_ref 154237 // Gérer matériel (Chauffage) center
     932 516 100 4 0 0
-  sequencediagram_ref 160765 // Gérer alarme
-    1170 645 100 4 0 0
-  active  sequencediagram_ref 167293 // detectionPrésence
+  active  sequencediagram_ref 160765 // Activer/Desactiver alarme
+    1170 643 100 4 0 0
+  sequencediagram_ref 167293 // detectionPrésence
     1170 643 100 4 0 0
 end
 show_stereotypes
-selected class_ref 175997 // CMonSocket
+selected class_ref 156029 // CRequeteRasp
 open
   usecaseview_ref 128125 // diagramme
 end
