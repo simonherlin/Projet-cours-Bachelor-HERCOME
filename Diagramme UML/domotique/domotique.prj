@@ -1,6 +1,6 @@
 format 75
 "domotique"
-  revision 20
+  revision 21
   modified_by 125 "Herlin"
 
 
@@ -290,6 +290,16 @@ format 75
       overlapping_bars size A4
     end
 
+    sequencediagram 180477 "ajouter matériel"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 180733 "supprimer matériel"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
     class 134781 "IHMPageAccueil"
       visibility package 
       cpp_decl ""
@@ -555,6 +565,39 @@ format 75
     end
 
     class 195709 "CBuffer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 202237 "IHMAjouterSupprimerMatériel"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 202365 "IHMAjouter"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 202493 "IHMSupprimer"
       visibility package 
       cpp_decl ""
       java_decl ""

@@ -10,13 +10,17 @@ diagrams
     1170 643 100 4 0 0
   sequencediagram_ref 154237 // Gérer matériel (Chauffage) center
     932 516 100 4 0 0
-  active  sequencediagram_ref 160765 // Activer/Desactiver alarme
+  sequencediagram_ref 160765 // Activer/Desactiver alarme
     1170 643 100 4 0 0
   sequencediagram_ref 167293 // detectionPrésence
     1170 643 100 4 0 0
+  sequencediagram_ref 180477 // ajouter matériel
+    932 516 100 4 0 0
+  active  sequencediagram_ref 180733 // supprimer matériel
+    1170 643 100 4 0 0
 end
 show_stereotypes
-selected class_ref 156029 // CRequeteRasp
+selected sequencediagram_ref 180733 // supprimer matériel
 open
   usecaseview_ref 128125 // diagramme
 end

@@ -1,0 +1,110 @@
+format 75
+
+classinstance 128381 class_ref 128253 // informaticien
+  name ""   xyz 71 4 2000 life_line_z 2000
+classinstance 128509 class_ref 134909 // Authentification
+  name ""   xyz 148 5 2000 life_line_z 2000
+classinstance 128637 class_ref 134781 // IHMPageAccueil
+  name ""   xyz 247 4 2000 life_line_z 2000
+classinstance 129661 class_ref 202237 // IHMAjouterSupprimerMatériel
+  name ""   xyz 351 4 2000 life_line_z 2000
+classinstance 130557 class_ref 202365 // IHMAjouter
+  name ""   xyz 498 4 2000 life_line_z 2000
+classinstance 131197 class_ref 155261 // CRequetePhp
+  name ""   xyz 602 4 2000 life_line_z 2000
+classinstance 131325 class_ref 155901 // CBdd
+  name ""   xyz 720 4 2000 life_line_z 2000
+fragment 132221 "opt reponse==true"
+  xyzwh 2 123 1995 756 294
+end
+durationcanvas 128893 classinstance_ref 128509 // :Authentification
+  xyzwh 182 69 2010 11 40
+end
+durationcanvas 129277 classinstance_ref 128381 // :informaticien
+  xyzwh 96 68 2010 11 317
+end
+durationcanvas 129405 classinstance_ref 128637 // :IHMPageAccueil
+  xyzwh 283 144 2010 11 28
+end
+durationcanvas 129789 classinstance_ref 129661 // :IHMAjouterSupprimerMatériel
+  xyzwh 413 154 2010 11 31
+end
+durationcanvas 130301 classinstance_ref 129661 // :IHMAjouterSupprimerMatériel
+  xyzwh 413 215 2010 11 25
+end
+durationcanvas 130685 classinstance_ref 130557 // :IHMAjouter
+  xyzwh 523 262 2010 11 68
+end
+durationcanvas 130941 classinstance_ref 130557 // :IHMAjouter
+  xyzwh 523 221 2010 11 25
+end
+durationcanvas 131453 classinstance_ref 131197 // :CRequetePhp
+  xyzwh 633 269 2010 11 58
+end
+durationcanvas 131709 classinstance_ref 131325 // :CBdd
+  xyzwh 739 268 2010 11 47
+end
+msg 129021 synchronous
+  from durationcanvas_ref 129277
+  to durationcanvas_ref 128893
+  yz 69 2015 explicitmsg "connecter()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 122 57
+msg 129149 return
+  from durationcanvas_ref 128893
+  to durationcanvas_ref 129277
+  yz 98 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129533 synchronous
+  from durationcanvas_ref 129277
+  to durationcanvas_ref 129405
+  yz 144 2015 explicitmsg "choisi ajouter/supprimer matériel"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 128 132
+msg 129917 synchronous
+  from durationcanvas_ref 129405
+  to durationcanvas_ref 129789
+  yz 155 2015 explicitmsg "affiche()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 334 143
+msg 130429 synchronous
+  from durationcanvas_ref 129277
+  to durationcanvas_ref 130301
+  yz 215 2015 explicitmsg "choisi d'ajouter"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 238 203
+msg 130813 synchronous
+  from durationcanvas_ref 129277
+  to durationcanvas_ref 130685
+  yz 262 2015 explicitmsg "ajouter()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 300 250
+msg 131069 synchronous
+  from durationcanvas_ref 130301
+  to durationcanvas_ref 130941
+  yz 221 2015 explicitmsg "affiche()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 462 209
+msg 131581 synchronous
+  from durationcanvas_ref 130685
+  to durationcanvas_ref 131453
+  yz 273 2020 explicitmsg "ajouterMat()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 557 261
+msg 131837 synchronous
+  from durationcanvas_ref 131453
+  to durationcanvas_ref 131709
+  yz 273 2015 explicitmsg "ecrire()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 686 261
+msg 131965 return
+  from durationcanvas_ref 131709
+  to durationcanvas_ref 131453
+  yz 304 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132093 return
+  from durationcanvas_ref 131453
+  to durationcanvas_ref 130685
+  yz 316 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end
