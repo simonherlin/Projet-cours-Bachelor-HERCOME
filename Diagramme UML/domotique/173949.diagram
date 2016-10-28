@@ -25,41 +25,43 @@ classinstance 129533 class_ref 156157 // WiringPi
   name ""   xyz 789 4 2000 life_line_z 2000
 classinstance 133885 class_ref 169469 // CChauffageRasp
   name ""   xyz 639 4 2000 life_line_z 2000
+note 134781 "Vérifie dans la base de données"
+  xyzwh 168.5 60.5 2005 171 43
 durationcanvas 129661 classinstance_ref 129149 // :Client
-  xyzwh 73 69.5 2010 11 432
+  xyzwh 73 69 2010 11 432
 end
 durationcanvas 129789 classinstance_ref 128637 // :Authentification
-  xyzwh 144 67.5 2010 11 65
+  xyzwh 144 67 2010 11 65
 end
 durationcanvas 129917 classinstance_ref 128253 // :IHMPageAccueil
-  xyzwh 230 151.5 2010 11 65
+  xyzwh 230 151 2010 11 65
 end
 durationcanvas 130045 classinstance_ref 129277 // :IHMPanneauControl
-  xyzwh 321 166.5 2010 11 55
+  xyzwh 321 166 2010 11 55
 end
 durationcanvas 130173 classinstance_ref 128381 // :IHMPiece
-  xyzwh 401 253.5 2010 11 36
+  xyzwh 401 253 2010 11 36
 end
 durationcanvas 130301 classinstance_ref 129277 // :IHMPanneauControl
-  xyzwh 321 242.5 2010 11 63
+  xyzwh 321 242 2010 11 63
 end
 durationcanvas 130429 classinstance_ref 128381 // :IHMPiece
-  xyzwh 401 301.5 2010 11 180
+  xyzwh 401 301 2010 11 180
 end
 durationcanvas 130557 classinstance_ref 128893 // :WebService
-  xyzwh 465 323.5 2010 11 139
+  xyzwh 465 323 2010 11 139
 end
 durationcanvas 130685 classinstance_ref 128125 // :CPhpSocket
-  xyzwh 536 328.5 2010 11 124
+  xyzwh 536 328 2010 11 124
 end
 durationcanvas 130813 classinstance_ref 129533 // :WiringPi
-  xyzwh 808 354.5 2010 11 69
+  xyzwh 808 354 2010 11 69
 end
 durationcanvas 130941 classinstance_ref 128509 // :ER433Rasp
-  xyzwh 751 343.5 2010 11 92
+  xyzwh 751 343 2010 11 92
 end
 durationcanvas 131197 classinstance_ref 129021 // :CMonSocket
-  xyzwh 603 340.5 2010 11 108
+  xyzwh 603 340 2010 11 108
 end
 durationcanvas 134013 classinstance_ref 133885 // :CChauffageRasp
   xyzwh 678 355 2010 11 90
@@ -67,91 +69,91 @@ end
 msg 131325 synchronous
   from durationcanvas_ref 129661
   to durationcanvas_ref 129917
-  yz 159.5 2020 explicitmsg "choisi panneau de configuration"
+  yz 159 2020 explicitmsg "choisi panneau de configuration"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 96.5 146.5
+  label_xy 96 146
 msg 131453 return
   from durationcanvas_ref 129789
   to durationcanvas_ref 129661
-  yz 121.5 2025 explicitmsg "reponse"
+  yz 121 2025 explicitmsg "reponse"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 98.5 108.5
+  label_xy 98 108
 msg 131709 return
   from durationcanvas_ref 130429
   to durationcanvas_ref 129661
-  yz 470.5 2015 unspecifiedmsg
+  yz 470 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 131837 synchronous
   from durationcanvas_ref 129661
   to durationcanvas_ref 129789
-  yz 71.5 2015 explicitmsg "connecter()"
+  yz 71 2015 explicitmsg "connecter()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 91.5 58.5
+  label_xy 91 58
 msg 132093 synchronous
   from durationcanvas_ref 130941
   to durationcanvas_ref 130813
-  yz 357.5 2015 explicitmsg "write()"
+  yz 357 2015 explicitmsg "write()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 774.5 339.5
+  label_xy 774 339
 msg 132477 return
   from durationcanvas_ref 130813
   to durationcanvas_ref 130941
-  yz 412.5 2015 unspecifiedmsg
+  yz 412 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 132605 return
   from durationcanvas_ref 131197
   to durationcanvas_ref 130685
-  yz 437.5 2015 unspecifiedmsg
+  yz 437 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 132733 synchronous
   from durationcanvas_ref 130557
   to durationcanvas_ref 130685
-  yz 331.5 2015 unspecifiedmsg
+  yz 331 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 132861 return
   from durationcanvas_ref 130557
   to durationcanvas_ref 130429
-  yz 451.5 2020 unspecifiedmsg
+  yz 451 2020 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 132989 synchronous
   from durationcanvas_ref 130685
   to durationcanvas_ref 131197
-  yz 342.5 2015 unspecifiedmsg
+  yz 342 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 133117 synchronous
   from durationcanvas_ref 130429
   to durationcanvas_ref 130557
-  yz 325.5 2030 unspecifiedmsg
+  yz 325 2030 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 133245 synchronous
   from durationcanvas_ref 129661
   to durationcanvas_ref 130429
-  yz 309.5 2025 explicitmsg "choisit lumiere"
+  yz 309 2025 explicitmsg "choisit lumiere"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 259.5 294.5
+  label_xy 259 294
 msg 133373 return
   from durationcanvas_ref 130685
   to durationcanvas_ref 130557
-  yz 441.5 2015 unspecifiedmsg
+  yz 441 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 133501 synchronous
   from durationcanvas_ref 129661
   to durationcanvas_ref 130301
-  yz 255.5 2025 explicitmsg "Choix piece"
+  yz 255 2025 explicitmsg "Choix piece"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 182.5 242.5
+  label_xy 182 242
 msg 133629 synchronous
   from durationcanvas_ref 130301
   to durationcanvas_ref 130173
-  yz 254.5 2015 explicitmsg "affiche"
+  yz 254 2015 explicitmsg "affiche"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 355.5 239.5
+  label_xy 355 239
 msg 133757 synchronous
   from durationcanvas_ref 129917
   to durationcanvas_ref 130045
-  yz 167.5 2025 explicitmsg "affiche"
+  yz 167 2025 explicitmsg "affiche"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 266.5 154.5
+  label_xy 266 154
 msg 134141 synchronous
   from durationcanvas_ref 131197
   to durationcanvas_ref 134013

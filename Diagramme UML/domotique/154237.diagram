@@ -56,25 +56,25 @@ msg 130557 synchronous
   to durationcanvas_ref 129405
   yz 111 2020 explicitmsg "creeRequeteRechercheInfo()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 424.5 99
+  label_xy 424 99
 msg 130685 synchronous
   from durationcanvas_ref 129917
   to durationcanvas_ref 130045
   yz 188 2015 explicitmsg "ChoisitChauffage()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 81.5 176
+  label_xy 81 176
 msg 130941 synchronous
   from durationcanvas_ref 129917
   to durationcanvas_ref 129149
   yz 103 2015 explicitmsg "AfficherModule()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 26.5 91
+  label_xy 26 91
 msg 131197 synchronous
   from durationcanvas_ref 129917
   to durationcanvas_ref 130301
   yz 311 2015 explicitmsg "quitter()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 103.5 299
+  label_xy 103 299
 msg 131325 return
   from durationcanvas_ref 129277
   to durationcanvas_ref 129789
@@ -85,19 +85,19 @@ msg 131453 synchronous
   to durationcanvas_ref 129661
   yz 106 2015 explicitmsg "CreateIHMModule()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 129.5 94
+  label_xy 129 94
 msg 131709 synchronous
   from durationcanvas_ref 129789
   to durationcanvas_ref 129277
   yz 197 2015 explicitmsg "write()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 487.5 185
+  label_xy 487 185
 msg 131837 synchronous
   from durationcanvas_ref 129405
   to durationcanvas_ref 130173
   yz 114 2025 explicitmsg "lire()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 753.5 102
+  label_xy 753 102
 msg 132093 return
   from durationcanvas_ref 129405
   to durationcanvas_ref 129661

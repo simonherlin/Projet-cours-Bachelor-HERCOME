@@ -1,6 +1,6 @@
 format 75
 "domotique"
-  revision 21
+  revision 22
   modified_by 125 "Herlin"
 
 
@@ -60,6 +60,17 @@ format 75
       size A4
     end
 
+    class 128253 "informaticien"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
     class 128125 "Client"
       visibility package stereotype "actor"
       cpp_decl ""
@@ -116,17 +127,6 @@ format 75
       //activity diagram settings
       package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
       show_infonote default drawing_language default show_stereotype_properties default
-    end
-
-    class 128253 "informaticien"
-      visibility package stereotype "actor"
-      cpp_decl ""
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
     end
 
     usecase 129405 "ajouter composant"
@@ -300,6 +300,16 @@ format 75
       overlapping_bars size A4
     end
 
+    classdiagram 187261 "diagramme de classe HERCOME Web"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 187517 "diagramme de classe HERCOME Center"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
     class 134781 "IHMPageAccueil"
       visibility package 
       cpp_decl ""
@@ -309,6 +319,45 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 128125 // <association>
+	relation 128125 ----
+	  a role_name "" private
+	    classrelation_ref 128125 // <association>
+	  b role_name "" private
+	    classrelation_ref 128253 // <association>
+      end
+
+      classrelation 128381 // <composition>
+	relation 128253 *---
+	  a role_name "" private
+	    classrelation_ref 128381 // <composition>
+	  b role_name "" private
+	    classrelation_ref 128509 // <composition>
+      end
+
+      classrelation 128637 // <composition>
+	relation 128381 *---
+	  a role_name "" private
+	    classrelation_ref 128637 // <composition>
+	  b role_name "" private
+	    classrelation_ref 128765 // <composition>
+      end
+
+      classrelation 129661 // <composition>
+	relation 128893 *---
+	  a role_name "" private
+	    classrelation_ref 129661 // <composition>
+	  b role_name "" private
+	    classrelation_ref 129789 // <composition>
+      end
+
+      classrelation 131453 // <composition>
+	relation 129789 *---
+	  a role_name "" private
+	    classrelation_ref 131453 // <composition>
+	  b role_name "" private
+	    classrelation_ref 131581 // <composition>
+      end
     end
 
     class 134909 "Authentification"
@@ -320,6 +369,31 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      operation 128125 "connecter()"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128253 // <association>
+	relation_ref 128125 // <association>
+      end
+
+      classrelation 128509 // <composition>
+	relation_ref 128253 // <composition>
+      end
+
+      classrelation 130685 // <aggregation>
+	relation 129405 o---
+	  a role_name "" private
+	    classrelation_ref 130685 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 130813 // <aggregation>
+      end
     end
 
     class 135037 "IHMPanneauControl"
@@ -331,6 +405,25 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 128765 // <composition>
+	relation_ref 128381 // <composition>
+      end
+
+      classrelation 128893 // <composition>
+	relation 128509 *---
+	  a role_name "" private
+	    classrelation_ref 128893 // <composition>
+	  b role_name "" private
+	    classrelation_ref 129021 // <composition>
+      end
+
+      classrelation 130429 // <composition>
+	relation 129277 *---
+	  a role_name "" private
+	    classrelation_ref 130429 // <composition>
+	  b role_name "" private
+	    classrelation_ref 130557 // <composition>
+      end
     end
 
     class 135165 "IHMPiece"
@@ -342,28 +435,17 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
-    end
+      classrelation 129021 // <composition>
+	relation_ref 128509 // <composition>
+      end
 
-    class 141821 "CLumiereWeb"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-    end
-
-    class 141949 "ER433Web"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
+      classrelation 129149 // <composition>
+	relation 128637 *---
+	  a role_name "" private
+	    classrelation_ref 129149 // <composition>
+	  b role_name "" private
+	    classrelation_ref 129277 // <composition>
+      end
     end
 
     class 148477 "CPhpSocket"
@@ -375,6 +457,9 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 129533 // <composition>
+	relation_ref 128765 // <composition>
+      end
     end
 
     class 155133 "WebService"
@@ -386,6 +471,17 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 129277 // <composition>
+	relation_ref 128637 // <composition>
+      end
+
+      classrelation 129405 // <composition>
+	relation 128765 *---
+	  a role_name "" private
+	    classrelation_ref 129405 // <composition>
+	  b role_name "" private
+	    classrelation_ref 129533 // <composition>
+      end
     end
 
     class 155261 "CRequetePhp"
@@ -397,6 +493,21 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 130813 // <aggregation>
+	relation_ref 129405 // <aggregation>
+      end
+
+      classrelation 131069 // <aggregation>
+	relation_ref 129533 // <aggregation>
+      end
+
+      classrelation 131197 // <composition>
+	relation 129661 *---
+	  a role_name "" private
+	    classrelation_ref 131197 // <composition>
+	  b role_name "" private
+	    classrelation_ref 131325 // <composition>
+      end
     end
 
     class 155389 "IHMAccueilRasp"
@@ -408,6 +519,21 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 131965 // <composition>
+	relation 130045 *---
+	  a role_name "" private
+	    classrelation_ref 131965 // <composition>
+	  b role_name "" private
+	    classrelation_ref 132093 // <composition>
+      end
+
+      classrelation 132477 // <composition>
+	relation 130301 *---
+	  a role_name "" private
+	    classrelation_ref 132477 // <composition>
+	  b role_name "" private
+	    classrelation_ref 132605 // <composition>
+      end
     end
 
     class 155517 "iHMModuleRasp"
@@ -419,6 +545,73 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 132093 // <composition>
+	relation_ref 130045 // <composition>
+      end
+
+      classrelation 132221 // <composition>
+	relation 130173 *---
+	  a role_name "" private
+	    classrelation_ref 132221 // <composition>
+	  b role_name "" private
+	    classrelation_ref 132349 // <composition>
+      end
+
+      classrelation 132733 // <composition>
+	relation 130429 *---
+	  a role_name "" private
+	    classrelation_ref 132733 // <composition>
+	  b role_name "" private
+	    classrelation_ref 132861 // <composition>
+      end
+
+      classrelation 132989 // <composition>
+	relation 130557 *---
+	  a role_name "" private
+	    classrelation_ref 132989 // <composition>
+	  b role_name "" private
+	    classrelation_ref 133117 // <composition>
+      end
+
+      classrelation 133245 // <composition>
+	relation 130685 *---
+	  a role_name "" private
+	    classrelation_ref 133245 // <composition>
+	  b role_name "" private
+	    classrelation_ref 133373 // <composition>
+      end
+
+      classrelation 134781 // <aggregation>
+	relation 131453 o---
+	  a role_name "" private
+	    classrelation_ref 134781 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 134909 // <aggregation>
+      end
+
+      classrelation 135037 // <aggregation>
+	relation 131581 o---
+	  a role_name "" private
+	    classrelation_ref 135037 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 135165 // <aggregation>
+      end
+
+      classrelation 135293 // <aggregation>
+	relation 131709 o---
+	  a role_name "" private
+	    classrelation_ref 135293 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 135421 // <aggregation>
+      end
+
+      classrelation 137341 // <aggregation>
+	relation 132733 o---
+	  a role_name "" private
+	    classrelation_ref 137341 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 137469 // <aggregation>
+      end
     end
 
     class 155645 "IHMChauffageRasp"
@@ -441,6 +634,25 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 132605 // <composition>
+	relation_ref 130301 // <composition>
+      end
+
+      classrelation 137085 // <composition>
+	relation 132605 *---
+	  a role_name "" private
+	    classrelation_ref 137085 // <composition>
+	  b role_name "" private
+	    classrelation_ref 137213 // <composition>
+      end
+
+      classrelation 137597 // <aggregation>
+	relation 132861 o---
+	  a role_name "" private
+	    classrelation_ref 137597 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 137725 // <aggregation>
+      end
     end
 
     class 155901 "CBdd"
@@ -452,6 +664,9 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 133629 // <composition>
+	relation_ref 130813 // <composition>
+      end
     end
 
     class 156029 "CRequeteRasp"
@@ -463,6 +678,25 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 133373 // <composition>
+	relation_ref 130685 // <composition>
+      end
+
+      classrelation 133501 // <composition>
+	relation 130813 *---
+	  a role_name "" private
+	    classrelation_ref 133501 // <composition>
+	  b role_name "" private
+	    classrelation_ref 133629 // <composition>
+      end
+
+      classrelation 137469 // <aggregation>
+	relation_ref 132733 // <aggregation>
+      end
+
+      classrelation 137725 // <aggregation>
+	relation_ref 132861 // <aggregation>
+      end
     end
 
     class 156157 "WiringPi"
@@ -474,6 +708,9 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 134653 // <composition>
+	relation_ref 131325 // <composition>
+      end
     end
 
     class 156285 "ER433Rasp"
@@ -485,6 +722,29 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 133885 // <aggregation>
+	relation_ref 130941 // <aggregation>
+      end
+
+      classrelation 134141 // <aggregation>
+	relation_ref 131069 // <aggregation>
+      end
+
+      classrelation 134397 // <aggregation>
+	relation_ref 131197 // <aggregation>
+      end
+
+      classrelation 134525 // <composition>
+	relation 131325 *---
+	  a role_name "" private
+	    classrelation_ref 134525 // <composition>
+	  b role_name "" private
+	    classrelation_ref 134653 // <composition>
+      end
+
+      classrelation 136957 // <aggregation>
+	relation_ref 132477 // <aggregation>
+      end
     end
 
     class 156413 "CLumiereRasp"
@@ -496,6 +756,25 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 132349 // <composition>
+	relation_ref 130173 // <composition>
+      end
+
+      classrelation 134013 // <aggregation>
+	relation 131069 o---
+	  a role_name "" private
+	    classrelation_ref 134013 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 134141 // <aggregation>
+      end
+
+      classrelation 135165 // <aggregation>
+	relation_ref 131581 // <aggregation>
+      end
+
+      classrelation 135933 // <aggregation>
+	relation_ref 131965 // <aggregation>
+      end
     end
 
     class 162941 "CStoreRasp"
@@ -507,6 +786,25 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 133117 // <composition>
+	relation_ref 130557 // <composition>
+      end
+
+      classrelation 133757 // <aggregation>
+	relation 130941 o---
+	  a role_name "" private
+	    classrelation_ref 133757 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 133885 // <aggregation>
+      end
+
+      classrelation 134909 // <aggregation>
+	relation_ref 131453 // <aggregation>
+      end
+
+      classrelation 136189 // <aggregation>
+	relation_ref 132093 // <aggregation>
+      end
     end
 
     class 169469 "CChauffageRasp"
@@ -518,6 +816,25 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 132861 // <composition>
+	relation_ref 130429 // <composition>
+      end
+
+      classrelation 134269 // <aggregation>
+	relation 131197 o---
+	  a role_name "" private
+	    classrelation_ref 134269 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 134397 // <aggregation>
+      end
+
+      classrelation 135421 // <aggregation>
+	relation_ref 131709 // <aggregation>
+      end
+
+      classrelation 135677 // <aggregation>
+	relation_ref 131837 // <aggregation>
+      end
     end
 
     class 175997 "CMonSocket"
@@ -529,6 +846,29 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 135549 // <aggregation>
+	relation 131837 o---
+	  a role_name "" private
+	    classrelation_ref 135549 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 135677 // <aggregation>
+      end
+
+      classrelation 135805 // <aggregation>
+	relation 131965 o---
+	  a role_name "" private
+	    classrelation_ref 135805 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 135933 // <aggregation>
+      end
+
+      classrelation 136061 // <aggregation>
+	relation 132093 o---
+	  a role_name "" private
+	    classrelation_ref 136061 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 136189 // <aggregation>
+      end
     end
 
     class 182525 "CAlarme"
@@ -540,6 +880,9 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 137213 // <composition>
+	relation_ref 132605 // <composition>
+      end
     end
 
     class 189053 "CCamera"
@@ -551,6 +894,13 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 131837 // <composition>
+	relation_ref 129917 // <composition>
+      end
+
+      classrelation 136445 // <composition>
+	relation_ref 132221 // <composition>
+      end
     end
 
     class 189181 "CCapteurPrsence"
@@ -562,6 +912,21 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 136317 // <composition>
+	relation 132221 *---
+	  a role_name "" private
+	    classrelation_ref 136317 // <composition>
+	  b role_name "" private
+	    classrelation_ref 136445 // <composition>
+      end
+
+      classrelation 136573 // <composition>
+	relation 132349 *---
+	  a role_name "" private
+	    classrelation_ref 136573 // <composition>
+	  b role_name "" private
+	    classrelation_ref 136701 // <composition>
+      end
     end
 
     class 195709 "CBuffer"
@@ -573,6 +938,17 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 136701 // <composition>
+	relation_ref 132349 // <composition>
+      end
+
+      classrelation 136829 // <aggregation>
+	relation 132477 o---
+	  a role_name "" private
+	    classrelation_ref 136829 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 136957 // <aggregation>
+      end
     end
 
     class 202237 "IHMAjouterSupprimerMatériel"
@@ -584,6 +960,25 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 129789 // <composition>
+	relation_ref 128893 // <composition>
+      end
+
+      classrelation 129917 // <composition>
+	relation 129021 *---
+	  a role_name "" private
+	    classrelation_ref 129917 // <composition>
+	  b role_name "" private
+	    classrelation_ref 130045 // <composition>
+      end
+
+      classrelation 130173 // <composition>
+	relation 129149 *---
+	  a role_name "" private
+	    classrelation_ref 130173 // <composition>
+	  b role_name "" private
+	    classrelation_ref 130301 // <composition>
+      end
     end
 
     class 202365 "IHMAjouter"
@@ -595,6 +990,9 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 130301 // <composition>
+	relation_ref 129149 // <composition>
+      end
     end
 
     class 202493 "IHMSupprimer"
@@ -606,6 +1004,67 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 130045 // <composition>
+	relation_ref 129021 // <composition>
+      end
+    end
+
+    class 209021 "CBddWeb"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 131325 // <composition>
+	relation_ref 129661 // <composition>
+      end
+    end
+
+    class 209277 "IHMVisualiserDonnee"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130557 // <composition>
+	relation_ref 129277 // <composition>
+      end
+
+      classrelation 130941 // <aggregation>
+	relation 129533 o---
+	  a role_name "" private
+	    classrelation_ref 130941 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 131069 // <aggregation>
+      end
+    end
+
+    class 209405 "IHMCamera"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 131581 // <composition>
+	relation_ref 129789 // <composition>
+      end
+
+      classrelation 131709 // <composition>
+	relation 129917 *---
+	  a role_name "" private
+	    classrelation_ref 131709 // <composition>
+	  b role_name "" private
+	    classrelation_ref 131837 // <composition>
+      end
     end
   end
 end

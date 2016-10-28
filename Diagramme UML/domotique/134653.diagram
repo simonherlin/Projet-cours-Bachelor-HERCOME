@@ -25,6 +25,8 @@ classinstance 133885 class_ref 156285 // ER433Rasp
   name ""   xyz 724.5 4 2000 life_line_z 2000
 classinstance 135677 class_ref 175997 // CMonSocket
   name ""   xyz 579 4 2000 life_line_z 2000
+note 136573 "Vérifie dans la base de données"
+  xyzwh 171 71 2005 171 43
 durationcanvas 128509 classinstance_ref 128125 // :Client
   xyzwh 77 73 2010 11 432
 end

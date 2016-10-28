@@ -28,10 +28,10 @@ durationcanvas 130557 classinstance_ref 130429 // :IHMAlarmeRasp
   xyzwh 262 96 2010 11 44
 end
 durationcanvas 131325 classinstance_ref 130429 // :IHMAlarmeRasp
-  xyzwh 268 181 2010 0 33
+  xyzwh 262 181 2010 11 33
 end
 durationcanvas 131453 classinstance_ref 130429 // :IHMAlarmeRasp
-  xyzwh 268 354 2010 0 27
+  xyzwh 262 354 2010 11 27
 end
 durationcanvas 131581 classinstance_ref 129021 // :CAlarme
   xyzwh 365 229 2010 11 67
