@@ -14,8 +14,8 @@ classinstance 128893 class_ref 156285 // ER433Rasp
   name ""   xyz 416 5 2000 life_line_z 2000
 classinstance 129021 class_ref 156157 // WiringPi
   name ""   xyz 536 4 2000 life_line_z 2000
-classinstance 131965 class_ref 162941 // CStoreRasp
-  name ""   xyz 309 4 2000 life_line_z 2000
+classinstance 131965 class_ref 162941 // CCommandeStore
+  name ""   xyz 296 4 2000 life_line_z 2000
 durationcanvas 129149 classinstance_ref 128637 // :IHMAccueilRasp
   xyzwh 109 83 2010 11 45
 end
@@ -40,7 +40,7 @@ end
 durationcanvas 130173 classinstance_ref 128125 // :CBdd
   xyzwh 798 97 2010 11 36
 end
-durationcanvas 132093 classinstance_ref 131965 // :CStoreRasp
+durationcanvas 132093 classinstance_ref 131965 // :CCommandeStore
   xyzwh 336 170 2010 11 93
 end
 durationcanvas 133117 classinstance_ref 128509 // :iHMModuleRasp

@@ -1,6 +1,6 @@
 format 75
 "domotique"
-  revision 22
+  revision 26
   modified_by 125 "Herlin"
 
 
@@ -82,53 +82,6 @@ format 75
       
     end
 
-    usecase 128509 "visualiser information"
-      //use case diagram settings
-      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
-      //sequence diagram settings
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      //collaboration diagram settings
-      show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
-      //class diagram settings
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      //object diagram settings
-       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
-      //state diagram settings
-      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
-      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
-      //activity diagram settings
-      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
-      show_infonote default drawing_language default show_stereotype_properties default
-      simplerelation 129533
-	-_->
-	  on usecase_ref 129661 // authentification
-      end
-
-      simplerelation 136573
-	-_->
-	  on usecase_ref 136317 // Commande vocal
-      end
-    end
-
-    usecase 129149 "gerer materiel"
-      //use case diagram settings
-      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
-      //sequence diagram settings
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      //collaboration diagram settings
-      show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
-      //class diagram settings
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      //object diagram settings
-       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
-      //state diagram settings
-      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
-      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
-      //activity diagram settings
-      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
-      show_infonote default drawing_language default show_stereotype_properties default
-    end
-
     usecase 129405 "ajouter composant"
       //use case diagram settings
       package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
@@ -146,6 +99,11 @@ format 75
       //activity diagram settings
       package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
       show_infonote default drawing_language default show_stereotype_properties default
+      sequencediagram 180477 "ajouter matériel"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
       simplerelation 129661
 	-_->
 	  on usecase_ref 129661 // authentification
@@ -169,6 +127,11 @@ format 75
       //activity diagram settings
       package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
       show_infonote default drawing_language default show_stereotype_properties default
+      sequencediagram 180733 "supprimer matériel"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
       simplerelation 129789
 	-_->
 	  on usecase_ref 129661 // authentification
@@ -192,9 +155,13 @@ format 75
       //activity diagram settings
       package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
       show_infonote default drawing_language default show_stereotype_properties default
+      sequencediagram 194813 "authentification"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
     end
 
-    usecase 136189 "gerer materiel "
+    usecase 128509 "visualiser information"
       //use case diagram settings
       package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
       //sequence diagram settings
@@ -211,18 +178,111 @@ format 75
       //activity diagram settings
       package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
       show_infonote default drawing_language default show_stereotype_properties default
+      sequencediagram 194685 "visualiser données (store) center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 194557 "visualiser données (chauffage) center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 194429 "visualiser données (lumiere) center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 194173 "visualiser données (Store) Web"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 194301 "visualiser données (lumiere) WEB"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 194045 "visualiser données (Chauffage) WEB"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      simplerelation 129533
+	-_->
+	  on usecase_ref 129661 // authentification
+      end
+    end
+
+    usecase 136189 "gestion composant"
+      //use case diagram settings
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      //sequence diagram settings
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      //collaboration diagram settings
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      //class diagram settings
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      //object diagram settings
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      //state diagram settings
+      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+      //activity diagram settings
+      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+      show_infonote default drawing_language default show_stereotype_properties default
+      sequencediagram 201597 "Gestion composant (barriere) center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 160765 "Activer/Desactiver alarme"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 154237 "Gérer matériel (Chauffage) center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 147709 "Gérer matériel (Store) center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 141181 "Gérer matériel (lumiére) center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 173949 "Gérer matériel (Chauffage) WEB"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 173821 "Gérer matériel ( Store) WEB"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 134653 "Gérer matériel (lumière) WEB"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 194941 "Gestion utilisateur barriere WEB"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
       simplerelation 136317
 	-_->
 	  on usecase_ref 129661 // authentification
       end
-
-      simplerelation 136445
-	-_->
-	  on usecase_ref 136317 // Commande vocal
-      end
     end
 
-    usecase 136317 "Commande vocal"
+    usecase 142845 "être alerter"
       //use case diagram settings
       package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
       //sequence diagram settings
@@ -239,73 +299,23 @@ format 75
       //activity diagram settings
       package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
       show_infonote default drawing_language default show_stereotype_properties default
-      simplerelation 136701
-	-_->
-	  on usecase_ref 136189 // gerer materiel 
+      sequencediagram 167293 "detectionPrésence"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
       end
-
-      simplerelation 136829
-	-_->
-	  on usecase_ref 128509 // visualiser information
-      end
-    end
-
-    sequencediagram 134653 "Gérer matériel (lumière) WEB"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 173821 "Gérer matériel ( Store) WEB"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 173949 "Gérer matériel (Chauffage) WEB"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 141181 "Gérer matériel (lumiére) center"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 147709 "Gérer matériel (Store) center"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 154237 "Gérer matériel (Chauffage) center"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 160765 "Activer/Desactiver alarme"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 167293 "detectionPrésence"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 180477 "ajouter matériel"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 180733 "supprimer matériel"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
     end
 
     classdiagram 187261 "diagramme de classe HERCOME Web"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4
     end
 
     classdiagram 187517 "diagramme de classe HERCOME Center"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 208125 "diagramme de classe gestion bariere"
       draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4
     end
@@ -358,6 +368,56 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 131581 // <composition>
       end
+
+      classrelation 152061 // <composition>
+	relation 146685 *---
+	  a role_name "" private
+	    classrelation_ref 152061 // <composition>
+	  b role_name "" private
+	    classrelation_ref 152189 // <composition>
+      end
+
+      classrelation 154621 // <directional composition>
+	relation 148733 *-->
+	  a role_name "" private
+	    classrelation_ref 154621 // <directional composition>
+	  b parent class_ref 209405 // IHMCamera
+      end
+
+      classrelation 154749 // <directional composition>
+	relation 148861 *-->
+	  a role_name "" private
+	    classrelation_ref 154749 // <directional composition>
+	  b parent class_ref 222845 // IHMBarriere
+      end
+
+      classrelation 154877 // <directional composition>
+	relation 148989 *-->
+	  a role_name "" private
+	    classrelation_ref 154877 // <directional composition>
+	  b parent class_ref 222845 // IHMBarriere
+      end
+
+      classrelation 155005 // <directional composition>
+	relation 149117 *-->
+	  a role_name "" private
+	    classrelation_ref 155005 // <directional composition>
+	  b parent class_ref 134909 // Authentification
+      end
+
+      classrelation 155389 // <directional composition>
+	relation 149501 *-->
+	  a role_name "" private
+	    classrelation_ref 155389 // <directional composition>
+	  b parent class_ref 135037 // IHMPanneauControl
+      end
+
+      classrelation 157181 // <directional composition>
+	relation 151165 *-->
+	  a role_name "" private
+	    classrelation_ref 157181 // <directional composition>
+	  b parent class_ref 202237 // IHMAjouterSupprimerMatériel
+      end
     end
 
     class 134909 "Authentification"
@@ -369,7 +429,7 @@ format 75
       idl_decl ""
       explicit_switch_type ""
       
-      operation 128125 "connecter()"
+      operation 128125 "Connecter"
 	public explicit_return_type ""
 	nparams 0
 	
@@ -393,6 +453,16 @@ format 75
 	    classrelation_ref 130685 // <aggregation>
 	  b role_name "" private
 	    classrelation_ref 130813 // <aggregation>
+      end
+
+      operation 136061 "Deconnecter"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
       end
     end
 
@@ -424,6 +494,20 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 130557 // <composition>
       end
+
+      classrelation 155517 // <directional composition>
+	relation 149629 *-->
+	  a role_name "" private
+	    classrelation_ref 155517 // <directional composition>
+	  b parent class_ref 135165 // IHMPiece
+      end
+
+      classrelation 155645 // <directional composition>
+	relation 149757 *-->
+	  a role_name "" private
+	    classrelation_ref 155645 // <directional composition>
+	  b parent class_ref 209277 // IHMVisualiserDonnee
+      end
     end
 
     class 135165 "IHMPiece"
@@ -445,6 +529,21 @@ format 75
 	    classrelation_ref 129149 // <composition>
 	  b role_name "" private
 	    classrelation_ref 129277 // <composition>
+      end
+
+      classrelation 144253 // <aggregation>
+	relation 139389 o---
+	  a role_name "" private
+	    classrelation_ref 144253 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 144381 // <aggregation>
+      end
+
+      classrelation 155773 // <directional composition>
+	relation 149885 *-->
+	  a role_name "" private
+	    classrelation_ref 155773 // <directional composition>
+	  b parent class_ref 155133 // WebService
       end
     end
 
@@ -482,6 +581,13 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 129533 // <composition>
       end
+
+      classrelation 154365 // <directional composition>
+	relation 148477 *-->
+	  a role_name "" private
+	    classrelation_ref 154365 // <directional composition>
+	  b parent class_ref 148477 // CPhpSocket
+      end
     end
 
     class 155261 "CRequetePhp"
@@ -508,6 +614,53 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 131325 // <composition>
       end
+
+      classrelation 144381 // <aggregation>
+	relation_ref 139389 // <aggregation>
+      end
+
+      operation 135549 "AjouterMateriel"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135677 "SupprimerMateriel"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 144637 // <aggregation>
+	relation_ref 139517 // <aggregation>
+      end
+
+      classrelation 144893 // <aggregation>
+	relation_ref 139645 // <aggregation>
+      end
+
+      classrelation 145149 // <aggregation>
+	relation_ref 139773 // <aggregation>
+      end
+
+      classrelation 152445 // <aggregation>
+	relation_ref 146813 // <aggregation>
+      end
+
+      classrelation 154493 // <directional composition>
+	relation 148605 *-->
+	  a role_name "" private
+	    classrelation_ref 154493 // <directional composition>
+	  b parent class_ref 209021 // CBddWeb
+      end
     end
 
     class 155389 "IHMAccueilRasp"
@@ -533,6 +686,20 @@ format 75
 	    classrelation_ref 132477 // <composition>
 	  b role_name "" private
 	    classrelation_ref 132605 // <composition>
+      end
+
+      classrelation 156413 // <directional composition>
+	relation 150397 *-->
+	  a role_name "" private
+	    classrelation_ref 156413 // <directional composition>
+	  b parent class_ref 155773 // IHMAlarmeRasp
+      end
+
+      classrelation 156541 // <directional composition>
+	relation 150525 *-->
+	  a role_name "" private
+	    classrelation_ref 156541 // <directional composition>
+	  b parent class_ref 155517 // iHMModuleRasp
       end
     end
 
@@ -653,6 +820,13 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 137725 // <aggregation>
       end
+
+      classrelation 156285 // <directional composition>
+	relation 150269 *-->
+	  a role_name "" private
+	    classrelation_ref 156285 // <directional composition>
+	  b parent class_ref 182525 // CAlarme
+      end
     end
 
     class 155901 "CBdd"
@@ -666,6 +840,53 @@ format 75
       
       classrelation 133629 // <composition>
 	relation_ref 130813 // <composition>
+      end
+
+      operation 134653 "Receive"
+	cpp_virtual public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 134781 "Send"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      attribute 128125 "database"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128253 "password"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128381 "login"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
     end
 
@@ -697,6 +918,50 @@ format 75
       classrelation 137725 // <aggregation>
 	relation_ref 132861 // <aggregation>
       end
+
+      classrelation 153469 // <directional composition>
+	relation 147709 *-->
+	  a role_name "" private
+	    classrelation_ref 153469 // <directional composition>
+	  b parent class_ref 155901 // CBdd
+      end
+
+      operation 144125 "requeteLectureStore"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 144253 "requeteLectureLumiere"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 144381 "requeteLectureChauffage"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 156669 // <directional composition>
+	relation 150653 *-->
+	  a role_name "" private
+	    classrelation_ref 156669 // <directional composition>
+	  b parent class_ref 155901 // CBdd
+      end
     end
 
     class 156157 "WiringPi"
@@ -710,6 +975,26 @@ format 75
       
       classrelation 134653 // <composition>
 	relation_ref 131325 // <composition>
+      end
+
+      operation 144893 "write"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 145021 "read"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
       end
     end
 
@@ -745,9 +1030,33 @@ format 75
       classrelation 136957 // <aggregation>
 	relation_ref 132477 // <aggregation>
       end
+
+      classrelation 154237 // <directional composition>
+	relation 148349 *-->
+	  a role_name "" private
+	    classrelation_ref 154237 // <directional composition>
+	  b parent class_ref 156157 // WiringPi
+      end
+
+      operation 143869 "envoyerTrame"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 157053 // <directional composition>
+	relation 151037 *-->
+	  a role_name "" private
+	    classrelation_ref 157053 // <directional composition>
+	  b parent class_ref 156157 // WiringPi
+      end
     end
 
-    class 156413 "CLumiereRasp"
+    class 156413 "CCommandeLumiere"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -775,9 +1084,36 @@ format 75
       classrelation 135933 // <aggregation>
 	relation_ref 131965 // <aggregation>
       end
+
+      classrelation 145405 // <generalisation>
+	relation 140029 ---|>
+	  a public
+	    classrelation_ref 145405 // <generalisation>
+	  b parent class_ref 215933 // CCommande
+      end
+
+      operation 144509 "allumer"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 144637 "eteindre"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
     end
 
-    class 162941 "CStoreRasp"
+    class 162941 "CCommandeStore"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -805,9 +1141,36 @@ format 75
       classrelation 136189 // <aggregation>
 	relation_ref 132093 // <aggregation>
       end
+
+      operation 135293 "Descendre"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135421 "Monter"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 145277 // <generalisation>
+	relation 139901 ---|>
+	  a public
+	    classrelation_ref 145277 // <generalisation>
+	  b parent class_ref 215933 // CCommande
+      end
     end
 
-    class 169469 "CChauffageRasp"
+    class 169469 "CCommandeChauffage"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -834,6 +1197,32 @@ format 75
 
       classrelation 135677 // <aggregation>
 	relation_ref 131837 // <aggregation>
+      end
+
+      classrelation 145533 // <generalisation>
+	relation 140157 ---|>
+	  a public
+	    classrelation_ref 145533 // <generalisation>
+	  b parent class_ref 215933 // CCommande
+      end
+
+      attribute 135293 "temperature"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 144765 "choisirTemperature"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
       end
     end
 
@@ -869,6 +1258,36 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 136189 // <aggregation>
       end
+
+      operation 145149 "send"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 145277 "receive"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 145405 "OnReceive"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
     end
 
     class 182525 "CAlarme"
@@ -882,6 +1301,45 @@ format 75
       
       classrelation 137213 // <composition>
 	relation_ref 132605 // <composition>
+      end
+
+      operation 134909 "Sonner"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135037 "Activer"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135165 "Desactiver"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      attribute 128509 "Etat"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
     end
 
@@ -900,6 +1358,26 @@ format 75
 
       classrelation 136445 // <composition>
 	relation_ref 132221 // <composition>
+      end
+
+      operation 142845 "saveCurrentImage"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 142973 "démarerCaméra"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
       end
     end
 
@@ -926,6 +1404,29 @@ format 75
 	    classrelation_ref 136573 // <composition>
 	  b role_name "" private
 	    classrelation_ref 136701 // <composition>
+      end
+
+      classrelation 156797 // <directional composition>
+	relation 150781 *-->
+	  a role_name "" private
+	    classrelation_ref 156797 // <directional composition>
+	  b parent class_ref 189053 // CCamera
+      end
+
+      classrelation 156925 // <directional composition>
+	relation 150909 *-->
+	  a role_name "" private
+	    classrelation_ref 156925 // <directional composition>
+	  b parent class_ref 195709 // CBuffer
+      end
+
+      attribute 135165 "activer"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
     end
 
@@ -979,6 +1480,20 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 130301 // <composition>
       end
+
+      classrelation 155133 // <directional composition>
+	relation 149245 *-->
+	  a role_name "" private
+	    classrelation_ref 155133 // <directional composition>
+	  b parent class_ref 202493 // IHMSupprimer
+      end
+
+      classrelation 155261 // <directional composition>
+	relation 149373 *-->
+	  a role_name "" private
+	    classrelation_ref 155261 // <directional composition>
+	  b parent class_ref 202365 // IHMAjouter
+      end
     end
 
     class 202365 "IHMAjouter"
@@ -992,6 +1507,24 @@ format 75
       
       classrelation 130301 // <composition>
 	relation_ref 129149 // <composition>
+      end
+
+      classrelation 144765 // <aggregation>
+	relation 139645 o---
+	  a role_name "" private
+	    classrelation_ref 144765 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 144893 // <aggregation>
+      end
+
+      operation 136189 "ajouterComposant"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
       end
     end
 
@@ -1007,6 +1540,24 @@ format 75
       classrelation 130045 // <composition>
 	relation_ref 129021 // <composition>
       end
+
+      classrelation 145021 // <aggregation>
+	relation 139773 o---
+	  a role_name "" private
+	    classrelation_ref 145021 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 145149 // <aggregation>
+      end
+
+      operation 136317 "supprimerComposant"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
     end
 
     class 209021 "CBddWeb"
@@ -1020,6 +1571,26 @@ format 75
       
       classrelation 131325 // <composition>
 	relation_ref 129661 // <composition>
+      end
+
+      operation 135805 "Send"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135933 "Receive"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
       end
     end
 
@@ -1043,6 +1614,14 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 131069 // <aggregation>
       end
+
+      classrelation 144509 // <aggregation>
+	relation 139517 o---
+	  a role_name "" private
+	    classrelation_ref 144509 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 144637 // <aggregation>
+      end
     end
 
     class 209405 "IHMCamera"
@@ -1064,6 +1643,286 @@ format 75
 	    classrelation_ref 131709 // <composition>
 	  b role_name "" private
 	    classrelation_ref 131837 // <composition>
+      end
+    end
+
+    class 215933 "CCommande"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 145533 "ecrireSortie"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 145661 "lireSortie"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 216061 "CSysteme"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 152573 // <composition>
+	relation 146941 *---
+	  a role_name "" private
+	    classrelation_ref 152573 // <composition>
+	  b role_name "" private
+	    classrelation_ref 152701 // <composition>
+      end
+
+      classrelation 152829 // <directional composition>
+	relation 147069 *-->
+	  a role_name "" private
+	    classrelation_ref 152829 // <directional composition>
+	  b parent class_ref 216189 // COpenAlpr
+      end
+
+      classrelation 152957 // <directional composition>
+	relation 147197 *-->
+	  a role_name "" private
+	    classrelation_ref 152957 // <directional composition>
+	  b parent class_ref 189053 // CCamera
+      end
+
+      classrelation 153085 // <directional composition>
+	relation 147325 *-->
+	  a role_name "" private
+	    classrelation_ref 153085 // <directional composition>
+	  b parent class_ref 222973 // CBarriere
+      end
+
+      classrelation 153213 // <directional composition>
+	relation 147453 *-->
+	  a role_name "" private
+	    classrelation_ref 153213 // <directional composition>
+	  b parent class_ref 216317 // CCapteur
+      end
+
+      classrelation 153341 // <directional composition>
+	relation 147581 *-->
+	  a role_name "" private
+	    classrelation_ref 153341 // <directional composition>
+	  b parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 155901 // <directional composition>
+	relation 150013 *-->
+	  a role_name "" private
+	    classrelation_ref 155901 // <directional composition>
+	  b parent class_ref 189053 // CCamera
+      end
+    end
+
+    class 216189 "COpenAlpr"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 152701 // <composition>
+	relation_ref 146941 // <composition>
+      end
+
+      operation 143997 "numeroPlaque"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 216317 "CCapteur"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 153725 // <aggregation>
+	relation 147965 o---
+	  a role_name "" private
+	    classrelation_ref 153725 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 153853 // <aggregation>
+      end
+
+      attribute 135037 "presence"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 143357 "getPresence"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 143485 "demandePresence"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 222845 "IHMBarriere"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 152189 // <composition>
+	relation_ref 146685 // <composition>
+      end
+
+      classrelation 152317 // <aggregation>
+	relation 146813 o---
+	  a role_name "" private
+	    classrelation_ref 152317 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 152445 // <aggregation>
+      end
+    end
+
+    class 222973 "CBarriere"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 153597 // <directional aggregation>
+	relation 147837 o-->
+	  a role_name "" private
+	    classrelation_ref 153597 // <directional aggregation>
+	  b parent class_ref 223101 // Arduino
+      end
+
+      operation 143101 "ouvrir"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 143229 "fermer"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 156029 // <aggregation>
+	relation 150141 o---
+	  a role_name "" private
+	    classrelation_ref 156029 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 156157 // <aggregation>
+      end
+    end
+
+    class 223101 "Arduino"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 153853 // <aggregation>
+	relation_ref 147965 // <aggregation>
+      end
+
+      classrelation 153981 // <directional composition>
+	relation 148093 *-->
+	  a role_name "" private
+	    classrelation_ref 153981 // <directional composition>
+	  b parent class_ref 156157 // WiringPi
+      end
+
+      classrelation 154109 // <directional composition>
+	relation 148221 *-->
+	  a role_name "" private
+	    classrelation_ref 154109 // <directional composition>
+	  b parent class_ref 156285 // ER433Rasp
+      end
+
+      operation 143613 "ecrirSortie"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 143741 "lireSortie"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 156157 // <aggregation>
+	relation_ref 150141 // <aggregation>
       end
     end
   end

@@ -88,7 +88,7 @@ msg 131069 synchronous
 msg 131581 synchronous
   from durationcanvas_ref 130685
   to durationcanvas_ref 131453
-  yz 273 2020 explicitmsg "ajouterMat()"
+  yz 273 2020 explicitmsg "ajouterComposant()"
   show_full_operations_definition default drawing_language default show_context_mode default
   label_xy 557 261
 msg 131837 synchronous

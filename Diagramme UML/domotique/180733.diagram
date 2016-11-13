@@ -99,9 +99,9 @@ msg 132349 synchronous
 msg 132605 synchronous
   from durationcanvas_ref 132221
   to durationcanvas_ref 129533
-  yz 281 2025 explicitmsg "supprimerMat()"
+  yz 281 2025 explicitmsg "supprimerComposant()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 570 269
+  label_xy 554 262
 msg 132733 return
   from durationcanvas_ref 129533
   to durationcanvas_ref 132221

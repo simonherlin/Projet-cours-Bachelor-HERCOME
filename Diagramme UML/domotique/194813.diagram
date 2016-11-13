@@ -1,0 +1,53 @@
+format 75
+
+classinstance 128125 class_ref 128253 // informaticien
+  name ""   xyz 9 4 2000 life_line_z 2000
+classinstance 128253 class_ref 134909 // Authentification
+  name ""   xyz 112 4 2000 life_line_z 2000
+classinstance 128381 class_ref 155261 // CRequetePhp
+  name ""   xyz 249 4 2000 life_line_z 2000
+classinstance 128509 class_ref 209021 // CBddWeb
+  name ""   xyz 378 4 2000 life_line_z 2000
+durationcanvas 128637 classinstance_ref 128125 // :informaticien
+  xyzwh 34 82 2010 11 87
+end
+durationcanvas 128765 classinstance_ref 128253 // :Authentification
+  xyzwh 146 82 2010 11 69
+end
+durationcanvas 129021 classinstance_ref 128381 // :CRequetePhp
+  xyzwh 280 85 2010 11 60
+end
+durationcanvas 129277 classinstance_ref 128509 // :CBddWeb
+  xyzwh 401 90 2010 11 38
+end
+msg 128893 synchronous
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 128765
+  yz 83 2015 msg operation_ref 128125 // "Connecter()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 71 71
+msg 129149 synchronous
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 129021
+  yz 86 2020 explicitmsg "verificationCode()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 180 74
+msg 129405 synchronous
+  from durationcanvas_ref 129021
+  to durationcanvas_ref 129277
+  yz 91 2015 explicitmsg "lire()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 337 79
+msg 129533 return
+  from durationcanvas_ref 129277
+  to durationcanvas_ref 129021
+  yz 117 2015 explicitmsg "resultat"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 331 105
+msg 129661 return
+  from durationcanvas_ref 129021
+  to durationcanvas_ref 128765
+  yz 134 2015 explicitmsg "reponse"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 202 122
+end

@@ -1,0 +1,40 @@
+format 75
+
+classinstance 128125 class_ref 155389 // IHMAccueilRasp
+  name ""   xyz 132 7 2000 life_line_z 2000
+classinstance 128253 class_ref 156029 // CRequeteRasp
+  name ""   xyz 312 7 2000 life_line_z 2000
+classinstance 128381 class_ref 155901 // CBdd
+  name ""   xyz 435 7 2000 life_line_z 2000
+durationcanvas 128509 classinstance_ref 128253 // :CRequeteRasp
+  xyzwh 346 81 2010 11 106
+end
+durationcanvas 128637 classinstance_ref 128125 // :IHMAccueilRasp
+  xyzwh 168 73 2010 11 129
+end
+durationcanvas 128765 classinstance_ref 128381 // :CBdd
+  xyzwh 454 92 2010 11 81
+end
+msg 128893 synchronous
+  from durationcanvas_ref 128509
+  to durationcanvas_ref 128765
+  yz 93 2025 explicitmsg "lire()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 371 80
+msg 129021 synchronous
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 128509
+  yz 83 2030 explicitmsg "requeteLectureLumiere()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 216 71
+msg 129149 return
+  from durationcanvas_ref 128509
+  to durationcanvas_ref 128637
+  yz 176 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129277 return
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 128509
+  yz 158 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

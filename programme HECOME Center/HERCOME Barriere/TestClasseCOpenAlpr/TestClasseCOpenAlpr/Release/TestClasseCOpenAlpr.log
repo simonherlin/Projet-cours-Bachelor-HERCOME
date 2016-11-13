@@ -1,0 +1,11 @@
+﻿  stdafx.cpp
+  OpenAlpr.cpp
+OpenAlpr.cpp(35): warning C4018: '<' : incompatibilité signed/unsigned
+OpenAlpr.cpp(40): warning C4018: '<' : incompatibilité signed/unsigned
+  TestClasseCOpenAlpr.cpp
+  TestClasseCOpenAlprDlg.cpp
+     Création de la bibliothèque c:\users\herlin\documents\visual studio 2015\Projects\TestClasseCOpenAlpr\Release\TestClasseCOpenAlpr.lib et de l'objet c:\users\herlin\documents\visual studio 2015\Projects\TestClasseCOpenAlpr\Release\TestClasseCOpenAlpr.exp
+  Génération de code en cours
+  All 549 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Fin de la génération du code
+  TestClasseCOpenAlpr.vcxproj -> c:\users\herlin\documents\visual studio 2015\Projects\TestClasseCOpenAlpr\Release\TestClasseCOpenAlpr.exe

@@ -9,25 +9,23 @@ classcanvas 131965 class_ref 128253 // informaticien
   xyz 11 358 2000
 end
 usecasecanvas 132093 usecase_ref 129405 // ajouter composant
-  xyzwh 256 348 3005 64 32 label_xy 250 380
+  xyzwh 258 346 3005 64 32 label_xy 252 378
 end
 usecasecanvas 132221 usecase_ref 129533 // supprimer composant
   xyzwh 255 421 3005 64 32 label_xy 242 455
 end
 usecasecanvas 132605 usecase_ref 129661 // authentification
-  xyzwh 550 387 3005 64 32 label_xy 550 419
+  xyzwh 508 303 3005 64 32 label_xy 508 335
 end
-usecasecanvas 133629 usecase_ref 136189 // gerer materiel 
-  xyzwh 261 213 3005 64 32 label_xy 263 245
+usecasecanvas 133629 usecase_ref 136189 // gestion composant
+  xyzwh 257 193 3005 64 32 label_xy 249 225
 end
 usecasecanvas 134269 usecase_ref 128509 // visualiser information
-  xyzwh 261 275 3011 64 32 label_xy 248 307
+  xyzwh 260 262 3011 64 32 label_xy 247 294
 end
-usecasecanvas 134653 usecase_ref 136317 // Commande vocal
-  xyzwh 543 212 3005 64 32 label_xy 538 244
+usecasecanvas 135549 usecase_ref 142845 // être alerter
+  xyzwh 259 98 3005 64 32 label_xy 268 130
 end
-note 135421 "Pour gerer le matériel il y aura un site web, et une application mobile, de meme pour la visualisation"
-  xyzwh 222 138 2000 167 65
 line 132349 ----
   from ref 131965 z 3006 to ref 132093
 line 132477 ----

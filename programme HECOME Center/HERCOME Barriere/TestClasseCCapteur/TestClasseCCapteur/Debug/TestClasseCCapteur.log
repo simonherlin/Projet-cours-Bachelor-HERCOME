@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  TestClasseCCapteurDlg.cpp
+  TestClasseCCapteur.cpp
+  MonSocket.cpp
+  Modbus.cpp
+c:\users\herlin\documents\visual studio 2015\projects\testclasseccapteur\testclasseccapteur\modbus.cpp(24): warning C4800: 'BOOL' : valeur forcée à la valeur booléenne 'true' ou 'false' (avertissement sur les performances)
+  CIEH12.cpp
+  CapteurPresence.cpp
+  Génération de code en cours...
+  TestClasseCCapteur.vcxproj -> c:\users\herlin\documents\visual studio 2015\Projects\TestClasseCCapteur\Debug\TestClasseCCapteur.exe

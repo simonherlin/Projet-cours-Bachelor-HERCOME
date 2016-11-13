@@ -17,8 +17,8 @@ classinstance 132349 class_ref 155133 // WebService
   name ""   xyz 442 5 2000 life_line_z 2000
 classinstance 133245 class_ref 148477 // CPhpSocket
   name ""   xyz 512 5 2000 life_line_z 2000
-classinstance 133629 class_ref 156413 // CLumiereRasp
-  name ""   xyz 647.5 4 2000 life_line_z 2000
+classinstance 133629 class_ref 156413 // CCommandeLumiere
+  name ""   xyz 634.5 4 2000 life_line_z 2000
 classinstance 133757 class_ref 156157 // WiringPi
   name ""   xyz 790.5 4 2000 life_line_z 2000
 classinstance 133885 class_ref 156285 // ER433Rasp
@@ -43,7 +43,7 @@ durationcanvas 129917 classinstance_ref 129789 // :IHMPiece
   xyzwh 405 257 2010 11 36
 end
 durationcanvas 132477 classinstance_ref 129405 // :IHMPanneauControl
-  xyzwh 325 246 2010 11 63
+  xyzwh 325 245 2010 11 51
 end
 durationcanvas 132605 classinstance_ref 129789 // :IHMPiece
   xyzwh 405 305 2010 11 179
@@ -60,7 +60,7 @@ end
 durationcanvas 134141 classinstance_ref 133885 // :ER433Rasp
   xyzwh 751 347 2010 11 90
 end
-durationcanvas 134269 classinstance_ref 133629 // :CLumiereRasp
+durationcanvas 134269 classinstance_ref 133629 // :CCommandeLumiere
   xyzwh 680 343 2010 11 103
 end
 durationcanvas 135805 classinstance_ref 135677 // :CMonSocket
@@ -93,15 +93,15 @@ msg 129661 synchronous
 msg 130045 synchronous
   from durationcanvas_ref 132477
   to durationcanvas_ref 129917
-  yz 257 2015 explicitmsg "affiche"
+  yz 258 2015 explicitmsg "affiche"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 359 243
+  label_xy 359 244
 msg 130301 synchronous
   from durationcanvas_ref 128509
   to durationcanvas_ref 132477
-  yz 258 2025 explicitmsg "Choix piece"
+  yz 246 2025 explicitmsg "Choix piece"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 186 246
+  label_xy 186 234
 msg 130557 synchronous
   from durationcanvas_ref 128509
   to durationcanvas_ref 132605
@@ -111,13 +111,15 @@ msg 130557 synchronous
 msg 132861 synchronous
   from durationcanvas_ref 132605
   to durationcanvas_ref 132733
-  yz 328 2030 unspecifiedmsg
+  yz 328 2030 explicitmsg "EnvoyerAction()"
   show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 408 316
 msg 133501 synchronous
   from durationcanvas_ref 132733
   to durationcanvas_ref 133373
-  yz 334 2015 unspecifiedmsg
+  yz 334 2015 explicitmsg "Envoyer()"
   show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 485 324
 msg 134397 return
   from durationcanvas_ref 134013
   to durationcanvas_ref 134141
@@ -158,8 +160,9 @@ msg 135549 return
 msg 135933 synchronous
   from durationcanvas_ref 133373
   to durationcanvas_ref 135805
-  yz 345 2015 unspecifiedmsg
+  yz 345 2015 explicitmsg "Receive()"
   show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 559 333
 msg 136061 return
   from durationcanvas_ref 135805
   to durationcanvas_ref 133373
@@ -170,7 +173,7 @@ msg 136317 synchronous
   to durationcanvas_ref 134269
   yz 348 2025 explicitmsg "commandeLumiere()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 610 311
+  label_xy 615 326
 msg 136445 return
   from durationcanvas_ref 134269
   to durationcanvas_ref 135805

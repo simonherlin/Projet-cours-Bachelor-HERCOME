@@ -1,9 +1,9 @@
-window_sizes 1536 801 360 1080 576 82
+window_sizes 766 792 360 1170 576 82
 diagrams
   usecasediagram_ref 128125 // Diagrammes des cas d'utilisation
     1170 655 100 4 0 0
   sequencediagram_ref 134653 // Gérer matériel (lumière) WEB
-    1170 645 100 4 0 0
+    1170 643 100 4 0 0
   sequencediagram_ref 141181 // Gérer matériel (lumiére) center
     1170 643 100 4 0 0
   sequencediagram_ref 147709 // Gérer matériel (Store) center
@@ -16,12 +16,43 @@ diagrams
     1170 643 100 4 0 0
   sequencediagram_ref 180477 // ajouter matériel
     932 516 100 4 0 0
-  active  sequencediagram_ref 180733 // supprimer matériel
+  sequencediagram_ref 180733 // supprimer matériel
     1170 643 100 4 0 0
+  classdiagram_ref 187261 // diagramme de classe HERCOME Web
+    1170 645 100 4 65 0
+  sequencediagram_ref 173821 // Gérer matériel ( Store) WEB
+    932 516 100 4 0 0
+  sequencediagram_ref 173949 // Gérer matériel (Chauffage) WEB
+    932 516 100 4 0 0
+  classdiagram_ref 187517 // diagramme de classe HERCOME Center
+    1170 643 100 4 0 0
+  sequencediagram_ref 194045 // visualiser données (Chauffage) WEB
+    932 514 100 4 0 0
+  sequencediagram_ref 194301 // visualiser données (lumiere) WEB
+    932 514 100 4 0 0
+  sequencediagram_ref 194173 // visualiser données (Store) Web
+    932 514 100 4 0 0
+  sequencediagram_ref 194685 // visualiser données (store) center
+    927 514 100 4 0 0
+  sequencediagram_ref 194813 // authentification
+    932 514 100 4 0 0
+  sequencediagram_ref 194557 // visualiser données (chauffage) center
+    932 514 100 4 0 0
+  sequencediagram_ref 194429 // visualiser données (lumiere) center
+    932 514 100 4 0 0
+  sequencediagram_ref 194941 // Gestion utilisateur barriere WEB
+    1166 643 100 4 0 0
+  active  classdiagram_ref 208125 // diagramme de classe gestion bariere
+    396 636 100 4 0 0
 end
 show_stereotypes
-selected sequencediagram_ref 180733 // supprimer matériel
+selected classdiagram_ref 208125 // diagramme de classe gestion bariere
 open
-  usecaseview_ref 128125 // diagramme
+  usecase_ref 129405 // ajouter composant
+  usecase_ref 129533 // supprimer composant
+  usecase_ref 129661 // authentification
+  usecase_ref 128509 // visualiser information
+  usecase_ref 136189 // gestion composant
+  usecase_ref 142845 // être alerter
 end
 end

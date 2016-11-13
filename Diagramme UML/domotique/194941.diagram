@@ -1,0 +1,115 @@
+format 75
+
+note 130045 "Vérifie dans la base de données"
+  xyzwh 204.5 66 2005 171 43
+classinstance 130173 class_ref 134909 // Authentification
+  name ""   xyz 136.5 4 2000 life_line_z 2000
+classinstance 130557 class_ref 128125 // Client
+  name ""   xyz 69.5 4 2000 life_line_z 2000
+fragment 130813 "if (reponse==true)"
+  xyzwh 0.5 133 1995 808 302
+end
+classinstance 131197 class_ref 135037 // IHMPanneauControl
+  name ""   xyz 303.5 5 2000 life_line_z 2000
+classinstance 131581 class_ref 134781 // IHMPageAccueil
+  name ""   xyz 221.5 4 2000 life_line_z 2000
+classinstance 135933 class_ref 222845 // IHMBarriere
+  name ""   xyz 414 5 2000 life_line_z 2000
+classinstance 136573 class_ref 155261 // CRequetePhp
+  name ""   xyz 512 4 2000 life_line_z 2000
+classinstance 136701 class_ref 209021 // CBddWeb
+  name ""   xyz 622 5 2000 life_line_z 2000
+durationcanvas 131709 classinstance_ref 130557 // :Client
+  xyzwh 79 66 2010 11 397
+end
+durationcanvas 131837 classinstance_ref 131197 // :IHMPanneauControl
+  xyzwh 346 164 2010 11 55
+end
+durationcanvas 132221 classinstance_ref 131197 // :IHMPanneauControl
+  xyzwh 346 252 2010 11 52
+end
+durationcanvas 132349 classinstance_ref 131581 // :IHMPageAccueil
+  xyzwh 257 149 2010 11 65
+end
+durationcanvas 132477 classinstance_ref 130173 // :Authentification
+  xyzwh 170 65 2010 11 65
+end
+durationcanvas 136061 classinstance_ref 135933 // :IHMBarriere
+  xyzwh 440 262 2010 11 30
+end
+durationcanvas 136317 classinstance_ref 135933 // :IHMBarriere
+  xyzwh 440 335 2010 11 72
+end
+durationcanvas 136829 classinstance_ref 136573 // :CRequetePhp
+  xyzwh 543 345 2010 11 59
+end
+durationcanvas 137085 classinstance_ref 136701 // :CBddWeb
+  xyzwh 645 351 2010 11 37
+end
+msg 133373 synchronous
+  from durationcanvas_ref 131709
+  to durationcanvas_ref 132477
+  yz 68 2015 explicitmsg "connecter()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 97 55
+msg 134269 return
+  from durationcanvas_ref 132477
+  to durationcanvas_ref 131709
+  yz 118 2025 explicitmsg "reponse"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 104 105
+msg 135037 synchronous
+  from durationcanvas_ref 132349
+  to durationcanvas_ref 131837
+  yz 165 2025 explicitmsg "affiche"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 293 152
+msg 135165 synchronous
+  from durationcanvas_ref 131709
+  to durationcanvas_ref 132349
+  yz 156 2020 explicitmsg "choisi panneau de configuration"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 102 143
+msg 135549 synchronous
+  from durationcanvas_ref 131709
+  to durationcanvas_ref 132221
+  yz 253 2025 explicitmsg "Choix barriere"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 188 240
+msg 136189 synchronous
+  from durationcanvas_ref 132221
+  to durationcanvas_ref 136061
+  yz 262 2030 explicitmsg "affiche"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 377 250
+msg 136445 synchronous
+  from durationcanvas_ref 131709
+  to durationcanvas_ref 136317
+  yz 335 2015 explicitmsg "ajoute/supprime/modifie voiture/utilisateur"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 161 323
+msg 136957 synchronous
+  from durationcanvas_ref 136317
+  to durationcanvas_ref 136829
+  yz 346 2020 explicitmsg "créeRequete()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 467 333
+msg 137213 synchronous
+  from durationcanvas_ref 136829
+  to durationcanvas_ref 137085
+  yz 352 2015 explicitmsg "lire/ecrire/modifier"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 562 337
+msg 137341 return
+  from durationcanvas_ref 137085
+  to durationcanvas_ref 136829
+  yz 377 2015 explicitmsg "reponse"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 572 365
+msg 137469 return
+  from durationcanvas_ref 136829
+  to durationcanvas_ref 136317
+  yz 393 2015 explicitmsg "reponse"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 478 380
+end

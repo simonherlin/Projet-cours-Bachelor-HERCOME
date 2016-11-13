@@ -1,0 +1,40 @@
+format 75
+
+classinstance 128125 class_ref 155389 // IHMAccueilRasp
+  name ""   xyz 98 6 2000 life_line_z 2000
+classinstance 128253 class_ref 156029 // CRequeteRasp
+  name ""   xyz 278 6 2000 life_line_z 2000
+classinstance 128381 class_ref 155901 // CBdd
+  name ""   xyz 401 6 2000 life_line_z 2000
+durationcanvas 128509 classinstance_ref 128253 // :CRequeteRasp
+  xyzwh 312 97 2010 11 106
+end
+durationcanvas 128637 classinstance_ref 128125 // :IHMAccueilRasp
+  xyzwh 134 89 2010 11 129
+end
+durationcanvas 128765 classinstance_ref 128381 // :CBdd
+  xyzwh 420 108 2010 11 81
+end
+msg 128893 synchronous
+  from durationcanvas_ref 128509
+  to durationcanvas_ref 128765
+  yz 109 2025 explicitmsg "lire()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 337 96
+msg 129021 synchronous
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 128509
+  yz 99 2030 explicitmsg "requeteLectureChauffage()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 182 87
+msg 129149 return
+  from durationcanvas_ref 128509
+  to durationcanvas_ref 128637
+  yz 192 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129277 return
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 128509
+  yz 174 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end
