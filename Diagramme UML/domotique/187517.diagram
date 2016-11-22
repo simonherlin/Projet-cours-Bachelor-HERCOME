@@ -157,4 +157,9 @@ relationcanvas 135677 relation_ref 151037 // <directional composition>
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
+relationcanvas 135805 relation_ref 157693 // <directional aggregation>
+  from ref 128125 z 2001 to ref 128765
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
 end

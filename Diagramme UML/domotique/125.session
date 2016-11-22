@@ -1,4 +1,4 @@
-window_sizes 766 792 360 1170 576 82
+window_sizes 1536 801 360 1170 576 82
 diagrams
   usecasediagram_ref 128125 // Diagrammes des cas d'utilisation
     1170 655 100 4 0 0
@@ -24,7 +24,7 @@ diagrams
     932 516 100 4 0 0
   sequencediagram_ref 173949 // Gérer matériel (Chauffage) WEB
     932 516 100 4 0 0
-  classdiagram_ref 187517 // diagramme de classe HERCOME Center
+  active  classdiagram_ref 187517 // diagramme de classe HERCOME Center
     1170 643 100 4 0 0
   sequencediagram_ref 194045 // visualiser données (Chauffage) WEB
     932 514 100 4 0 0
@@ -42,11 +42,11 @@ diagrams
     932 514 100 4 0 0
   sequencediagram_ref 194941 // Gestion utilisateur barriere WEB
     1166 643 100 4 0 0
-  active  classdiagram_ref 208125 // diagramme de classe gestion bariere
+  classdiagram_ref 208125 // diagramme de classe gestion bariere
     396 636 100 4 0 0
 end
 show_stereotypes
-selected classdiagram_ref 208125 // diagramme de classe gestion bariere
+selected classdiagram_ref 187517 // diagramme de classe HERCOME Center
 open
   usecase_ref 129405 // ajouter composant
   usecase_ref 129533 // supprimer composant

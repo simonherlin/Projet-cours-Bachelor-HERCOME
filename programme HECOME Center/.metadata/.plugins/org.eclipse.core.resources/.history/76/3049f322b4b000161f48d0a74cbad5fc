@@ -1,0 +1,66 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Frame;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+//importation classe besoin
+import model.CRequeteRasp;
+import model.CModificationImage;
+
+public class IHMModuleRasp extends JFrame {
+
+	private JPanel contentPane;
+	
+	private CModificationImage modifImg;
+	private CRequeteRasp maRequete;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					IHMModuleRasp frame = new IHMModuleRasp();
+					frame.setVisible(false);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public IHMModuleRasp(CRequeteRasp req) {
+		
+		maRequete = req;
+		
+		this.pack();
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		setExtendedState(Frame.MAXIMIZED_BOTH);
+		
+		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		int height = (int)dimension.getHeight();
+		int width  = (int)dimension.getWidth();
+		
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		
+		
+	}
+
+}

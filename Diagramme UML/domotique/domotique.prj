@@ -1,6 +1,6 @@
 format 75
 "domotique"
-  revision 26
+  revision 27
   modified_by 125 "Herlin"
 
 
@@ -700,6 +700,13 @@ format 75
 	  a role_name "" private
 	    classrelation_ref 156541 // <directional composition>
 	  b parent class_ref 155517 // iHMModuleRasp
+      end
+
+      classrelation 163709 // <directional aggregation>
+	relation 157693 o-->
+	  a role_name "" private
+	    classrelation_ref 163709 // <directional aggregation>
+	  b parent class_ref 156029 // CRequeteRasp
       end
     end
 

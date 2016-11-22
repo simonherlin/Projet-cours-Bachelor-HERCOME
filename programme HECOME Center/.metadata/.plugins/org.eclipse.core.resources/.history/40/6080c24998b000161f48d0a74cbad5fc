@@ -1,0 +1,25 @@
+package model;
+
+import model.CBdd;
+
+public class CRequeteRasp {
+
+	CBdd maBdd;
+	
+	public CRequeteRasp (){
+		maBdd = new CBdd ();
+	}
+	
+	public int recupNumeroArduino (){
+		
+		this.maBdd.connection();
+		String query = "SELECT ARD_Num FROM ARDUINO";
+		return maBdd.retourDonneInt(query,"ARD_Num");
+	}
+	
+	public void activerAlarme(){
+		
+		this.maBdd.connection();
+		String query = "";
+	}
+}

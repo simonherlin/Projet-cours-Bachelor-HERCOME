@@ -1,1 +1,15 @@
 2016-11-12 15:47:51,440 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-11-14 15:49:30,988 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-11-16 09:19:18,559 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-11-18 20:39:22,881 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-11-21 14:24:08,082 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-11-21 14:24:27,888 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2016-11-21 14:24:44,157 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @92320ms
+2016-11-21 14:24:44,444 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2016-11-21 14:24:44,500 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@13e9b2a{/help,null,AVAILABLE}
+2016-11-21 14:24:44,558 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@9c2415{HTTP/1.1,[http/1.1]}{127.0.0.1:4558}
+2016-11-21 14:24:44,559 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @92722ms
+2016-11-21 14:28:02,912 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@9c2415{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2016-11-21 14:28:02,957 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@13e9b2a{/help,null,UNAVAILABLE}
+2016-11-21 17:13:24,174 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-11-22 07:59:22,921 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
