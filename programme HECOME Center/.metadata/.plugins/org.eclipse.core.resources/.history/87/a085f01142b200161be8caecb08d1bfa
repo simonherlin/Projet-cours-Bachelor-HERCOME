@@ -1,0 +1,83 @@
+package model;
+
+import model.CBdd;
+
+public class CRequeteRasp {
+
+	CBdd maBdd;
+	
+	public CRequeteRasp (){
+		maBdd = new CBdd ();
+	}
+	
+	
+	// a prog les differente requete pour la base de donnée
+	public int recupNumeroArduino (){
+		
+		this.maBdd.connection();
+		String query = "SELECT ARD_Num FROM ARDUINO";
+		return maBdd.retourDonneInt(query,"ARD_Num");
+	}
+	
+	public void activerAlarme(){
+		
+		this.maBdd.connection();
+		String query = "";
+	}
+	
+	public boolean etatAlarme(){
+		this.maBdd.connection();
+		
+		return true;
+	}
+	
+	public int getNombreDeLum(){
+		this.maBdd.connection();
+		
+		return 2;
+	}
+	
+	public int getVitesseVent(){
+		this.maBdd.connection();
+		
+		
+		return 55;
+	}
+	
+	public String getDirectionVent(){
+		this.maBdd.connection();
+		
+		return "N-O";
+	}
+	
+	public int getPluie(){
+		this.maBdd.connection();
+		
+		return 20;
+	}
+	
+	public int getHumidite(){
+		this.maBdd.connection();
+		
+		return 20;
+	}
+	
+	public int getTemperatureExtern(){
+		this.maBdd.connection();
+		
+		return 28;
+	}
+
+	public int getTemperatureIntern(){
+		this.maBdd.connection();
+		
+		return 31;
+	}
+	
+	public int getTemperatureSouhaiter(){
+		this.maBdd.connection();
+		
+		return 20;
+	}
+}
+

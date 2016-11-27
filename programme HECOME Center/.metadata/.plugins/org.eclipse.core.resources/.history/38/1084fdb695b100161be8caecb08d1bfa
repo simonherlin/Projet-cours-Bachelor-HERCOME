@@ -1,0 +1,197 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+//importation classe besoin
+import model.CRequeteRasp;
+import model.CModificationImage;
+
+public class IHMModuleRasp extends JFrame {
+
+	private static final long serialVersionUID = 3095235317386885468L;
+
+	private JPanel contentPane;
+	
+	private CModificationImage modifImg;
+	private static CRequeteRasp maRequete;
+	
+	private String temp;
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					IHMModuleRasp frame = new IHMModuleRasp();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public IHMModuleRasp() {
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		
+		//this.maRequete = req;
+		
+		this.pack();
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		setExtendedState(Frame.MAXIMIZED_BOTH);
+		
+		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		int height = (int)dimension.getHeight();
+		int width  = (int)dimension.getWidth();
+		
+		
+		
+/******************************************************************************************************
+			
+			Partie menu de l'application evc le logo
+
+******************************************************************************************************/
+JLabel lblNewLabel = new JLabel("");
+lblNewLabel.setBounds(2*width/100, 8*height/100, 21*width/100, 15*height/100);
+lblNewLabel.setOpaque(true);
+lblNewLabel.setBackground(Color.WHITE);
+Image img = new ImageIcon(this.getClass().getResource("/logoHercome.jpg")).getImage();
+contentPane.setLayout(null);
+lblNewLabel.setIcon(new ImageIcon(this.modifImg.scaleImage(img, 21*width/100, 15*height/100)));
+contentPane.add(lblNewLabel);
+
+
+JButton btnChauffage = new JButton("Chauffage");
+btnChauffage.setBounds(27*width/100, 8*height/100, 21*width/100, 15*height/100);
+btnChauffage.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
+btnChauffage.setBackground(Color.WHITE);
+contentPane.add(btnChauffage);
+
+JButton btnModules = new JButton("Modules");
+btnModules.setBounds(52*width/100, 8*height/100, 21*width/100, 15*height/100);
+btnModules.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
+btnModules.setBackground(Color.WHITE);
+contentPane.add(btnModules);
+
+JButton btnAlarme = new JButton("Alarme");
+btnAlarme.setBounds(77*width/100, 8*height/100, 21*width/100, 15*height/100);
+btnAlarme.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
+btnAlarme.setBackground(Color.WHITE);
+contentPane.add(btnAlarme);
+
+
+/*********************************************************************************************************
+
+		Partie texte information de l'application
+
+********************************************************************************************************/
+			/***********************************************
+				partie bande noir
+			************************************************/
+		JLabel lblInfoImgAmp = new JLabel ("");
+		lblInfoImgAmp.setBounds(1, 1, 4*width/100, 6*height/100);
+		lblInfoImgAmp.setOpaque(true);
+		lblInfoImgAmp.setBackground(Color.WHITE);
+		Image iconAmpoule = new ImageIcon(this.getClass().getResource("/iconAmpoule.jpg")).getImage();
+		contentPane.setLayout(null);
+		lblInfoImgAmp.setIcon(new ImageIcon(this.modifImg.scaleImage(iconAmpoule, 4*width/100, 6*height/100)));
+		contentPane.add(lblInfoImgAmp);
+		
+		
+		this.temp = Integer.toString(maRequete.nombreDeLum());
+		JLabel lblNbLum = new JLabel(this.temp);
+		lblNbLum.setBounds(5*width/100, 1, 2*width/100, 6*height/100);
+		lblNbLum.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNbLum.setFont(new Font("Tahoma", Font.PLAIN, 5*height/100));
+		lblNbLum.setForeground(Color.WHITE);
+		contentPane.add(lblNbLum);
+		
+		
+		JLabel lblInfoImgTemp = new JLabel ("");
+		lblInfoImgTemp.setBounds(11*width/100, 1*height/100, 3*width/100, 6*height/100);
+		lblInfoImgTemp.setOpaque(true);
+		lblInfoImgTemp.setBackground(Color.BLACK);
+		Image iconTemp = new ImageIcon(this.getClass().getResource("/iconTemp.png")).getImage();
+		contentPane.setLayout(null);
+		lblInfoImgTemp.setIcon(new ImageIcon(this.modifImg.scaleImage(iconTemp, 3*width/100, 6*height/100)));
+		contentPane.add(lblInfoImgTemp);
+		
+		this.temp = " : "+Integer.toString(maRequete.temperatureIntern());
+		this.temp += " / "+Integer.toString(maRequete.temperatureSouhaiter());
+		JLabel lblTemp = new JLabel(this.temp);
+		lblTemp.setBounds(14*width/100, 1, 12*width/100, 6*height/100);
+		lblTemp.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTemp.setFont(new Font("Tahoma", Font.PLAIN, 5*height/100));
+		lblTemp.setForeground(Color.WHITE);
+		contentPane.add(lblTemp);
+		
+		
+		
+		
+/***********************************************************************************************************
+		 
+		 Partie des differant rectangle de couleur de l'application pour separer les differante partie
+		
+************************************************************************************************************/
+		//bande noir au dessus
+		JLabel lblBandeNoir = new JLabel("");
+		lblBandeNoir.setBounds(0,0,width,7*height/100);
+		lblBandeNoir.setOpaque(true);
+		lblBandeNoir.setBackground(Color.BLACK);
+		//contentPane.setLayout(null);
+		contentPane.add(lblBandeNoir);
+		
+		// rectangle gris claire sur les bouton menu
+		JLabel lblRecGris = new JLabel("");
+		lblRecGris.setBounds(0,7*height/100,width,17*height/100);
+		lblRecGris.setOpaque(true);
+		lblRecGris.setBackground(Color.LIGHT_GRAY);
+		//contentPane.setLayout(null);
+		contentPane.add(lblRecGris);
+		
+
+		
+		// rectangle blanc des differente parti permettant le recap de la maison
+		JLabel lblRecTemp = new JLabel("");
+		lblRecTemp.setBounds(2*width/100,27*height/100,48*width/100,30*height/100);
+		lblRecTemp.setOpaque(true);
+		lblRecTemp.setBackground(Color.WHITE);
+		//contentPane.setLayout(null);
+		contentPane.add(lblRecTemp);
+	
+		
+		//rectangle gris foncer du reste de l'application
+		JLabel lblMiddleDarkGray = new JLabel("");
+		lblMiddleDarkGray.setBounds(0,25*height/100,width,75*height/100);
+		lblMiddleDarkGray.setOpaque(true);
+		lblMiddleDarkGray.setBackground(Color.DARK_GRAY);
+		//contentPane.setLayout(null);
+		contentPane.add(lblMiddleDarkGray);
+		
+		
+	}
+
+}

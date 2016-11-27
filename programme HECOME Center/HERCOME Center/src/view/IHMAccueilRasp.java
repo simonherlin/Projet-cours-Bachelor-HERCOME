@@ -35,7 +35,7 @@ public class IHMAccueilRasp extends JFrame {
 	private JPanel contentPane;
 	
 	private CModificationImage modifImg;
-	private CRequeteRasp maRequete;
+	private static CRequeteRasp maRequete=new CRequeteRasp();
 	
 	private String temp;
 
@@ -46,7 +46,7 @@ public class IHMAccueilRasp extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					IHMAccueilRasp frame = new IHMAccueilRasp();
+					IHMAccueilRasp frame = new IHMAccueilRasp(maRequete);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -59,7 +59,7 @@ public class IHMAccueilRasp extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public IHMAccueilRasp() {
+	public IHMAccueilRasp(CRequeteRasp req) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 543, 416);
 		contentPane = new JPanel();
@@ -67,7 +67,7 @@ public class IHMAccueilRasp extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		maRequete = new CRequeteRasp();
+		maRequete = req;
 		modifImg = new CModificationImage();
 		
 		this.pack();
@@ -98,6 +98,10 @@ public class IHMAccueilRasp extends JFrame {
 		JButton btnChauffage = new JButton("Chauffage");
 		btnChauffage.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				IHMChauffageRasp chauffage = new IHMChauffageRasp(maRequete);
+				chauffage.setVisible(true);
+				dispose();
 			}
 		});
 		btnChauffage.setBounds(27*width/100, 8*height/100, 21*width/100, 15*height/100);
@@ -109,11 +113,9 @@ public class IHMAccueilRasp extends JFrame {
 		btnModules.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				IHMModuleRasp module = new IHMModuleRasp();
-				
-				setVisible(false);
-				module.setVisible(true);
-			
+			IHMModuleRasp module = new IHMModuleRasp(maRequete);
+			module.setVisible(true);
+			dispose();
 			}
 		});
 		
@@ -125,6 +127,9 @@ public class IHMAccueilRasp extends JFrame {
 		JButton btnAlarme = new JButton("Alarme");
 		btnAlarme.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				IHMAlarmeRasp alarme = new IHMAlarmeRasp(maRequete);
+				alarme.setVisible(true);
+				dispose();
 			}
 		});
 		btnAlarme.setBounds(77*width/100, 8*height/100, 21*width/100, 15*height/100);
@@ -151,7 +156,7 @@ public class IHMAccueilRasp extends JFrame {
 		contentPane.add(lblInfoImgAmp);
 		
 		
-		this.temp = Integer.toString(maRequete.nombreDeLum());
+		this.temp = Integer.toString(maRequete.getNombreDeLum());
 		JLabel lblNbLum = new JLabel(this.temp);
 		lblNbLum.setBounds(5*width/100, 1, 2*width/100, 6*height/100);
 		lblNbLum.setHorizontalAlignment(SwingConstants.CENTER);
@@ -169,10 +174,10 @@ public class IHMAccueilRasp extends JFrame {
 		lblInfoImgTemp.setIcon(new ImageIcon(this.modifImg.scaleImage(iconTemp, 3*width/100, 6*height/100)));
 		contentPane.add(lblInfoImgTemp);
 		
-		this.temp = " : "+Integer.toString(maRequete.temperatureIntern());
-		this.temp += " / "+Integer.toString(maRequete.temperatureSouhaiter());
+		this.temp = " : "+Float.toString(maRequete.getTemperatureIntern())+"°C";
+		this.temp += " / "+Float.toString(maRequete.getTemperatureSouhaiter())+"°C";
 		JLabel lblTemp = new JLabel(this.temp);
-		lblTemp.setBounds(14*width/100, 1, 12*width/100, 6*height/100);
+		lblTemp.setBounds(14*width/100, 1, 26*width/100, 6*height/100);
 		lblTemp.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTemp.setFont(new Font("Tahoma", Font.PLAIN, 5*height/100));
 		lblTemp.setForeground(Color.WHITE);
@@ -195,13 +200,12 @@ public class IHMAccueilRasp extends JFrame {
 		//lblTemperatureExterne.setBackground(Color.WHITE);
 		contentPane.add(lblTemperatureExterne);
 		
-		JLabel lblResultatTempExt = new JLabel("");
+		JLabel lblResultatTempExt = new JLabel(Float.toString(maRequete.getTemperatureExtern()));
 		lblResultatTempExt.setBounds(38*width/100, 34*height/100, 8*width/100, 3*height/100);
 		lblResultatTempExt.setHorizontalAlignment(SwingConstants.CENTER);
 		lblResultatTempExt.setFont(new Font("Tahoma", Font.PLAIN, 3*height/100));
 		lblResultatTempExt.setOpaque(true);
 		lblResultatTempExt.setBackground(Color.LIGHT_GRAY);
-		lblResultatTempExt.setText("27 °C");
 		contentPane.add(lblResultatTempExt);
 		
 		
@@ -212,13 +216,12 @@ public class IHMAccueilRasp extends JFrame {
 		//lblTemperatureExterne.setBackground(Color.WHITE);
 		contentPane.add(lblTemperatureInterne);
 
-		JLabel lblResultatTempInt = new JLabel("");
+		JLabel lblResultatTempInt = new JLabel(Float.toString(maRequete.getTemperatureIntern()));
 		lblResultatTempInt.setBounds(38*width/100, 41*height/100, 8*width/100, 3*height/100);
 		lblResultatTempInt.setHorizontalAlignment(SwingConstants.CENTER);
 		lblResultatTempInt.setFont(new Font("Tahoma", Font.PLAIN, 3*height/100));
 		lblResultatTempInt.setOpaque(true);
 		lblResultatTempInt.setBackground(Color.LIGHT_GRAY);
-		lblResultatTempInt.setText("31 °C");
 		contentPane.add(lblResultatTempInt);
 		
 		
@@ -229,13 +232,12 @@ public class IHMAccueilRasp extends JFrame {
 		//lblTemperatureExterne.setBackground(Color.WHITE);
 		contentPane.add(lblTemperatureInterneDemande);
 
-		JLabel lblResultatTempIntDem = new JLabel("");
+		JLabel lblResultatTempIntDem = new JLabel(Float.toString(maRequete.getTemperatureSouhaiter()));
 		lblResultatTempIntDem.setBounds(38*width/100, 48*height/100, 8*width/100, 3*height/100);
 		lblResultatTempIntDem.setHorizontalAlignment(SwingConstants.CENTER);
 		lblResultatTempIntDem.setFont(new Font("Tahoma", Font.PLAIN, 3*height/100));
 		lblResultatTempIntDem.setOpaque(true);
 		lblResultatTempIntDem.setBackground(Color.LIGHT_GRAY);
-		lblResultatTempIntDem.setText("22 °C");
 		contentPane.add(lblResultatTempIntDem);
 
 		
@@ -251,7 +253,7 @@ public class IHMAccueilRasp extends JFrame {
 		
 		
 		if (maRequete.etatAlarme()==true){
-			JLabel lblEtatAlarme = new JLabel("ACTIVE");
+			JLabel lblEtatAlarme = new JLabel("ACTIVER");
 			lblEtatAlarme.setBounds(58*width/100, 34*height/100, 36*width/100, 16*height/100);
 			lblEtatAlarme.setHorizontalAlignment(SwingConstants.CENTER);
 			lblEtatAlarme.setFont(new Font("Tahoma", Font.PLAIN, 16*height/100));
@@ -260,10 +262,10 @@ public class IHMAccueilRasp extends JFrame {
 			contentPane.add(lblEtatAlarme);
 		}
 		else{
-			JLabel lblEtatAlarme = new JLabel("NON ACTIVE");
+			JLabel lblEtatAlarme = new JLabel("DESACTIVER");
 			lblEtatAlarme.setBounds(58*width/100, 34*height/100, 36*width/100, 16*height/100);
 			lblEtatAlarme.setHorizontalAlignment(SwingConstants.CENTER);
-			lblEtatAlarme.setFont(new Font("Tahoma", Font.PLAIN, 16*height/100));
+			lblEtatAlarme.setFont(new Font("Tahoma", Font.PLAIN, 10*height/100));
 			lblEtatAlarme.setForeground(Color.RED);
 			//lblTemperature.setBackground(Color.WHITE);
 			contentPane.add(lblEtatAlarme);
@@ -294,7 +296,7 @@ public class IHMAccueilRasp extends JFrame {
 		lblResultatLum.setFont(new Font("Tahoma", Font.PLAIN, 3*height/100));
 		lblResultatLum.setOpaque(true);
 		lblResultatLum.setBackground(Color.LIGHT_GRAY);
-		this.temp = Integer.toString(maRequete.nombreDeLum());
+		this.temp = Integer.toString(maRequete.getNombreDeLum());
 		lblResultatLum.setText(this.temp);
 		contentPane.add(lblResultatLum);
 		
@@ -320,7 +322,7 @@ public class IHMAccueilRasp extends JFrame {
 		contentPane.add(lblVitesseVent);
 		
 		
-		this.temp = Integer.toString(maRequete.vitesseVent());
+		this.temp = Integer.toString(maRequete.getVitesseVent());
 		JLabel lblResultatVitVent = new JLabel(this.temp);
 		lblResultatVitVent.setBounds(85*width/100, 68*height/100, 8*width/100, 3*height/100);
 		lblResultatVitVent.setHorizontalAlignment(SwingConstants.CENTER);
@@ -339,7 +341,7 @@ public class IHMAccueilRasp extends JFrame {
 		contentPane.add(lblDirectionVent);
 		
 		
-		this.temp = maRequete.directionVent();
+		this.temp = maRequete.getDirectionVent();
 		JLabel lblResultatDirecVent = new JLabel(this.temp);
 		lblResultatDirecVent.setBounds(85*width/100, 74*height/100, 8*width/100, 3*height/100);
 		lblResultatDirecVent.setHorizontalAlignment(SwingConstants.CENTER);
@@ -358,7 +360,7 @@ public class IHMAccueilRasp extends JFrame {
 		contentPane.add(lblPluie);
 		
 		
-		this.temp = Integer.toString(maRequete.pluie());
+		this.temp = Integer.toString(maRequete.getPluie());
 		JLabel lblResultatPluie = new JLabel(this.temp+" %");
 		lblResultatPluie.setBounds(85*width/100, 80*height/100, 8*width/100, 3*height/100);
 		lblResultatPluie.setHorizontalAlignment(SwingConstants.CENTER);
@@ -377,7 +379,7 @@ public class IHMAccueilRasp extends JFrame {
 		contentPane.add(lblHumidite);
 		
 		
-		this.temp = Integer.toString(maRequete.humidite());
+		this.temp = Integer.toString(maRequete.getHumidite());
 		JLabel lblResultatHum = new JLabel(this.temp+" %");
 		lblResultatHum.setBounds(85*width/100, 86*height/100, 8*width/100, 3*height/100);
 		lblResultatHum.setHorizontalAlignment(SwingConstants.CENTER);

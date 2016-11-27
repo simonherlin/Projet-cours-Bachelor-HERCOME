@@ -1,0 +1,53 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Frame;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import model.CModificationImage;
+import model.CRequeteRasp;
+
+public class IHMAlarmeRasp extends JFrame {
+
+	private JPanel contentPane;
+	
+	private CModificationImage modifImg;
+	private static CRequeteRasp maRequete=new CRequeteRasp();
+	
+	private String temp;
+
+	/**
+	 * Launch the application.
+	 */
+
+
+	/**
+	 * Create the frame.
+	 */
+	public IHMAlarmeRasp(CRequeteRasp req) {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		
+		maRequete = req;
+		modifImg = new CModificationImage();
+		
+		this.pack();
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		setExtendedState(Frame.MAXIMIZED_BOTH);
+		
+		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		int height = (int)dimension.getHeight();
+		int width  = (int)dimension.getWidth();
+	}
+
+}

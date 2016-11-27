@@ -1,0 +1,123 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import model.CModificationImage;
+import model.CRequeteRasp;
+
+public class dyftyhrt extends JFrame {
+
+	private JPanel contentPane;
+	
+	private CModificationImage modifImg;
+	private CRequeteRasp maRequete;
+	
+	private String temp;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					dyftyhrt frame = new dyftyhrt();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public dyftyhrt() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		this.pack();
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		setExtendedState(Frame.MAXIMIZED_BOTH);
+		
+		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		int height = (int)dimension.getHeight();
+		int width  = (int)dimension.getWidth();
+		
+		/******************************************************************************************************
+			
+			Partie menu de l'application evc le logo
+
+******************************************************************************************************/
+JLabel lblNewLabel = new JLabel("");
+lblNewLabel.setBounds(2*width/100, 8*height/100, 21*width/100, 15*height/100);
+lblNewLabel.setOpaque(true);
+lblNewLabel.setBackground(Color.WHITE);
+Image img = new ImageIcon(this.getClass().getResource("/logoHercome.jpg")).getImage();
+contentPane.setLayout(null);
+lblNewLabel.setIcon(new ImageIcon(this.modifImg.scaleImage(img, 21*width/100, 15*height/100)));
+contentPane.add(lblNewLabel);
+
+
+JButton btnChauffage = new JButton("Chauffage");
+btnChauffage.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+}
+});
+btnChauffage.setBounds(27*width/100, 8*height/100, 21*width/100, 15*height/100);
+btnChauffage.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
+btnChauffage.setBackground(Color.WHITE);
+contentPane.add(btnChauffage);
+
+JButton btnModules = new JButton("Modules");
+btnModules.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent arg0) {
+
+IHMModuleRasp module = new IHMModuleRasp();
+	module.setVisible(true);
+dispose();
+}
+});
+
+btnModules.setBounds(52*width/100, 8*height/100, 21*width/100, 15*height/100);
+btnModules.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
+btnModules.setBackground(Color.WHITE);
+contentPane.add(btnModules);
+
+JButton btnAlarme = new JButton("Alarme");
+btnAlarme.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+	dyftyhrt ggg= new dyftyhrt();
+	ggg.setVisible(true);
+}
+});
+btnAlarme.setBounds(77*width/100, 8*height/100, 21*width/100, 15*height/100);
+btnAlarme.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
+btnAlarme.setBackground(Color.WHITE);
+contentPane.add(btnAlarme);
+		
+		
+		
+	}
+
+}

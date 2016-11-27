@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -19,6 +18,8 @@ import javax.swing.border.EmptyBorder;
 //importation classe besoin
 import model.CRequeteRasp;
 import model.CModificationImage;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class IHMModuleRasp extends JFrame {
 
@@ -31,12 +32,23 @@ public class IHMModuleRasp extends JFrame {
 	
 	private String temp;
 	
-
-
+	/*public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					IHMModuleRasp frame = new IHMModuleRasp();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+*/
 	/**
 	 * Create the frame.
 	 */
-	public IHMModuleRasp() {
+	public IHMModuleRasp(CRequeteRasp req) {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -47,6 +59,9 @@ public class IHMModuleRasp extends JFrame {
 		
 		
 		//this.maRequete = req;
+		maRequete = req;
+		modifImg = new CModificationImage();
+		
 		
 		this.pack();
 		JFrame.setDefaultLookAndFeelDecorated(true);
@@ -55,7 +70,6 @@ public class IHMModuleRasp extends JFrame {
 		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 		int height = (int)dimension.getHeight();
 		int width  = (int)dimension.getWidth();
-		
 		
 		
 		
@@ -75,18 +89,38 @@ contentPane.add(lblNewLabel);
 
 
 JButton btnChauffage = new JButton("Chauffage");
+btnChauffage.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent arg0) {
+		
+		IHMChauffageRasp chauffage = new IHMChauffageRasp(maRequete);
+		chauffage.setVisible(true);
+		dispose();
+	}
+});
 btnChauffage.setBounds(27*width/100, 8*height/100, 21*width/100, 15*height/100);
 btnChauffage.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
 btnChauffage.setBackground(Color.WHITE);
 contentPane.add(btnChauffage);
 
 JButton btnModules = new JButton("Modules");
+btnModules.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+	}
+});
 btnModules.setBounds(52*width/100, 8*height/100, 21*width/100, 15*height/100);
 btnModules.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
 btnModules.setBackground(Color.WHITE);
 contentPane.add(btnModules);
 
 JButton btnAlarme = new JButton("Alarme");
+btnAlarme.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+		
+		IHMAlarmeRasp alarme = new IHMAlarmeRasp(maRequete);
+		alarme.setVisible(true);
+		dispose();
+	}
+});
 btnAlarme.setBounds(77*width/100, 8*height/100, 21*width/100, 15*height/100);
 btnAlarme.setFont(new Font("Tahoma", Font.PLAIN, 6*height/100));
 btnAlarme.setBackground(Color.WHITE);
@@ -111,7 +145,7 @@ contentPane.add(btnAlarme);
 		contentPane.add(lblInfoImgAmp);
 		
 		
-		this.temp = Integer.toString(maRequete.nombreDeLum());
+		this.temp = Integer.toString(maRequete.getNombreDeLum());
 		JLabel lblNbLum = new JLabel(this.temp);
 		lblNbLum.setBounds(5*width/100, 1, 2*width/100, 6*height/100);
 		lblNbLum.setHorizontalAlignment(SwingConstants.CENTER);
@@ -129,10 +163,10 @@ contentPane.add(btnAlarme);
 		lblInfoImgTemp.setIcon(new ImageIcon(this.modifImg.scaleImage(iconTemp, 3*width/100, 6*height/100)));
 		contentPane.add(lblInfoImgTemp);
 		
-		this.temp = " : "+Integer.toString(maRequete.temperatureIntern());
-		this.temp += " / "+Integer.toString(maRequete.temperatureSouhaiter());
+		this.temp = " : "+Float.toString(maRequete.getTemperatureIntern())+"°C";
+		this.temp += " / "+Float.toString(maRequete.getTemperatureSouhaiter())+"°C";
 		JLabel lblTemp = new JLabel(this.temp);
-		lblTemp.setBounds(14*width/100, 1, 12*width/100, 6*height/100);
+		lblTemp.setBounds(14*width/100, 1, 26*width/100, 6*height/100);
 		lblTemp.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTemp.setFont(new Font("Tahoma", Font.PLAIN, 5*height/100));
 		lblTemp.setForeground(Color.WHITE);
@@ -140,10 +174,54 @@ contentPane.add(btnAlarme);
 		
 		
 		
+			/***********************************************
+					partie bouton module
+			************************************************/
+		
+		JButton btnLumiere = new JButton("Module Lumière");
+		btnLumiere.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				IHMModuleLumRasp lum = new IHMModuleLumRasp(maRequete);
+				lum.setVisible(true);
+				dispose();
+			}
+		});
+		btnLumiere.setBounds(8*width/100,34*height/100, 36*width/100, 20*height/100);
+		btnLumiere.setFont(new Font("Tahoma", Font.PLAIN, 8*height/100));
+		contentPane.add(btnLumiere);
+		
+		
+		JButton btnStore = new JButton("Module Store");
+		btnStore.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				IHMModuleStoreRasp store = new IHMModuleStoreRasp(maRequete);
+				store.setVisible(true);
+				dispose();
+			}
+		});
+		btnStore.setBounds(58*width/100,34*height/100, 36*width/100, 20*height/100);
+		btnStore.setFont(new Font("Tahoma", Font.PLAIN, 8*height/100));
+		contentPane.add(btnStore);
+		
+		JButton btnQuitter = new JButton("Retour accueil");
+		btnQuitter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				IHMAccueilRasp accueil = new IHMAccueilRasp(maRequete);
+				accueil.setVisible(true);
+				dispose();
+			}
+		});
+		btnQuitter.setBounds(10*width/100,60*height/100, 80*width/100, 20*height/100);
+		btnQuitter.setFont(new Font("Tahoma", Font.PLAIN, 8*height/100));
+		contentPane.add(btnQuitter);
+		
+		
 		
 /***********************************************************************************************************
 		 
-		 Partie des differant rectangle de couleur de l'application pour separer les differante partie
+		 Partie des differant rectangle de couleur de l'application pour separer les differentes partie
 		
 ************************************************************************************************************/
 		//bande noir au dessus
@@ -164,24 +242,24 @@ contentPane.add(btnAlarme);
 		
 
 		
-		// rectangle blanc des differente parti permettant le recap de la maison
-		JLabel lblRecTemp = new JLabel("");
-		lblRecTemp.setBounds(2*width/100,27*height/100,48*width/100,30*height/100);
-		lblRecTemp.setOpaque(true);
-		lblRecTemp.setBackground(Color.WHITE);
+		// rectangle blanc 
+		JLabel lblRecChoix = new JLabel("");
+		lblRecChoix.setBounds(2*width/100,27*height/100,96*width/100,70*height/100);
+		lblRecChoix.setOpaque(true);
+		lblRecChoix.setBackground(Color.WHITE);
 		//contentPane.setLayout(null);
-		contentPane.add(lblRecTemp);
+		contentPane.add(lblRecChoix);
 	
 		
 		//rectangle gris foncer du reste de l'application
 		JLabel lblMiddleDarkGray = new JLabel("");
-		lblMiddleDarkGray.setBounds(0,25*height/100,width,75*height/100);
+		lblMiddleDarkGray.setBounds(0,25*height/100,width,70*height/100);
 		lblMiddleDarkGray.setOpaque(true);
 		lblMiddleDarkGray.setBackground(Color.DARK_GRAY);
 		//contentPane.setLayout(null);
 		contentPane.add(lblMiddleDarkGray);
 		
+
 		
 	}
-
 }
