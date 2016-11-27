@@ -107,14 +107,6 @@ public class CRequeteRasp {
 		return this.nbLumAllumer;
 	}
 	
-	public void setNombreDeLumPlus(){
-		this.nbLumAllumer++;
-	}
-	
-	public void setNombreDeLumMoin(){
-		this.nbLumAllumer--;
-	}
-	
 	public int getVitesseVent(){
 		this.maBdd.connection();
 		

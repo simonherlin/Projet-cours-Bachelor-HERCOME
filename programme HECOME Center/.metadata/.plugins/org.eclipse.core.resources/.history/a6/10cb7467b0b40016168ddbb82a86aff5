@@ -22,27 +22,30 @@ import javax.swing.border.EmptyBorder;
 import model.CModificationImage;
 import model.CRequeteRasp;
 
-public class IHMModuleLumRasp extends JFrame {
+public class IHMModuleStoreRasp extends JFrame {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -2921044396190108608L;
+	private static final long serialVersionUID = -481502620306647122L;
+
 
 	private JPanel contentPane;
-
+	
+	
 	private CModificationImage modifImg;
-	private static CRequeteRasp maRequete=new CRequeteRasp();
+	private static CRequeteRasp maRequete;
 	
 	private String temp;
-	private int nbPiece;
 
+	/**
+	 * Launch the application.
 
 
 	/**
 	 * Create the frame.
 	 */
-	public IHMModuleLumRasp(CRequeteRasp req) {
+	public IHMModuleStoreRasp(CRequeteRasp req) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -171,6 +174,8 @@ public class IHMModuleLumRasp extends JFrame {
 		****************************************************************************/
 		
 		
+		
+		
 		this.nbPiece = maRequete.getNbPiece();
 		ArrayList<JLabel> lblMesPieces = new ArrayList<JLabel>();
 		ArrayList<JButton> btnButtonActivationDesactivation = new ArrayList<JButton>();
@@ -212,17 +217,13 @@ public class IHMModuleLumRasp extends JFrame {
 						
 						test.add(false);
 						maRequete.setEtatLumParPiece(u, test);
-						maRequete.setNombreDeLumMoin();
-						
 						btnButtonActivationDesactivation.get(u).setText("Eteint");
 					}
 					else{
 						test.add(true);
 						maRequete.setEtatLumParPiece(u, test);
-						maRequete.setNombreDeLumPlus();
 						btnButtonActivationDesactivation.get(u).setText("Allumer");
 					}
-					lblNbLum.setText(Integer.toString(maRequete.getNombreDeLum()));
 				}
 			});
 			contentPane.add(btnButtonActivationDesactivation.get(i));
@@ -241,6 +242,8 @@ public class IHMModuleLumRasp extends JFrame {
 		btnQuitter.setBounds(10*width/100,80*height/100, 80*width/100, 15*height/100);
 		btnQuitter.setFont(new Font("Tahoma", Font.PLAIN, 8*height/100));
 		contentPane.add(btnQuitter);
+		
+		
 		
 		
 		
@@ -284,10 +287,6 @@ public class IHMModuleLumRasp extends JFrame {
 		lblMiddleDarkGray.setBackground(Color.DARK_GRAY);
 		//contentPane.setLayout(null);
 		contentPane.add(lblMiddleDarkGray);
-		
-		JButton button = new JButton("");
-		contentPane.add(button, BorderLayout.NORTH);
-		
 	}
 
 }

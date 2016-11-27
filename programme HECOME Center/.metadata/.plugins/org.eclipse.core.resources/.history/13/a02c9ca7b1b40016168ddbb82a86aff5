@@ -219,10 +219,8 @@ public class IHMModuleLumRasp extends JFrame {
 					else{
 						test.add(true);
 						maRequete.setEtatLumParPiece(u, test);
-						maRequete.setNombreDeLumPlus();
 						btnButtonActivationDesactivation.get(u).setText("Allumer");
 					}
-					lblNbLum.setText(Integer.toString(maRequete.getNombreDeLum()));
 				}
 			});
 			contentPane.add(btnButtonActivationDesactivation.get(i));

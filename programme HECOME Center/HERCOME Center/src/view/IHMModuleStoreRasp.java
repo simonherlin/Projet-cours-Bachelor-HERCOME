@@ -9,6 +9,7 @@ import java.awt.Frame;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -174,8 +175,61 @@ public class IHMModuleStoreRasp extends JFrame {
 		
 		
 		
+		/* du meme type que lum
+		this.nbPiece = maRequete.getNbPiece();
+		ArrayList<JLabel> lblMesPieces = new ArrayList<JLabel>();
+		ArrayList<JButton> btnButtonActivationDesactivation = new ArrayList<JButton>();
 		
+		// on fait le nombre de bouton et d'indication suivant le nombre de piece que l'on a
+		for (int i =0;i<this.nbPiece;i++){
+			
+			// création des label d'info des piece
+			JLabel temp = new JLabel(maRequete.nomPieceIndexer(i));
+			temp.setBounds(width*8/100, (height*20/100)+(i*height*45/this.nbPiece/100)+10*height/100, width*36/100, height*(40/this.nbPiece)/100);
+			temp.setFont(new Font("Tahoma", Font.PLAIN, 14*height/100/(40/this.nbPiece)));
+			//contentPane.add(temp);
+			lblMesPieces.add(temp);
+			contentPane.add(lblMesPieces.get(i));
+			
+			// création des boutons suivant les lum des piece
+			JButton btnTemp = new JButton("");
+			btnTemp.setBounds(width*55/100, (height*20/100)+(i*height*45/this.nbPiece/100)+10*height/100, width*20/100, height*(40/this.nbPiece)/100);
+			btnTemp.setFont(new Font("Tahoma", Font.PLAIN, 14*height/100/(40/this.nbPiece)));
 		
+			
+			// indication du text du bouton suivnt situation
+			if(this.maRequete.getEtatLumParPiece(i).get(0)==true){
+				btnTemp.setText("Allmuer");
+			}
+			else{
+				btnTemp.setText("Eteint");
+			}
+			btnButtonActivationDesactivation.add(btnTemp);
+			
+			int u = i;
+			
+			btnButtonActivationDesactivation.get(i).addActionListener(new ActionListener(){
+				
+				public void actionPerformed(ActionEvent arg0) {
+					ArrayList<Boolean> test=new ArrayList<Boolean>();
+					boolean X = maRequete.getEtatLumParPiece(u).get(0);
+					if ( X==true){
+						
+						test.add(false);
+						maRequete.setEtatLumParPiece(u, test);
+						btnButtonActivationDesactivation.get(u).setText("Eteint");
+					}
+					else{
+						test.add(true);
+						maRequete.setEtatLumParPiece(u, test);
+						btnButtonActivationDesactivation.get(u).setText("Allumer");
+					}
+				}
+			});
+			contentPane.add(btnButtonActivationDesactivation.get(i));
+			
+		}
+		*/
 		
 		JButton btnQuitter = new JButton("Retour accueil");
 		btnQuitter.addActionListener(new ActionListener() {
@@ -188,6 +242,7 @@ public class IHMModuleStoreRasp extends JFrame {
 		btnQuitter.setBounds(10*width/100,80*height/100, 80*width/100, 15*height/100);
 		btnQuitter.setFont(new Font("Tahoma", Font.PLAIN, 8*height/100));
 		contentPane.add(btnQuitter);
+		
 		
 		
 		

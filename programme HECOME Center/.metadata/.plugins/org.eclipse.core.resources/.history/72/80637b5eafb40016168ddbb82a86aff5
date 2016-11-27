@@ -107,14 +107,6 @@ public class CRequeteRasp {
 		return this.nbLumAllumer;
 	}
 	
-	public void setNombreDeLumPlus(){
-		this.nbLumAllumer++;
-	}
-	
-	public void setNombreDeLumMoin(){
-		this.nbLumAllumer--;
-	}
-	
 	public int getVitesseVent(){
 		this.maBdd.connection();
 		
@@ -192,14 +184,6 @@ public class CRequeteRasp {
 	
 	public void setEtatLamp(int id, boolean etat){
 		this.etatLampePiece.set(id, etat);
-	}
-	
-	public ArrayList<Boolean> getEtatStoreParPiece(int id){
-		return this.pieceMaisonLum.get(id);
-	}
-	
-	public void setEtatStoreParPiece(int id,ArrayList<Boolean> piece){
-		this.pieceMaisonLum.set(id, piece);
 	}
 	
 	public ArrayList<Boolean> getEtatLumParPiece(int id){

@@ -207,22 +207,18 @@ public class IHMModuleLumRasp extends JFrame {
 				
 				public void actionPerformed(ActionEvent arg0) {
 					ArrayList<Boolean> test=new ArrayList<Boolean>();
-					boolean X = maRequete.getEtatLumParPiece(u).get(0);
+					boolean X = maRequete.getEtatLumParPiece(i).get(0);
 					if ( X==true){
 						
 						test.add(false);
 						maRequete.setEtatLumParPiece(u, test);
-						maRequete.setNombreDeLumMoin();
-						
 						btnButtonActivationDesactivation.get(u).setText("Eteint");
 					}
 					else{
 						test.add(true);
 						maRequete.setEtatLumParPiece(u, test);
-						maRequete.setNombreDeLumPlus();
 						btnButtonActivationDesactivation.get(u).setText("Allumer");
 					}
-					lblNbLum.setText(Integer.toString(maRequete.getNombreDeLum()));
 				}
 			});
 			contentPane.add(btnButtonActivationDesactivation.get(i));
