@@ -1,0 +1,24 @@
+package model;
+
+public class CCommandStore {
+	
+	public void monterStore(char[] trame){
+		
+		// ajouter dans la trame le code correspondant à l'information de monter 
+		
+	}
+	
+	public void dessendreStore(char[] trame){
+		
+		
+		
+	}
+	
+	public void stoperStore(char[] trame){
+		
+		
+		
+	}
+
+
+}

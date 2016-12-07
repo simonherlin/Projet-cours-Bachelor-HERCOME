@@ -1,70 +1,52 @@
 format 75
 
 classinstance 128125 class_ref 148477 // CPhpSocket
-  name ""   xyz 508.5 4 2000 life_line_z 2000
+  name ""   xyz 622.5 5 2000 life_line_z 2000
 classinstance 128253 class_ref 134781 // IHMPageAccueil
-  name ""   xyz 194.5 4 2000 life_line_z 2000
+  name ""   xyz 234.5 4 2000 life_line_z 2000
 classinstance 128381 class_ref 135165 // IHMPiece
-  name ""   xyz 379.5 4 2000 life_line_z 2000
-classinstance 128509 class_ref 156285 // ER433Rasp
-  name ""   xyz 724 4 2000 life_line_z 2000
+  name ""   xyz 421.5 4 2000 life_line_z 2000
 classinstance 128637 class_ref 134909 // Authentification
-  name ""   xyz 110.5 4 2000 life_line_z 2000
+  name ""   xyz 111.5 4 2000 life_line_z 2000
 classinstance 128893 class_ref 155133 // WebService
-  name ""   xyz 438.5 4 2000 life_line_z 2000
-classinstance 129021 class_ref 175997 // CMonSocket
-  name ""   xyz 575.5 4 2000 life_line_z 2000
+  name ""   xyz 513.5 4 2000 life_line_z 2000
 classinstance 129149 class_ref 128125 // Client
   name ""   xyz 63.5 4 2000 life_line_z 2000
 classinstance 129277 class_ref 135037 // IHMPanneauControl
-  name ""   xyz 278.5 4 2000 life_line_z 2000
+  name ""   xyz 320.5 5 2000 life_line_z 2000
 fragment 129405 "if (reponse==true)"
   xyzwh 1.5 135.5 1995 829 354
 end
-classinstance 129533 class_ref 156157 // WiringPi
-  name ""   xyz 789 4 2000 life_line_z 2000
-classinstance 133885 class_ref 169469 // CCommandeChauffage
-  name ""   xyz 626 4 2000 life_line_z 2000
 note 134781 "Vérifie dans la base de données"
   xyzwh 168.5 60.5 2005 171 43
+note 135165 "message envoyer vers HERCOME Center"
+  xyzwh 743 330 2000 79 77
 durationcanvas 129661 classinstance_ref 129149 // :Client
   xyzwh 73 69 2010 11 432
 end
 durationcanvas 129789 classinstance_ref 128637 // :Authentification
-  xyzwh 144 67 2010 11 65
+  xyzwh 145 67 2010 11 65
 end
 durationcanvas 129917 classinstance_ref 128253 // :IHMPageAccueil
-  xyzwh 230 151 2010 11 65
+  xyzwh 270 151 2010 11 65
 end
 durationcanvas 130045 classinstance_ref 129277 // :IHMPanneauControl
-  xyzwh 321 166 2010 11 55
+  xyzwh 363 166 2010 11 55
 end
 durationcanvas 130173 classinstance_ref 128381 // :IHMPiece
-  xyzwh 401 253 2010 11 36
+  xyzwh 443 253 2010 11 36
 end
 durationcanvas 130301 classinstance_ref 129277 // :IHMPanneauControl
-  xyzwh 321 242 2010 11 63
+  xyzwh 363 242 2010 11 63
 end
 durationcanvas 130429 classinstance_ref 128381 // :IHMPiece
-  xyzwh 401 301 2010 11 180
+  xyzwh 443 301 2010 11 180
 end
 durationcanvas 130557 classinstance_ref 128893 // :WebService
-  xyzwh 465 323 2010 11 139
+  xyzwh 540 323 2010 11 139
 end
 durationcanvas 130685 classinstance_ref 128125 // :CPhpSocket
-  xyzwh 536 328 2010 11 124
-end
-durationcanvas 130813 classinstance_ref 129533 // :WiringPi
-  xyzwh 808 354 2010 11 69
-end
-durationcanvas 130941 classinstance_ref 128509 // :ER433Rasp
-  xyzwh 751 343 2010 11 92
-end
-durationcanvas 131197 classinstance_ref 129021 // :CMonSocket
-  xyzwh 603 340 2010 11 108
-end
-durationcanvas 134013 classinstance_ref 133885 // :CCommandeChauffage
-  xyzwh 678 355 2010 11 90
+  xyzwh 650 328 2010 11 124
 end
 msg 131325 synchronous
   from durationcanvas_ref 129661
@@ -89,45 +71,23 @@ msg 131837 synchronous
   yz 71 2015 explicitmsg "connecter()"
   show_full_operations_definition default drawing_language default show_context_mode default
   label_xy 91 58
-msg 132093 synchronous
-  from durationcanvas_ref 130941
-  to durationcanvas_ref 130813
-  yz 357 2015 explicitmsg "write()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 774 339
-msg 132477 return
-  from durationcanvas_ref 130813
-  to durationcanvas_ref 130941
-  yz 412 2015 unspecifiedmsg
-  show_full_operations_definition default drawing_language default show_context_mode default
-msg 132605 return
-  from durationcanvas_ref 131197
-  to durationcanvas_ref 130685
-  yz 437 2015 unspecifiedmsg
-  show_full_operations_definition default drawing_language default show_context_mode default
 msg 132733 synchronous
   from durationcanvas_ref 130557
   to durationcanvas_ref 130685
   yz 331 2015 explicitmsg "envoyer()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 486 319
+  label_xy 561 319
 msg 132861 return
   from durationcanvas_ref 130557
   to durationcanvas_ref 130429
   yz 451 2020 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
-msg 132989 synchronous
-  from durationcanvas_ref 130685
-  to durationcanvas_ref 131197
-  yz 342 2015 explicitmsg "receive()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 557 330
 msg 133117 synchronous
   from durationcanvas_ref 130429
   to durationcanvas_ref 130557
   yz 325 2030 explicitmsg "envoyerAction()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 405 313
+  label_xy 447 313
 msg 133245 synchronous
   from durationcanvas_ref 129661
   to durationcanvas_ref 130429
@@ -150,33 +110,11 @@ msg 133629 synchronous
   to durationcanvas_ref 130173
   yz 254 2015 explicitmsg "affiche"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 355 239
+  label_xy 397 239
 msg 133757 synchronous
   from durationcanvas_ref 129917
   to durationcanvas_ref 130045
   yz 167 2025 explicitmsg "affiche"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 266 154
-msg 134141 synchronous
-  from durationcanvas_ref 131197
-  to durationcanvas_ref 134013
-  yz 355 2015 explicitmsg "choisitTempérature()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 610 319
-msg 134397 synchronous
-  from durationcanvas_ref 134013
-  to durationcanvas_ref 130941
-  yz 365 2025 explicitmsg "envoyerTrame()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 684 337
-msg 134525 return
-  from durationcanvas_ref 130941
-  to durationcanvas_ref 134013
-  yz 424 2020 unspecifiedmsg
-  show_full_operations_definition default drawing_language default show_context_mode default
-msg 134653 return
-  from durationcanvas_ref 134013
-  to durationcanvas_ref 131197
-  yz 429 2015 unspecifiedmsg
-  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 306 154
 end

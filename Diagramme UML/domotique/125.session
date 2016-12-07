@@ -44,6 +44,14 @@ diagrams
     1166 643 100 4 0 0
   classdiagram_ref 208125 // diagramme de classe gestion bariere
     396 636 100 4 0 0
+  sequencediagram_ref 214781 // Gérer matériel ( Store) WEB Center
+    932 514 100 4 0 0
+  sequencediagram_ref 214909 // Gérer Matériel (lumiere) WEB Center
+    932 514 100 4 0 0
+  classdiagram_ref 215037 // IHM
+    932 514 100 4 0 0
+  sequencediagram_ref 201597 // Gestion composant (barriere) center
+    932 514 100 4 0 0
 end
 show_stereotypes
 selected classdiagram_ref 187517 // diagramme de classe HERCOME Center
@@ -54,5 +62,7 @@ open
   usecase_ref 128509 // visualiser information
   usecase_ref 136189 // gestion composant
   usecase_ref 142845 // être alerter
+  class_ref 230525 // CSirene
+  classview_ref 128125 // diagramme de classe IHM
 end
 end

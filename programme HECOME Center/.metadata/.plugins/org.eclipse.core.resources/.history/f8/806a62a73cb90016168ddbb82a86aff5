@@ -1,0 +1,63 @@
+package model;
+
+public class CGestion {
+	private CRequeteRasp maRequete;
+	public CGestion(CRequeteRasp req){
+		this.maRequete = req;
+	}
+	
+	public float decryptageTrame(char [] trame){
+		
+		switch (trame[4]){
+			
+			case '1' :
+				CCommandStore mesStores = new CCommandStore();
+				switch (trame[8]){
+				
+					case '0' :
+						mesStores.monterStore(trame);
+						
+							
+					break;
+					
+					case '1':
+						mesStores.dessendreStore(trame);
+					break;
+					
+					case '2':
+						mesStores.stoperStore(trame);
+					break;	
+				
+				}
+				
+				
+				break;
+			
+			case '2' :
+				
+				
+				
+				
+				
+				break;
+				
+			case '3' :
+				CCommandLumiere mesLumieres = new CCommandLumiere();
+				if (trame[8]=='0'){
+					mesLumieres.allumerLumiere(trame);
+					
+				}
+				else{
+					mesLumieres.eteindreLumiere(trame);
+				}
+				
+				break;
+				
+			default :
+					
+				break;
+		
+		}
+
+	}
+}

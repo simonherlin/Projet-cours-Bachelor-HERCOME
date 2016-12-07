@@ -1,0 +1,28 @@
+package model;
+
+public class CGestion {
+	
+	public void decryptageTrame(char [] trame){
+		
+		switch (trame[2]){
+			
+			case '1' :
+				
+				break;
+			
+			case '2' :
+				
+				break;
+				
+			case '3' : 
+				
+				break;
+				
+			default :
+					
+				break;
+		
+		}
+
+	}
+}

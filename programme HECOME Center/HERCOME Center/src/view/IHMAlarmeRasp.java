@@ -333,10 +333,10 @@ public class IHMAlarmeRasp extends JFrame {
 		
 		if (maRequete.etatAlarme()==true){
 			
-			lblTextAlarme.setText("Alarme activer");
+			lblTextAlarme.setText("Alarme activée");
 		}
 		else{
-			lblTextAlarme.setText("Alarme désactiver");
+			lblTextAlarme.setText("Alarme désactivée");
 		}
 
 		

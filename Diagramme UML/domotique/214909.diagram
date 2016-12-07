@@ -1,0 +1,80 @@
+format 75
+
+classinstance 128125 class_ref 175997 // CMonSocket
+  name ""   xyz 183.5 4 2000 life_line_z 2000
+classinstance 128253 class_ref 156157 // WiringPi
+  name ""   xyz 689 5 2000 life_line_z 2000
+classinstance 128381 class_ref 156285 // ER433Rasp
+  name ""   xyz 607 4 2000 life_line_z 2000
+classinstance 128509 class_ref 156413 // CCommandeLumiere
+  name ""   xyz 455 5 2000 life_line_z 2000
+classinstance 129917 class_ref 229757 // CGestion
+  name ""   xyz 310 5 2000 life_line_z 2000
+note 130941 "Message arrivant de HERCOME WEB"
+  xyzwh 48.5 92.5 2000 73 75
+durationcanvas 128637 classinstance_ref 128253 // :WiringPi
+  xyzwh 708 91 2010 11 60
+end
+durationcanvas 128765 classinstance_ref 128381 // :ER433Rasp
+  xyzwh 634 81 2010 11 98
+end
+durationcanvas 128893 classinstance_ref 128509 // :CCommandeLumiere
+  xyzwh 501 73 2010 11 116
+end
+durationcanvas 130045 classinstance_ref 128125 // :CMonSocket
+  xyzwh 211 68 2010 11 140
+end
+durationcanvas 130173 classinstance_ref 129917 // :CGestion
+  xyzwh 331 72 2010 11 129
+end
+lostfoundmsgsupport 131197 xyz 68 70 2025
+msg 129277 return
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 128893
+  yz 167 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129533 synchronous
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 128637
+  yz 93 2015 explicitmsg "write()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 657.5 76
+msg 129661 synchronous
+  from durationcanvas_ref 128893
+  to durationcanvas_ref 128765
+  yz 86 2015 explicitmsg "envoyerTrame()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 541.5 68
+msg 129789 return
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 128765
+  yz 140 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130301 synchronous
+  from durationcanvas_ref 130045
+  to durationcanvas_ref 130173
+  yz 73 2015 msg operation_ref 152189 // "decryptageTrame()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 234 61
+msg 130557 synchronous
+  from durationcanvas_ref 130173
+  to durationcanvas_ref 128893
+  yz 80 2025 explicitmsg "allumer() / Etiendre()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 352 63
+msg 130685 return
+  from durationcanvas_ref 128893
+  to durationcanvas_ref 130173
+  yz 178 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130813 return
+  from durationcanvas_ref 130173
+  to durationcanvas_ref 130045
+  yz 189 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131325 found_synchronous
+  from lostfoundmsgsupport_ref 131197
+  to durationcanvas_ref 130045
+  yz 68 2025 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

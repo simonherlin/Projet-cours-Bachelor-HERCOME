@@ -12,7 +12,7 @@ public class CBdd
 
 	private String url = "192.168.1.253";
     private String user = "root";
-    private String passwd = "root";
+    private String passwd = "";
     private Connection conn;
     private Statement state;
     private ResultSet result;
@@ -25,7 +25,7 @@ public class CBdd
     public void connection(){
     	try
 	    {
-	        this.conn = DriverManager.getConnection(url, user, passwd);
+	        this.conn = DriverManager.getConnection(this.url, this.user, this.passwd);
 	        this.state = conn.createStatement();
 	           
 	        

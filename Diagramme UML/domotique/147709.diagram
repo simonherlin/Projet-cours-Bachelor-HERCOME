@@ -5,51 +5,73 @@ classinstance 128125 class_ref 155901 // CBdd
 classinstance 128253 class_ref 128125 // Client
   name ""   xyz 10 7 2000 life_line_z 2000
 classinstance 128381 class_ref 156029 // CRequeteRasp
-  name ""   xyz 695 5 2000 life_line_z 2000
+  name ""   xyz 690 4 2000 life_line_z 2000
 classinstance 128509 class_ref 155517 // iHMModuleRasp
   name ""   xyz 183 4 2000 life_line_z 2000
 classinstance 128637 class_ref 155389 // IHMAccueilRasp
   name ""   xyz 73 4 2000 life_line_z 2000
 classinstance 128893 class_ref 156285 // ER433Rasp
-  name ""   xyz 416 5 2000 life_line_z 2000
+  name ""   xyz 525 4 2000 life_line_z 2000
 classinstance 129021 class_ref 156157 // WiringPi
-  name ""   xyz 536 4 2000 life_line_z 2000
+  name ""   xyz 613 5 2000 life_line_z 2000
 classinstance 131965 class_ref 162941 // CCommandeStore
-  name ""   xyz 296 4 2000 life_line_z 2000
+  name ""   xyz 421 4 2000 life_line_z 2000
+classinstance 133501 class_ref 229629 // IHMPieceChoisi
+  name ""   xyz 274 5 2000 life_line_z 2000
+classinstance 133885 class_ref 229757 // CGestion
+  name ""   xyz 358 4 2000 life_line_z 2000
 durationcanvas 129149 classinstance_ref 128637 // :IHMAccueilRasp
   xyzwh 109 83 2010 11 45
 end
 durationcanvas 129277 classinstance_ref 129021 // :WiringPi
-  xyzwh 555 179 2010 11 63
+  xyzwh 632 355 2010 11 52
 end
 durationcanvas 129405 classinstance_ref 128509 // :iHMModuleRasp
-  xyzwh 218 170 2010 11 99
+  xyzwh 218 171 2010 11 68
 end
 durationcanvas 129661 classinstance_ref 128509 // :iHMModuleRasp
   xyzwh 218 89 2010 11 57
 end
 durationcanvas 129789 classinstance_ref 128893 // :ER433Rasp
-  xyzwh 443 174 2010 11 82
+  xyzwh 552 338 2010 11 82
 end
 durationcanvas 129917 classinstance_ref 128381 // :CRequeteRasp
-  xyzwh 729 91 2010 11 49
+  xyzwh 724 91 2010 11 49
 end
 durationcanvas 130045 classinstance_ref 128253 // :Client
-  xyzwh 20 87 2010 11 250
+  xyzwh 20 87 2010 11 378
 end
 durationcanvas 130173 classinstance_ref 128125 // :CBdd
   xyzwh 798 97 2010 11 36
 end
 durationcanvas 132093 classinstance_ref 131965 // :CCommandeStore
-  xyzwh 336 170 2010 11 93
+  xyzwh 461 334 2010 11 93
 end
-durationcanvas 133117 classinstance_ref 128509 // :iHMModuleRasp
-  xyzwh 218 295 2010 11 37
+durationcanvas 134013 classinstance_ref 133885 // :CGestion
+  xyzwh 379 318 2010 11 143
+end
+durationcanvas 134781 classinstance_ref 128381 // :CRequeteRasp
+  xyzwh 724 485 2010 11 73
+end
+durationcanvas 135037 classinstance_ref 128125 // :CBdd
+  xyzwh 798 493 2010 11 47
+end
+durationcanvas 136189 classinstance_ref 133501 // :IHMPieceChoisi
+  xyzwh 309 187 2010 11 90
+end
+durationcanvas 136445 classinstance_ref 128381 // :CRequeteRasp
+  xyzwh 724 201 2010 11 60
+end
+durationcanvas 136701 classinstance_ref 128125 // :CBdd
+  xyzwh 798 209 2010 11 39
+end
+durationcanvas 137213 classinstance_ref 133501 // :IHMPieceChoisi
+  xyzwh 309 301 2010 11 243
 end
 msg 130429 return
   from durationcanvas_ref 129277
   to durationcanvas_ref 129789
-  yz 231 2015 unspecifiedmsg
+  yz 396 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 msg 130557 synchronous
   from durationcanvas_ref 129661
@@ -62,13 +84,13 @@ msg 130685 synchronous
   to durationcanvas_ref 130173
   yz 98 2025 explicitmsg "lire()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 755 86
+  label_xy 750 86
 msg 130941 synchronous
   from durationcanvas_ref 129789
   to durationcanvas_ref 129277
-  yz 181 2015 explicitmsg "write()"
+  yz 360 2015 explicitmsg "write()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 489 169
+  label_xy 590 344
 msg 131069 synchronous
   from durationcanvas_ref 130045
   to durationcanvas_ref 129149
@@ -94,40 +116,96 @@ msg 131709 return
 msg 131837 synchronous
   from durationcanvas_ref 130045
   to durationcanvas_ref 129405
-  yz 172 2015 explicitmsg "ChoisitStore()"
+  yz 173 2015 explicitmsg "ChoisitPiece()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 83 160
-msg 132221 synchronous
-  from durationcanvas_ref 129405
-  to durationcanvas_ref 132093
-  yz 171 2015 explicitmsg "commandStore()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 245 159
+  label_xy 83 161
 msg 132477 synchronous
   from durationcanvas_ref 132093
   to durationcanvas_ref 129789
-  yz 186 2025 explicitmsg "envoyerTrame()"
+  yz 350 2025 explicitmsg "envoyerTrame()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 359 174
+  label_xy 488 338
 msg 132605 return
   from durationcanvas_ref 129789
   to durationcanvas_ref 132093
-  yz 242 2015 unspecifiedmsg
+  yz 406 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
-msg 132733 return
+msg 134141 synchronous
+  from durationcanvas_ref 137213
+  to durationcanvas_ref 134013
+  yz 319 2020 msg operation_ref 152189 // "decryptageTrame()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 316 304
+msg 134397 synchronous
+  from durationcanvas_ref 134013
+  to durationcanvas_ref 132093
+  yz 336 2030 explicitmsg "Monter() / dessendre()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 398 312
+msg 134525 return
   from durationcanvas_ref 132093
-  to durationcanvas_ref 129405
+  to durationcanvas_ref 134013
+  yz 413 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 134653 return
+  from durationcanvas_ref 134013
+  to durationcanvas_ref 137213
+  yz 445 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 134909 synchronous
+  from durationcanvas_ref 137213
+  to durationcanvas_ref 134781
+  yz 488 2015 explicitmsg "SetStore()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 506 476
+msg 135165 synchronous
+  from durationcanvas_ref 134781
+  to durationcanvas_ref 135037
+  yz 494 2020 explicitmsg "ecrire()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 756 482
+msg 135293 return
+  from durationcanvas_ref 135037
+  to durationcanvas_ref 134781
+  yz 523 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 135421 return
+  from durationcanvas_ref 134781
+  to durationcanvas_ref 137213
+  yz 533 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 136317 synchronous
+  from durationcanvas_ref 129405
+  to durationcanvas_ref 136189
+  yz 187 2015 explicitmsg "CreateIHMModule()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 227 175
+msg 136573 synchronous
+  from durationcanvas_ref 136189
+  to durationcanvas_ref 136445
+  yz 201 2020 explicitmsg "creeRequeteRechercheInfo()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 463 189
+msg 136829 synchronous
+  from durationcanvas_ref 136445
+  to durationcanvas_ref 136701
+  yz 210 2025 explicitmsg "lire()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 757 198
+msg 136957 return
+  from durationcanvas_ref 136701
+  to durationcanvas_ref 136445
+  yz 237 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 137085 return
+  from durationcanvas_ref 136445
+  to durationcanvas_ref 136189
   yz 250 2020 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
-msg 133245 synchronous
+msg 137469 synchronous
   from durationcanvas_ref 130045
-  to durationcanvas_ref 133117
-  yz 295 2015 explicitmsg "quitter()"
+  to durationcanvas_ref 137213
+  yz 310 3005 explicitmsg "choisitStore()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 105 283
-msg 133373 return
-  from durationcanvas_ref 133117
-  to durationcanvas_ref 130045
-  yz 317 2020 unspecifiedmsg
-  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 145 298
 end

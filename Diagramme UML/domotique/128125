@@ -1,0 +1,390 @@
+format 75
+"IHM" // IHM
+  revision 1
+  modified_by 125 "Herlin"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 128125 "diagramme de classe IHM"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 229629 "IHMPieceChoisi"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 170749 // <directional aggregation>
+	relation 164733 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 170749 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 171133 // <directional composition>
+	relation 165117 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 171133 // <directional composition>
+	  b multiplicity "1" parent class_ref 229757 // CGestion
+      end
+
+      classrelation 173949 // <directional composition>
+	relation 167933 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 173949 // <directional composition>
+	  b multiplicity "1" parent class_ref 230141 // CModificationImage
+      end
+    end
+
+    class 230141 "CModificationImage"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 155773 "IHMAlarmeRasp"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 132605 // <composition>
+	relation_ref 130301 // <composition>
+      end
+
+      classrelation 137085 // <composition>
+	relation 132605 *---
+	  a role_name "" private
+	    classrelation_ref 137085 // <composition>
+	  b role_name "" private
+	    classrelation_ref 137213 // <composition>
+      end
+
+      classrelation 137597 // <aggregation>
+	relation 132861 o---
+	  a role_name "" private
+	    classrelation_ref 137597 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 137725 // <aggregation>
+      end
+
+      classrelation 156285 // <directional composition>
+	relation 150269 *-->
+	  a role_name "" private
+	    classrelation_ref 156285 // <directional composition>
+	  b parent class_ref 182525 // CAlarme
+      end
+
+      classrelation 171005 // <directional aggregation>
+	relation 164989 o-->
+	  a role_name "" private
+	    classrelation_ref 171005 // <directional aggregation>
+	  b parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 176253 // <directional aggregation>
+	relation 170237 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 176253 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 182525 // CAlarme
+      end
+
+      classrelation 179581 // <directional composition>
+	relation 172925 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 179581 // <directional composition>
+	  b multiplicity "1" parent class_ref 230141 // CModificationImage
+      end
+    end
+
+    class 155645 "IHMChauffageRasp"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 155517 "iHMModuleRasp"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 132093 // <composition>
+	relation_ref 130045 // <composition>
+      end
+
+      classrelation 132221 // <composition>
+	relation 130173 *---
+	  a role_name "" private
+	    classrelation_ref 132221 // <composition>
+	  b role_name "" private
+	    classrelation_ref 132349 // <composition>
+      end
+
+      classrelation 132733 // <composition>
+	relation 130429 *---
+	  a role_name "" private
+	    classrelation_ref 132733 // <composition>
+	  b role_name "" private
+	    classrelation_ref 132861 // <composition>
+      end
+
+      classrelation 132989 // <composition>
+	relation 130557 *---
+	  a role_name "" private
+	    classrelation_ref 132989 // <composition>
+	  b role_name "" private
+	    classrelation_ref 133117 // <composition>
+      end
+
+      classrelation 133245 // <composition>
+	relation 130685 *---
+	  a role_name "" private
+	    classrelation_ref 133245 // <composition>
+	  b role_name "" private
+	    classrelation_ref 133373 // <composition>
+      end
+
+      classrelation 134781 // <aggregation>
+	relation 131453 o---
+	  a role_name "" private
+	    classrelation_ref 134781 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 134909 // <aggregation>
+      end
+
+      classrelation 135037 // <aggregation>
+	relation 131581 o---
+	  a role_name "" private
+	    classrelation_ref 135037 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 135165 // <aggregation>
+      end
+
+      classrelation 135293 // <aggregation>
+	relation 131709 o---
+	  a role_name "" private
+	    classrelation_ref 135293 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 135421 // <aggregation>
+      end
+
+      classrelation 137341 // <aggregation>
+	relation 132733 o---
+	  a role_name "" private
+	    classrelation_ref 137341 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 137469 // <aggregation>
+      end
+
+      classrelation 170365 // <directional composition>
+	relation 164349 *-->
+	  a role_name "" private
+	    classrelation_ref 170365 // <directional composition>
+	  b parent class_ref 229629 // IHMPieceChoisi
+      end
+
+      classrelation 170493 // <directional aggregation>
+	relation 164477 o-->
+	  a role_name "" private
+	    classrelation_ref 170493 // <directional aggregation>
+	  b parent class_ref 229629 // IHMPieceChoisi
+      end
+
+      classrelation 170877 // <directional aggregation>
+	relation 164861 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 170877 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 172413 // <directional aggregation>
+	relation 166397 o-->
+	  a role_name "" private
+	    classrelation_ref 172413 // <directional aggregation>
+	  b parent class_ref 229629 // IHMPieceChoisi
+      end
+
+      classrelation 172541 // <directional composition>
+	relation 166525 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 172541 // <directional composition>
+	  b multiplicity "1" parent class_ref 229629 // IHMPieceChoisi
+      end
+
+      classrelation 174077 // <directional composition>
+	relation 168061 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 174077 // <directional composition>
+	  b multiplicity "1" parent class_ref 230141 // CModificationImage
+      end
+    end
+
+    class 155389 "IHMAccueilRasp"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 131965 // <composition>
+	relation 130045 *---
+	  a role_name "" private
+	    classrelation_ref 131965 // <composition>
+	  b role_name "" private
+	    classrelation_ref 132093 // <composition>
+      end
+
+      classrelation 132477 // <composition>
+	relation 130301 *---
+	  a role_name "" private
+	    classrelation_ref 132477 // <composition>
+	  b role_name "" private
+	    classrelation_ref 132605 // <composition>
+      end
+
+      classrelation 156413 // <directional composition>
+	relation 150397 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 156413 // <directional composition>
+	  b multiplicity "1" parent class_ref 155773 // IHMAlarmeRasp
+      end
+
+      classrelation 156541 // <directional composition>
+	relation 150525 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 156541 // <directional composition>
+	  b multiplicity "1" parent class_ref 155517 // iHMModuleRasp
+      end
+
+      classrelation 163709 // <directional aggregation>
+	relation 157693 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 163709 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 171773 // <directional composition>
+	relation 165757 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 171773 // <directional composition>
+	  b multiplicity "1" parent class_ref 229885 // IHMChauffage
+      end
+
+      classrelation 173693 // <directional composition>
+	relation 167677 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 173693 // <directional composition>
+	  b multiplicity "1" parent class_ref 230141 // CModificationImage
+      end
+
+      operation 152445 "miseAJour"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 176381 // <directional aggregation>
+	relation 170365 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 176381 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 182525 // CAlarme
+      end
+    end
+
+    class 229885 "IHMChauffage"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 171901 // <directional aggregation>
+	relation 165885 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 171901 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 172029 // <directional composition>
+	relation 166013 *-->
+	  a role_name "" private
+	    classrelation_ref 172029 // <directional composition>
+	  b parent class_ref 229757 // CGestion
+      end
+
+      classrelation 173821 // <directional composition>
+	relation 167805 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 173821 // <directional composition>
+	  b multiplicity "1" parent class_ref 230141 // CModificationImage
+      end
+    end
+
+    classdiagram 215037 "IHM"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+  end
+end

@@ -1,0 +1,18 @@
+package model;
+
+public class CCommandStore {
+	
+	public void monterStore(char[] trame){
+		
+	}
+	
+	public void dessendreStore(char[] trame){
+		
+	}
+	
+	public void stoperStore(char[] trame){
+		
+	}
+
+
+}

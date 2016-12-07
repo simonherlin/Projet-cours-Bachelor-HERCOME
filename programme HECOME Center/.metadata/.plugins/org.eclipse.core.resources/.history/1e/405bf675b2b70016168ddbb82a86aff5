@@ -1,0 +1,14 @@
+package model;
+
+public class CCommandLumiere {
+	
+	public void allumerLumiere(char[] trame){
+		
+		
+	}
+	
+	public void eteindreLumiere(char[] trame){
+		
+		
+	}
+}

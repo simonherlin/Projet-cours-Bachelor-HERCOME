@@ -7,8 +7,10 @@ import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Image;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -19,6 +21,7 @@ import javax.swing.border.EmptyBorder;
 import model.CRequeteRasp;
 import model.CModificationImage;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
 public class IHMModuleRasp extends JFrame {
@@ -29,7 +32,7 @@ public class IHMModuleRasp extends JFrame {
 	
 	private CModificationImage modifImg;
 	private static CRequeteRasp maRequete;
-	
+	private JComboBox combo = new JComboBox();
 	private String temp;
 	
 	/*public static void main(String[] args) {
@@ -178,7 +181,7 @@ contentPane.add(btnAlarme);
 					partie bouton module
 			************************************************/
 		
-		JButton btnLumiere = new JButton("Module Lumière");
+		/*JButton btnLumiere = new JButton("Module Lumière");
 		btnLumiere.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -204,7 +207,40 @@ contentPane.add(btnAlarme);
 		btnStore.setBounds(58*width/100,34*height/100, 36*width/100, 20*height/100);
 		btnStore.setFont(new Font("Tahoma", Font.PLAIN, 8*height/100));
 		contentPane.add(btnStore);
+		*/
+		ArrayList<String> mesPieces = new ArrayList<String>();
 		
+		mesPieces = this.maRequete.getLesPieces();
+		String[] test = mesPieces.toArray(new String[0]);
+		combo.setPreferredSize(new Dimension(20*width/100, 20*height/100));
+		combo.setModel(new DefaultComboBoxModel(test));
+		combo.setBounds(8*width/100,34*height/100, 84*width/100, 26*height/100);
+		combo.setFont(new Font("Tahoma", Font.PLAIN, 9*height/100));
+		//combo.setSize(200, combo.getPreferredSize().height);
+		contentPane.add(combo);
+		
+		JButton btnSaisie = new JButton("Valider");
+		btnSaisie.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0){
+				int hauteur = 70*height/100;
+				int largeur = 90*width/100;
+				IHMPieceChoisi maPieceChoisi = new IHMPieceChoisi ((String) combo.getSelectedItem(),maRequete,hauteur,largeur);
+				maPieceChoisi.setVisible(true);
+				//dispose();
+				
+			}
+		});
+		btnSaisie.setBounds(20*width/100,65*height/100, 60*width/100, 10*height/100);
+		btnSaisie.setFont(new Font("Tahoma", Font.PLAIN, 8*height/100));
+		contentPane.add(btnSaisie);
+		
+		
+		/*JLabel testTest = new JLabel ((String) combo.getSelectedItem());
+		testTest.setBounds(8*width/100, 65*height/100, 84*width/100, 8*height/100);
+		testTest.setHorizontalAlignment(SwingConstants.CENTER);
+		testTest.setFont(new Font("Tahoma", Font.PLAIN, 5*height/100));
+		contentPane.add(testTest);
+		*/
 		JButton btnQuitter = new JButton("Retour accueil");
 		btnQuitter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -213,7 +249,7 @@ contentPane.add(btnAlarme);
 				dispose();
 			}
 		});
-		btnQuitter.setBounds(10*width/100,60*height/100, 80*width/100, 20*height/100);
+		btnQuitter.setBounds(10*width/100,80*height/100, 80*width/100, 15*height/100);
 		btnQuitter.setFont(new Font("Tahoma", Font.PLAIN, 8*height/100));
 		contentPane.add(btnQuitter);
 		
@@ -253,7 +289,7 @@ contentPane.add(btnAlarme);
 		
 		//rectangle gris foncer du reste de l'application
 		JLabel lblMiddleDarkGray = new JLabel("");
-		lblMiddleDarkGray.setBounds(0,25*height/100,width,70*height/100);
+		lblMiddleDarkGray.setBounds(0,25*height/100,width,75*height/100);
 		lblMiddleDarkGray.setOpaque(true);
 		lblMiddleDarkGray.setBackground(Color.DARK_GRAY);
 		//contentPane.setLayout(null);

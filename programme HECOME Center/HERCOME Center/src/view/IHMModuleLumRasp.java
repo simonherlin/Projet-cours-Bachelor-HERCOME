@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
@@ -169,7 +170,13 @@ public class IHMModuleLumRasp extends JFrame {
 		/****************************************************************************
 				Partie central
 		****************************************************************************/
+		JPanel activiteCentral = new JPanel();
+		activiteCentral.setBounds(2*width/100,27*height/100,96*width/100,53*height/100);
+		activiteCentral.setBackground(Color.WHITE);
+		contentPane.add(activiteCentral);
 		
+		JScrollPane jsp = new JScrollPane(activiteCentral);
+		contentPane.add(jsp);
 		
 		this.nbPiece = maRequete.getNbPiece();
 		ArrayList<JLabel> lblMesPieces = new ArrayList<JLabel>();
@@ -184,7 +191,7 @@ public class IHMModuleLumRasp extends JFrame {
 			temp.setFont(new Font("Tahoma", Font.PLAIN, 14*height/100/(40/this.nbPiece)));
 			//contentPane.add(temp);
 			lblMesPieces.add(temp);
-			contentPane.add(lblMesPieces.get(i));
+			activiteCentral.add(lblMesPieces.get(i));
 			
 			// création des boutons suivant les lum des piece
 			JButton btnTemp = new JButton("");
@@ -225,7 +232,7 @@ public class IHMModuleLumRasp extends JFrame {
 					lblNbLum.setText(Integer.toString(maRequete.getNombreDeLum()));
 				}
 			});
-			contentPane.add(btnButtonActivationDesactivation.get(i));
+			activiteCentral.add(btnButtonActivationDesactivation.get(i));
 			
 		}
 		
@@ -243,13 +250,17 @@ public class IHMModuleLumRasp extends JFrame {
 		contentPane.add(btnQuitter);
 		
 		
-		
+
 		
 /***********************************************************************************************************
 		 
 		 Partie des differant rectangle de couleur de l'application pour separer les differante partie
 		
 ************************************************************************************************************/
+		JScrollPane scroll = new JScrollPane();
+		contentPane.add(scroll);
+		
+		
 		//bande noir au dessus
 		JLabel lblBandeNoir = new JLabel("");
 		lblBandeNoir.setBounds(0,0,width,7*height/100);
@@ -285,9 +296,12 @@ public class IHMModuleLumRasp extends JFrame {
 		//contentPane.setLayout(null);
 		contentPane.add(lblMiddleDarkGray);
 		
-		JButton button = new JButton("");
-		contentPane.add(button, BorderLayout.NORTH);
+
 		
+
+		
+
+		//contentPane.pack();		
 	}
 
 }

@@ -17,16 +17,10 @@ classinstance 132349 class_ref 155133 // WebService
   name ""   xyz 442 5 2000 life_line_z 2000
 classinstance 133245 class_ref 148477 // CPhpSocket
   name ""   xyz 512 5 2000 life_line_z 2000
-classinstance 133629 class_ref 156413 // CCommandeLumiere
-  name ""   xyz 634.5 4 2000 life_line_z 2000
-classinstance 133757 class_ref 156157 // WiringPi
-  name ""   xyz 790.5 4 2000 life_line_z 2000
-classinstance 133885 class_ref 156285 // ER433Rasp
-  name ""   xyz 724.5 4 2000 life_line_z 2000
-classinstance 135677 class_ref 175997 // CMonSocket
-  name ""   xyz 579 4 2000 life_line_z 2000
 note 136573 "Vérifie dans la base de données"
   xyzwh 171 71 2005 171 43
+note 136701 "message envoyer vers HERCOME Center"
+  xyzwh 629.5 363.5 2000 79 77
 durationcanvas 128509 classinstance_ref 128125 // :Client
   xyzwh 77 73 2010 11 432
 end
@@ -54,18 +48,7 @@ end
 durationcanvas 133373 classinstance_ref 133245 // :CPhpSocket
   xyzwh 540 332 2010 11 123
 end
-durationcanvas 134013 classinstance_ref 133757 // :WiringPi
-  xyzwh 809 358 2010 11 68
-end
-durationcanvas 134141 classinstance_ref 133885 // :ER433Rasp
-  xyzwh 751 347 2010 11 90
-end
-durationcanvas 134269 classinstance_ref 133629 // :CCommandeLumiere
-  xyzwh 680 343 2010 11 103
-end
-durationcanvas 135805 classinstance_ref 135677 // :CMonSocket
-  xyzwh 607 344 2010 11 107
-end
+lostfoundmsgsupport 136829 xyz 697 354 2015
 msg 128765 synchronous
   from durationcanvas_ref 128509
   to durationcanvas_ref 128637
@@ -120,28 +103,6 @@ msg 133501 synchronous
   yz 334 2015 explicitmsg "Envoyer()"
   show_full_operations_definition default drawing_language default show_context_mode default
   label_xy 485 324
-msg 134397 return
-  from durationcanvas_ref 134013
-  to durationcanvas_ref 134141
-  yz 415 2015 unspecifiedmsg
-  show_full_operations_definition default drawing_language default show_context_mode default
-msg 134525 synchronous
-  from durationcanvas_ref 134269
-  to durationcanvas_ref 134141
-  yz 348 2015 explicitmsg "envoyerTrame()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 688 324
-msg 134653 synchronous
-  from durationcanvas_ref 134141
-  to durationcanvas_ref 134013
-  yz 360 2015 explicitmsg "write()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 775 343
-msg 134781 return
-  from durationcanvas_ref 134141
-  to durationcanvas_ref 134269
-  yz 425 2015 unspecifiedmsg
-  show_full_operations_definition default drawing_language default show_context_mode default
 msg 135293 return
   from durationcanvas_ref 133373
   to durationcanvas_ref 132733
@@ -157,26 +118,9 @@ msg 135549 return
   to durationcanvas_ref 128509
   yz 473 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
-msg 135933 synchronous
+msg 136957 lost_synchronous
   from durationcanvas_ref 133373
-  to durationcanvas_ref 135805
-  yz 345 2015 explicitmsg "Receive()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 559 333
-msg 136061 return
-  from durationcanvas_ref 135805
-  to durationcanvas_ref 133373
-  yz 440 2015 unspecifiedmsg
-  show_full_operations_definition default drawing_language default show_context_mode default
-msg 136317 synchronous
-  from durationcanvas_ref 135805
-  to durationcanvas_ref 134269
-  yz 348 2025 explicitmsg "commandeLumiere()"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 615 326
-msg 136445 return
-  from durationcanvas_ref 134269
-  to durationcanvas_ref 135805
-  yz 435 2020 unspecifiedmsg
+  to lostfoundmsgsupport_ref 136829
+  yz 352 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 end

@@ -22,7 +22,7 @@ public class CRequeteRasp {
 	public CRequeteRasp (){
 		maBdd = new CBdd ();
 		
-		this.nomPiece.add("salon");
+		this.nomPiece.add("salon");  
 		this.nomPiece.add("chambre parent");
 		this.nomPiece.add("cuisine");
 		this.nomPiece.add("salle de jeu");
@@ -184,6 +184,10 @@ public class CRequeteRasp {
 	
 	public String nomPieceIndexer(int id){
 		return this.nomPiece.get(id);
+	}
+	
+	public ArrayList<String> getLesPieces(){
+		return this.nomPiece;
 	}
 	
 	public boolean getEtatLampe(int id){

@@ -10,6 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import javax.swing.Timer;
+
 import java.awt.Font;
 import java.awt.Frame;
 
@@ -24,6 +26,8 @@ import model.CModificationImage;
 import view.*;
 
 import java.awt.event.ActionListener;
+//import java.util.Timer;
+
 import java.awt.event.ActionEvent;
 
 public class IHMAccueilRasp extends JFrame {
@@ -56,6 +60,11 @@ public class IHMAccueilRasp extends JFrame {
 	}
 	
 
+	public void miseAJour(){
+		
+	}
+
+
 	/**
 	 * Create the frame.
 	 */
@@ -77,8 +86,20 @@ public class IHMAccueilRasp extends JFrame {
 		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 		int height = (int)dimension.getHeight();
 		int width  = (int)dimension.getWidth();
-
 		
+		
+		
+		Timer timer = new Timer(60000, new ActionListener() {
+			  public void actionPerformed(ActionEvent ae) {
+			    miseAJour();
+			  }
+			});
+			timer.setRepeats(true);
+			timer.start();
+		
+		
+
+
 		
 /******************************************************************************************************
   					

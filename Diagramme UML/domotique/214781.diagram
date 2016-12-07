@@ -1,0 +1,80 @@
+format 75
+
+classinstance 128125 class_ref 156285 // ER433Rasp
+  name ""   xyz 442.5 4 2000 life_line_z 2000
+classinstance 128253 class_ref 156157 // WiringPi
+  name ""   xyz 569.5 5 2000 life_line_z 2000
+classinstance 128381 class_ref 175997 // CMonSocket
+  name ""   xyz 82 4 2000 life_line_z 2000
+classinstance 128509 class_ref 162941 // CCommandeStore
+  name ""   xyz 310.5 4 2000 life_line_z 2000
+classinstance 129917 class_ref 229757 // CGestion
+  name ""   xyz 187 4 2000 life_line_z 2000
+note 131325 "Message arrivant de HERCOME WEB"
+  xyzwh 23 119 2000 73 75
+durationcanvas 128637 classinstance_ref 128509 // :CCommandeStore
+  xyzwh 350 65.5 2010 11 169
+end
+durationcanvas 128765 classinstance_ref 128125 // :ER433Rasp
+  xyzwh 469 74.5 2010 11 151
+end
+durationcanvas 129021 classinstance_ref 128253 // :WiringPi
+  xyzwh 588 116.5 2010 11 105
+end
+durationcanvas 130045 classinstance_ref 128381 // :CMonSocket
+  xyzwh 110 73 2010 11 183
+end
+durationcanvas 130173 classinstance_ref 129917 // :CGestion
+  xyzwh 208 60 2010 11 187
+end
+lostfoundmsgsupport 131069 xyz 18 75 3005
+msg 129149 return
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 128637
+  yz 199.5 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129405 synchronous
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 128765
+  yz 86.5 2025 explicitmsg "envoyerTrame()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 392.5 62.5
+msg 129533 return
+  from durationcanvas_ref 129021
+  to durationcanvas_ref 128765
+  yz 202.5 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129789 synchronous
+  from durationcanvas_ref 128765
+  to durationcanvas_ref 129021
+  yz 116.5 2015 explicitmsg "write()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 492.5 99.5
+msg 130301 synchronous
+  from durationcanvas_ref 130045
+  to durationcanvas_ref 130173
+  yz 79 2015 msg operation_ref 152189 // "decryptageTrame()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 120 67
+msg 130557 synchronous
+  from durationcanvas_ref 130173
+  to durationcanvas_ref 128637
+  yz 72 2025 explicitmsg "MonterStore() /dessendreStore ()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 211 52
+msg 130685 return
+  from durationcanvas_ref 128637
+  to durationcanvas_ref 130173
+  yz 221 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130813 return
+  from durationcanvas_ref 130173
+  to durationcanvas_ref 130045
+  yz 235 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131197 found_synchronous
+  from lostfoundmsgsupport_ref 131069
+  to durationcanvas_ref 130045
+  yz 73 3005 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

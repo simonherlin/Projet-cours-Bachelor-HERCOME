@@ -1,6 +1,6 @@
 format 75
 "domotique"
-  revision 27
+  revision 28
   modified_by 125 "Herlin"
 
 
@@ -279,6 +279,16 @@ format 75
       simplerelation 136317
 	-_->
 	  on usecase_ref 129661 // authentification
+      end
+
+      sequencediagram 214781 "Gérer matériel ( Store) WEB Center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+
+      sequencediagram 214909 "Gérer Matériel (lumiere) WEB Center"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
       end
     end
 
@@ -663,179 +673,6 @@ format 75
       end
     end
 
-    class 155389 "IHMAccueilRasp"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 131965 // <composition>
-	relation 130045 *---
-	  a role_name "" private
-	    classrelation_ref 131965 // <composition>
-	  b role_name "" private
-	    classrelation_ref 132093 // <composition>
-      end
-
-      classrelation 132477 // <composition>
-	relation 130301 *---
-	  a role_name "" private
-	    classrelation_ref 132477 // <composition>
-	  b role_name "" private
-	    classrelation_ref 132605 // <composition>
-      end
-
-      classrelation 156413 // <directional composition>
-	relation 150397 *-->
-	  a role_name "" private
-	    classrelation_ref 156413 // <directional composition>
-	  b parent class_ref 155773 // IHMAlarmeRasp
-      end
-
-      classrelation 156541 // <directional composition>
-	relation 150525 *-->
-	  a role_name "" private
-	    classrelation_ref 156541 // <directional composition>
-	  b parent class_ref 155517 // iHMModuleRasp
-      end
-
-      classrelation 163709 // <directional aggregation>
-	relation 157693 o-->
-	  a role_name "" private
-	    classrelation_ref 163709 // <directional aggregation>
-	  b parent class_ref 156029 // CRequeteRasp
-      end
-    end
-
-    class 155517 "iHMModuleRasp"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 132093 // <composition>
-	relation_ref 130045 // <composition>
-      end
-
-      classrelation 132221 // <composition>
-	relation 130173 *---
-	  a role_name "" private
-	    classrelation_ref 132221 // <composition>
-	  b role_name "" private
-	    classrelation_ref 132349 // <composition>
-      end
-
-      classrelation 132733 // <composition>
-	relation 130429 *---
-	  a role_name "" private
-	    classrelation_ref 132733 // <composition>
-	  b role_name "" private
-	    classrelation_ref 132861 // <composition>
-      end
-
-      classrelation 132989 // <composition>
-	relation 130557 *---
-	  a role_name "" private
-	    classrelation_ref 132989 // <composition>
-	  b role_name "" private
-	    classrelation_ref 133117 // <composition>
-      end
-
-      classrelation 133245 // <composition>
-	relation 130685 *---
-	  a role_name "" private
-	    classrelation_ref 133245 // <composition>
-	  b role_name "" private
-	    classrelation_ref 133373 // <composition>
-      end
-
-      classrelation 134781 // <aggregation>
-	relation 131453 o---
-	  a role_name "" private
-	    classrelation_ref 134781 // <aggregation>
-	  b role_name "" private
-	    classrelation_ref 134909 // <aggregation>
-      end
-
-      classrelation 135037 // <aggregation>
-	relation 131581 o---
-	  a role_name "" private
-	    classrelation_ref 135037 // <aggregation>
-	  b role_name "" private
-	    classrelation_ref 135165 // <aggregation>
-      end
-
-      classrelation 135293 // <aggregation>
-	relation 131709 o---
-	  a role_name "" private
-	    classrelation_ref 135293 // <aggregation>
-	  b role_name "" private
-	    classrelation_ref 135421 // <aggregation>
-      end
-
-      classrelation 137341 // <aggregation>
-	relation 132733 o---
-	  a role_name "" private
-	    classrelation_ref 137341 // <aggregation>
-	  b role_name "" private
-	    classrelation_ref 137469 // <aggregation>
-      end
-    end
-
-    class 155645 "IHMChauffageRasp"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-    end
-
-    class 155773 "IHMAlarmeRasp"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 132605 // <composition>
-	relation_ref 130301 // <composition>
-      end
-
-      classrelation 137085 // <composition>
-	relation 132605 *---
-	  a role_name "" private
-	    classrelation_ref 137085 // <composition>
-	  b role_name "" private
-	    classrelation_ref 137213 // <composition>
-      end
-
-      classrelation 137597 // <aggregation>
-	relation 132861 o---
-	  a role_name "" private
-	    classrelation_ref 137597 // <aggregation>
-	  b role_name "" private
-	    classrelation_ref 137725 // <aggregation>
-      end
-
-      classrelation 156285 // <directional composition>
-	relation 150269 *-->
-	  a role_name "" private
-	    classrelation_ref 156285 // <directional composition>
-	  b parent class_ref 182525 // CAlarme
-      end
-    end
-
     class 155901 "CBdd"
       visibility package 
       cpp_decl ""
@@ -965,9 +802,16 @@ format 75
 
       classrelation 156669 // <directional composition>
 	relation 150653 *-->
-	  a role_name "" private
+	  a role_name "" multiplicity "1" private
 	    classrelation_ref 156669 // <directional composition>
-	  b parent class_ref 155901 // CBdd
+	  b multiplicity "1" parent class_ref 155901 // CBdd
+      end
+
+      classrelation 170237 // <directional composition>
+	relation 164221 *-->
+	  a role_name "" private
+	    classrelation_ref 170237 // <directional composition>
+	  b parent class_ref 229629 // IHMPieceChoisi
       end
     end
 
@@ -1057,9 +901,39 @@ format 75
 
       classrelation 157053 // <directional composition>
 	relation 151037 *-->
-	  a role_name "" private
+	  a role_name "" multiplicity "1" private
 	    classrelation_ref 157053 // <directional composition>
-	  b parent class_ref 156157 // WiringPi
+	  b multiplicity "1" parent class_ref 156157 // WiringPi
+      end
+
+      classrelation 173181 // <directional composition>
+	relation 167165 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 173181 // <directional composition>
+	  b multiplicity "1" parent class_ref 229757 // CGestion
+      end
+
+      classrelation 177277 // <aggregation>
+	relation_ref 171133 // <aggregation>
+      end
+
+      classrelation 177533 // <aggregation>
+	relation_ref 171261 // <aggregation>
+      end
+
+      classrelation 177789 // <aggregation>
+	relation_ref 171389 // <aggregation>
+      end
+
+      classrelation 178429 // <directional aggregation>
+	relation 172029 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 178429 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 156157 // WiringPi
+      end
+
+      classrelation 179453 // <aggregation>
+	relation_ref 172797 // <aggregation>
       end
     end
 
@@ -1118,6 +992,20 @@ format 75
 	
 	
       end
+
+      classrelation 172925 // <directional composition>
+	relation 166909 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 172925 // <directional composition>
+	  b multiplicity "1" parent class_ref 156285 // ER433Rasp
+      end
+
+      classrelation 177021 // <directional aggregation>
+	relation 171005 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 177021 // <directional aggregation>
+	  b multiplicity "*" parent class_ref 156285 // ER433Rasp
+      end
     end
 
     class 162941 "CCommandeStore"
@@ -1175,6 +1063,20 @@ format 75
 	    classrelation_ref 145277 // <generalisation>
 	  b parent class_ref 215933 // CCommande
       end
+
+      classrelation 172797 // <directional composition>
+	relation 166781 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 172797 // <directional composition>
+	  b multiplicity "1" parent class_ref 156285 // ER433Rasp
+      end
+
+      classrelation 176893 // <directional aggregation>
+	relation 170877 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 176893 // <directional aggregation>
+	  b multiplicity "*" parent class_ref 156285 // ER433Rasp
+      end
     end
 
     class 169469 "CCommandeChauffage"
@@ -1213,16 +1115,7 @@ format 75
 	  b parent class_ref 215933 // CCommande
       end
 
-      attribute 135293 "temperature"
-	private explicit_type ""
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      operation 144765 "choisirTemperature"
+      operation 152829 "getTemperatureChoisi"
 	public explicit_return_type ""
 	nparams 0
 	
@@ -1230,6 +1123,14 @@ format 75
 	
 	
 	
+      end
+
+      classrelation 177661 // <aggregation>
+	relation 171389 o---
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 177661 // <aggregation>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 177789 // <aggregation>
       end
     end
 
@@ -1295,6 +1196,38 @@ format 75
 	
 	
       end
+
+      classrelation 170621 // <directional aggregation>
+	relation 164605 o-->
+	  a role_name "" private
+	    classrelation_ref 170621 // <directional aggregation>
+	  b parent class_ref 229629 // IHMPieceChoisi
+      end
+
+      classrelation 171261 // <directional aggregation>
+	relation 165245 o-->
+	  a role_name "" private
+	    classrelation_ref 171261 // <directional aggregation>
+	  b parent class_ref 229757 // CGestion
+      end
+
+      classrelation 172669 // <directional composition>
+	relation 166653 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 172669 // <directional composition>
+	  b multiplicity "1" parent class_ref 229757 // CGestion
+      end
+
+      classrelation 178045 // <directional aggregation>
+	relation 171645 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 178045 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 229757 // CGestion
+      end
+
+      classrelation 179069 // <composition>
+	relation_ref 172541 // <composition>
+      end
     end
 
     class 182525 "CAlarme"
@@ -1308,16 +1241,6 @@ format 75
       
       classrelation 137213 // <composition>
 	relation_ref 132605 // <composition>
-      end
-
-      operation 134909 "Sonner"
-	public explicit_return_type ""
-	nparams 0
-	
-	
-	
-	
-	
       end
 
       operation 135037 "Activer"
@@ -1347,6 +1270,48 @@ format 75
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+      end
+
+      classrelation 174205 // <directional composition>
+	relation 168189 *-->
+	  a role_name "" private
+	    classrelation_ref 174205 // <directional composition>
+	  b parent class_ref 189181 // CCapteurPrsence
+      end
+
+      classrelation 174845 // <directional composition>
+	relation 168829 *-->
+	  a role_name "" private
+	    classrelation_ref 174845 // <directional composition>
+	  b parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 174973 // <directional composition>
+	relation 168957 *-->
+	  a role_name "" private
+	    classrelation_ref 174973 // <directional composition>
+	  b parent class_ref 156157 // WiringPi
+      end
+
+      classrelation 175101 // <directional composition>
+	relation 169085 *-->
+	  a role_name "" private
+	    classrelation_ref 175101 // <directional composition>
+	  b parent class_ref 182525 // CAlarme
+      end
+
+      classrelation 175357 // <directional composition>
+	relation 169341 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 175357 // <directional composition>
+	  b multiplicity "1" parent class_ref 156157 // WiringPi
+      end
+
+      classrelation 178301 // <directional aggregation>
+	relation 171901 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 178301 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 156157 // WiringPi
       end
     end
 
@@ -1427,13 +1392,33 @@ format 75
 	  b parent class_ref 195709 // CBuffer
       end
 
-      attribute 135165 "activer"
-	private explicit_type ""
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
+      classrelation 174589 // <directional composition>
+	relation 168573 *-->
+	  a role_name "" private
+	    classrelation_ref 174589 // <directional composition>
+	  b parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 174717 // <directional composition>
+	relation 168701 *-->
+	  a role_name "" private
+	    classrelation_ref 174717 // <directional composition>
+	  b parent class_ref 182525 // CAlarme
+      end
+
+      classrelation 175869 // <directional composition>
+	relation 169853 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 175869 // <directional composition>
+	  b multiplicity "1" parent class_ref 230397 // CGestionAlarme
+      end
+
+      classrelation 177405 // <aggregation>
+	relation 171261 o---
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 177405 // <aggregation>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 177533 // <aggregation>
       end
     end
 
@@ -1456,6 +1441,13 @@ format 75
 	    classrelation_ref 136829 // <aggregation>
 	  b role_name "" private
 	    classrelation_ref 136957 // <aggregation>
+      end
+
+      classrelation 173565 // <directional composition>
+	relation 167549 *-->
+	  a role_name "" private
+	    classrelation_ref 173565 // <directional composition>
+	  b parent class_ref 156285 // ER433Rasp
       end
     end
 
@@ -1812,6 +1804,13 @@ format 75
 	
 	
       end
+
+      classrelation 173437 // <directional aggregation>
+	relation 167421 o-->
+	  a role_name "" private
+	    classrelation_ref 173437 // <directional aggregation>
+	  b parent class_ref 223101 // Arduino
+      end
     end
 
     class 222845 "IHMBarriere"
@@ -1879,6 +1878,13 @@ format 75
 	  b role_name "" private
 	    classrelation_ref 156157 // <aggregation>
       end
+
+      classrelation 173309 // <directional aggregation>
+	relation 167293 o-->
+	  a role_name "" private
+	    classrelation_ref 173309 // <directional aggregation>
+	  b parent class_ref 223101 // Arduino
+      end
     end
 
     class 223101 "Arduino"
@@ -1932,5 +1938,282 @@ format 75
 	relation_ref 150141 // <aggregation>
       end
     end
+
+    class 229757 "CGestion"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 171389 // <directional composition>
+	relation 165373 *-->
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 171389 // <directional composition>
+	  b multiplicity "1" parent class_ref 162941 // CCommandeStore
+      end
+
+      classrelation 171517 // <directional composition>
+	relation 165501 *-->
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 171517 // <directional composition>
+	  b multiplicity "1" parent class_ref 156413 // CCommandeLumiere
+      end
+
+      classrelation 171645 // <directional composition>
+	relation 165629 *-->
+	  a role_name "" private
+	    classrelation_ref 171645 // <directional composition>
+	  b parent class_ref 169469 // CCommandeChauffage
+      end
+
+      classrelation 172157 // <directional aggregation>
+	relation 166141 o-->
+	  a role_name "" private
+	    classrelation_ref 172157 // <directional aggregation>
+	  b parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 172285 // <directional aggregation>
+	relation 166269 o-->
+	  a role_name "" private
+	    classrelation_ref 172285 // <directional aggregation>
+	  b parent class_ref 156029 // CRequeteRasp
+      end
+
+      operation 152189 "decryptageTrame"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 174333 // <directional composition>
+	relation 168317 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 174333 // <directional composition>
+	  b multiplicity "1" parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 174461 // <directional composition>
+	relation 168445 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 174461 // <directional composition>
+	  b multiplicity "1" parent class_ref 189181 // CCapteurPrsence
+      end
+
+      classrelation 175229 // <directional composition>
+	relation 169213 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 175229 // <directional composition>
+	  b multiplicity "1" parent class_ref 230269 // CDectectionPorte
+      end
+
+      classrelation 176509 // <directional composition>
+	relation 170493 *-->
+	  a role_name "" private
+	    classrelation_ref 176509 // <directional composition>
+	  b parent class_ref 182525 // CAlarme
+      end
+
+      classrelation 176637 // <directional composition>
+	relation 170621 *-->
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 176637 // <directional composition>
+	  b multiplicity "1" parent class_ref 230269 // CDectectionPorte
+      end
+
+      classrelation 176765 // <directional composition>
+	relation 170749 *-->
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 176765 // <directional composition>
+	  b multiplicity "1" parent class_ref 189181 // CCapteurPrsence
+      end
+
+      classrelation 177917 // <directional composition>
+	relation 171517 *-->
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 177917 // <directional composition>
+	  b multiplicity "1" parent class_ref 169469 // CCommandeChauffage
+      end
+
+      classrelation 178173 // <directional composition>
+	relation 171773 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 178173 // <directional composition>
+	  b multiplicity "1" parent class_ref 175997 // CMonSocket
+      end
+
+      classrelation 178557 // <directional composition>
+	relation 172157 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 178557 // <directional composition>
+	  b multiplicity "1" parent class_ref 230525 // CSirene
+      end
+
+      classrelation 178813 // <directional composition>
+	relation 172413 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 178813 // <directional composition>
+	  b multiplicity "1" parent class_ref 182525 // CAlarme
+      end
+
+      classrelation 178941 // <composition>
+	relation 172541 *---
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 178941 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 179069 // <composition>
+      end
+
+      classrelation 179197 // <directional composition>
+	relation 172669 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 179197 // <directional composition>
+	  b multiplicity "1" parent class_ref 230653 // CStationMeteo
+      end
+    end
+
+    class 230269 "CDectectionPorte"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 175485 // <directional composition>
+	relation 169469 *-->
+	  a role_name "" private
+	    classrelation_ref 175485 // <directional composition>
+	  b parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 175613 // <directional composition>
+	relation 169597 *-->
+	  a role_name "" private
+	    classrelation_ref 175613 // <directional composition>
+	  b parent class_ref 182525 // CAlarme
+      end
+
+      classrelation 175741 // <directional composition>
+	relation 169725 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 175741 // <directional composition>
+	  b multiplicity "1" parent class_ref 230397 // CGestionAlarme
+      end
+
+      classrelation 177149 // <aggregation>
+	relation 171133 o---
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 177149 // <aggregation>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 177277 // <aggregation>
+      end
+    end
+
+    class 230397 "CGestionAlarme"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 175997 // <directional composition>
+	relation 169981 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 175997 // <directional composition>
+	  b multiplicity "1" parent class_ref 156029 // CRequeteRasp
+      end
+
+      classrelation 176125 // <directional composition>
+	relation 170109 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 176125 // <directional composition>
+	  b multiplicity "1" parent class_ref 182525 // CAlarme
+      end
+
+      operation 152573 "etatAlarme"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 152701 "sonner"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 230525 "CSirene"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 152957 "sonner"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 178685 // <directional composition>
+	relation 172285 *-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 178685 // <directional composition>
+	  b multiplicity "1" parent class_ref 156157 // WiringPi
+      end
+
+      classrelation 179709 // <directional aggregation>
+	relation 173053 o-->
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 179709 // <directional aggregation>
+	  b multiplicity "1" parent class_ref 156157 // WiringPi
+      end
+    end
+
+    class 230653 "CStationMeteo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 179325 // <aggregation>
+	relation 172797 o---
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 179325 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 179453 // <aggregation>
+      end
+    end
   end
+
+  package_ref 128125 // IHM
 end

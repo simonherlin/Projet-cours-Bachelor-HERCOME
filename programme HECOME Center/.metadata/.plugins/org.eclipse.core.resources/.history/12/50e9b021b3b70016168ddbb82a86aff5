@@ -1,0 +1,41 @@
+package model;
+
+public class CGestion {
+	
+	public void decryptageTrame(char [] trame){
+		
+		switch (trame[4]){
+			
+			case '1' :
+				
+				
+				
+				break;
+			
+			case '2' :
+				
+				
+				
+				
+				break;
+				
+			case '3' :
+				CCommandLumiere mesLumieres = new CCommandLumiere();
+				if (trame[8]=='0'){
+					mesLumieres.allumerLumiere(trame);
+					
+				}
+				else{
+					mesLumieres.eteindreLumiere(trame);
+				}
+				
+				break;
+				
+			default :
+					
+				break;
+		
+		}
+
+	}
+}

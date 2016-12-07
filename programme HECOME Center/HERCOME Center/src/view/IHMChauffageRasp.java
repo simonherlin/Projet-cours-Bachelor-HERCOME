@@ -89,9 +89,9 @@ public class IHMChauffageRasp extends JFrame {
 	btnModules.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent arg0) {
 	
-	IHMModuleRasp module = new IHMModuleRasp(maRequete);
-	module.setVisible(true);
-	dispose();
+		IHMModuleRasp module = new IHMModuleRasp(maRequete);
+		module.setVisible(true);
+		dispose();
 	}
 	});
 	
@@ -176,7 +176,7 @@ public class IHMChauffageRasp extends JFrame {
 		contentPane.add(lblResultatTemp);
 		
 		
-		JLabel lblTextTempSouhait = new JLabel("Température souhaiter de la maison :");
+		JLabel lblTextTempSouhait = new JLabel("Température souhaitée de la maison :");
 		lblTextTempSouhait.setBounds(4*width/100, 51*height/100, 50*width/100, 10*height/100);
 		//lblTextTemp.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTextTempSouhait.setFont(new Font("Tahoma", Font.PLAIN, 5*height/100));
